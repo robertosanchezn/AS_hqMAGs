@@ -1,0 +1,50 @@
+# This file should contain everything to configure the workflow on a global scale.
+
+#### PROJECT INFORMATION ####
+# This section control your project configuration. 
+# Each project are separated by "-". 
+# A project must contain the variable "name" and "samples".
+# - name : name of your project
+# - samples : a csv file containing a list of genome ids for analysis with multiple sources mentioned. Genome ids must be unique.
+# - prokka-db (optional): list of the custom accessions to use as prokka reference database
+projects:
+# Project 1 - Done!
+  - name: f__Nitrospiraceae_all
+    samples: config/f__Nitrospiraceae_all.csv
+    gtdb-tax: config/hqMAGs_taxonomy.tsv
+# Project 2 - Done!
+  - name: p__Nitrospirota_all
+    samples: config/p__Nitrospirota_all.csv
+    gtdb-tax: config/hqMAGs_taxonomy.tsv
+# Project 3 - Done!
+  - name: p__Nitrospirota_HQ_all
+    samples: config/p__Nitrospirota_HQ_all.csv
+    gtdb-tax: config/hqMAGs_taxonomy.tsv
+# Project 4 - Done!
+  - name: p__Myxococcota_all
+    samples: config/p__Myxococcota_all.csv
+    gtdb-tax: config/hqMAGs_taxonomy.tsv
+
+#### RULE CONFIGURATION ####
+# rules: set value to TRUE if you want to run the analysis or FALSE if you don't
+rules:
+  bigscape: TRUE
+  query_bigslice: FALSE
+  mlst: TRUE
+  refseq_masher: TRUE
+  seqfu: TRUE
+  eggnog: FALSE
+  roary: FALSE
+  bigslice: FALSE
+  automlst_wrapper: FALSE
+  # other parameter settings
+  rnammer: FALSE
+
+#### RESOURCES CONFIGURATION ####
+# resources : the location of the resources to run the rule. The default location is at "resources/{resource_name}".
+resources_path: 
+  antismash_db: resources/antismash_db
+  eggnog_db: resources/eggnog_db
+  BiG-SCAPE: resources/BiG-SCAPE
+  bigslice: resources/bigslice
+  #RNAmmer: resources/RNAmmer # Path must be specified if rule configuration "rnammer" is TRUE
