@@ -1,0 +1,12 @@
+genome_id,source,organism,domain,phylum,class,order,family,genus,species,strain,closest_placement_reference
+GCF_000695975.1,ncbi,Leptospirillum_A rubarum,Bacteria,Nitrospirota_A,Leptospirillia,Leptospirillales,Leptospirillaceae,Leptospirillum_A,rubarum,,
+GCF_000284315.1,ncbi,Leptospirillum ferrooxidans,Bacteria,Nitrospirota_A,Leptospirillia,Leptospirillales,Leptospirillaceae,Leptospirillum,ferrooxidans,,
+GCF_000299235.1,ncbi,Leptospirillum_A rubarum,Bacteria,Nitrospirota_A,Leptospirillia,Leptospirillales,Leptospirillaceae,Leptospirillum_A,rubarum,,
+GCF_001186405.1,ncbi,Leptospirillum_A rubarum,Bacteria,Nitrospirota_A,Leptospirillia,Leptospirillales,Leptospirillaceae,Leptospirillum_A,rubarum,,
+GCA_015709715.1,ncbi,,,,,,,,,,
+GCA_020347665.1,ncbi,,,,,,,,,,
+GCA_020356065.1,ncbi,,,,,,,,,,
+GCA_020346765.1,ncbi,,,,,,,,,,
+GCA_020354155.1,ncbi,,,,,,,,,,
+GCA_020347785.1,ncbi,,,,,,,,,,
+GCA_020349825.1,ncbi,,,,,,,,,,
