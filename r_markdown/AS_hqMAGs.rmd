@@ -1,0 +1,29 @@
+```{r}
+suppressPackageStartupMessages({
+  library('tidyverse')
+})
+```
+
+
+
+```{bash}
+Rscript notebook/bgc_table.R \
+  --antismash_dir  ~/bgcflow/data/interim/antismash/6.0.1/ \
+  --bigscape_dir ~/bgcflow/data/interim/bigscape/Nitrospira_tree_antismash_6.0.1/ \
+  --output tables/Nitrospira_tree_bgcs.csv 
+```
+```{bash}
+Rscript notebook/mag_table.R \
+  --bgcs_table tables/Nitrospira_tree_bgcs.csv \
+  --gtdbtk_dir data/ \
+  --supplementary_file data/singleton_2021_table3.xlsx \
+  --assembly_details data/assembly_details.txt \
+  --output tables/mags_csv 
+```
+```{r}
+read_csv("tables/mags.csv")
+```
+
+
+
+

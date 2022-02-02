@@ -1,0 +1,1085 @@
+# PRJNA629478 Assembly Details
+# Assembly	Level	WGS	Chrs	BioSample	Isolate	Taxonomy
+GCA_016722025.1	Contig	JADKGZ000000000	undefined	SAMN16426458	Skiv_18-Q3-R9-52_BAT3C.106	Acidimicrobiaceae bacterium	
+GCA_016711835.1	Contig	JADJSE000000000	undefined	SAMN16426049	Hade_18-Q3-R52-61_BATAC.47	Acidimicrobiaceae bacterium	
+GCA_016716005.1	Contig	JADJXE000000000	undefined	SAMN16426187	Kalu_18-Q3-R12-55_MAXAC.061	Acidimicrobiales bacterium	
+GCA_016715865.1	Contig	JADJXM000000000	undefined	SAMN16426197	Kalu_18-Q3-R12-55_MAXAC.123	Acidobacteria bacterium	
+GCA_016715115.1	Contig	JADKBM000000000	undefined	SAMN16426311	Mari_18-Q3-R65-66_MAXAC.226	Acidobacteria bacterium	
+GCA_016717465.1	Contig	JADKFO000000000	undefined	SAMN16426419	Rand_18-Q3-R56-63_MAXAC.181	Acidobacteria bacterium	
+GCA_016716905.1	Contig	JADJUS000000000	undefined	SAMN16426117	Hirt_18-Q3-R61-65_MAXAC.091	Acidobacteria bacterium	
+GCA_016716715.1	Contig	JADJVE000000000	undefined	SAMN16426131	Hjor_18-Q3-R7-51_BAT3C.167	Acidobacteria bacterium	
+GCA_016716435.1	Contig	JADJWI000000000	undefined	SAMN16426163	Kalu_18-Q3-R12-55_BAT3C.226	Acidobacteria bacterium	
+GCA_016713675.1	Contig	JADJOS000000000	undefined	SAMN16425952	Fred_18-Q3-R57-64_BAT3C.705	Acidobacteria bacterium	
+GCA_016712785.1	Contig	JADJQL000000000	undefined	SAMN16426000	Fred_18-Q3-R57-64_MAXAC.250	Acidobacteria bacterium	
+GCA_016712445.1	Contig	JADJRB000000000	undefined	SAMN16426017	Fred_18-Q3-R57-64_MAXAC.362	Acidobacteria bacterium	
+GCA_016718135.1	Contig	JADKEF000000000	undefined	SAMN16426383	OdNW_18-Q3-R42-56_MAXAC.155	Acidobacteria bacterium	
+GCA_016711965.1	Contig	JADJRY000000000	undefined	SAMN16426043	Hade_18-Q3-R52-61_BATAC.287	Acidobacteria bacterium	
+GCA_016710075.1	Contig	JADJLO000000000	undefined	SAMN16425858	EsbW_18-Q3-R4-48_BAT3C.194	Acidobacteria bacterium	
+GCA_016709645.1	Contig	JADJMK000000000	undefined	SAMN16425881	EsbW_18-Q3-R4-48_BATAC.318	Acidobacteria bacterium	
+GCA_016703965.1	Contig	JADJBB000000000	undefined	SAMN16425573	AalW_18-Q3-R10-53_MAXAC.144	Acidobacteria bacterium	
+GCA_016703285.1	Contig	JADJCI000000000	undefined	SAMN16425609	Aved_18-Q3-R54-62_BATAC.345	Acidobacteria bacterium	
+GCA_016703135.1	Contig	JADJCQ000000000	undefined	SAMN16425618	Aved_18-Q3-R54-62_BATAC.601	Acidobacteria bacterium	
+GCA_016702945.1	Contig	JADJCZ000000000	undefined	SAMN16425627	Aved_18-Q3-R54-62_BATAC.851	Acidobacteria bacterium	
+GCA_016700195.1	Complete genome	undefined	1	SAMN16426208	Kalu_18-Q3-R12-55_MAXAC.198_cln	Acidobacteria bacterium	
+GCA_016700175.1	Complete genome	undefined	1	SAMN16426205	Kalu_18-Q3-R12-55_MAXAC.185_cln	Acidobacteria bacterium	
+GCA_016700075.1	Complete genome	undefined	1	SAMN16426192	Kalu_18-Q3-R12-55_MAXAC.078_cln	Acidobacteria bacterium	
+GCA_016717115.1	Contig	JADKGE000000000	undefined	SAMN16426435	Ribe_18-Q3-R11-54_BATAC.412	Actinobacteria bacterium	
+GCA_016700055.1	Complete genome	undefined	1	SAMN16426185	Kalu_18-Q3-R12-55_MAXAC.049_cln	Actinobacteria bacterium	
+GCA_016703525.1	Contig	JADJBW000000000	undefined	SAMN16425597	Aved_18-Q3-R54-62_BAT3C.633	Actinobacteria bacterium	
+GCA_016717165.1	Contig	JADKGA000000000	undefined	SAMN16426431	Ribe_18-Q3-R11-54_BAT3C.65	Actinomycetales bacterium	
+GCA_016715285.1	Contig	JADKAO000000000	undefined	SAMN16426287	Mari_18-Q3-R65-66_BAT3C.41	Actinomycetales bacterium	
+GCA_016722305.1	Contig	JADKGK000000000	undefined	SAMN16426442	Ribe_18-Q3-R11-54_MAXAC.001	Actinomycetales bacterium	
+GCA_016705565.1	Contig	JADIXZ000000000	undefined	SAMN16425491	AalE_18-Q3-R2-46_BAT3C.188	Actinomycetales bacterium	
+GCA_016704565.1	Contig	JADIZV000000000	undefined	SAMN16425541	AalW_18-Q3-R10-53_BAT3C.524	Actinomycetales bacterium	
+GCA_016709925.1	Contig	JADJLW000000000	undefined	SAMN16425866	EsbW_18-Q3-R4-48_BAT3C.295	Actinomycetales bacterium	
+GCA_016710385.1	Contig	JADJVX000000000	undefined	SAMN16426150	Hjor_18-Q3-R7-51_MAXAC.088	Actinomycetales bacterium	
+GCA_016710645.1	Contig	JADJVI000000000	undefined	SAMN16426135	Hjor_18-Q3-R7-51_BAT3C.81_sub	Actinomycetales bacterium	
+GCA_016711095.1	Contig	JADJTP000000000	undefined	SAMN16426087	Hirt_18-Q3-R61-65_BAT3C.386	Actinomycetales bacterium	
+GCA_016708855.1	Contig	JADJEW000000000	undefined	SAMN16425678	Bjer_18-Q3-R1-45_BAT3C.93	Actinomycetales bacterium	
+GCA_016707175.1	Contig	JADJIB000000000	undefined	SAMN16425764	Ega_18-Q3-R5-49_MAXAC.001	Actinomycetales bacterium	
+GCA_016712105.1	Contig	JADJRU000000000	undefined	SAMN16426039	Hade_18-Q3-R52-61_BATAC.200	Ahniella sp.	
+GCA_016699305.1	Complete genome	undefined	1	SAMN16425809	Ejby_18-Q3-R6-50_MAXAC.200_cln	Alphaproteobacteria bacterium	
+GCA_016702325.1	Contig	JADJED000000000	undefined	SAMN16425657	Aved_18-Q3-R54-62_MAXAC.392	Alphaproteobacteria bacterium	
+GCA_016699735.1	Complete genome	undefined	1	SAMN16426270	Lyne_18-Q3-R50-59_MAXAC.325_cln	Alphaproteobacteria bacterium	
+GCA_016722515.1	Contig	JADKJE000000000	undefined	SAMN16426516	Skiv_18-Q3-R9-52_MAXAC.332	Alphaproteobacteria bacterium	
+GCA_016717845.1	Contig	JADKES000000000	undefined	SAMN16426397	Rand_18-Q3-R56-63_BAT3C.341	Alphaproteobacteria bacterium	
+GCA_016713825.1	Contig	JADJOJ000000000	undefined	SAMN16425941	Fred_18-Q3-R57-64_BAT3C.445	Anaerolineaceae bacterium	
+GCA_016710325.1	Contig	JADJXK000000000	undefined	SAMN16426195	Kalu_18-Q3-R12-55_MAXAC.106v2	Anaerolineaceae bacterium	
+GCA_016707735.1	Contig	JADJHC000000000	undefined	SAMN16425738	Damh_18-Q3-R51-60_MAXAC.106	Anaerolineae bacterium	
+GCA_016704685.1	Contig	JADIZS000000000	undefined	SAMN16425536	AalW_18-Q3-R10-53_BAT3C.371_sub	Anaerolineae bacterium	
+GCA_016714465.1	Contig	JADKDT000000000	undefined	SAMN16426371	OdNW_18-Q3-R42-56_BATAC.48	Anaerolineae bacterium	
+GCA_016716235.1	Contig	JADJWS000000000	undefined	SAMN16426173	Kalu_18-Q3-R12-55_BAT3C.361	Anaerolineae bacterium	
+GCA_016718485.1	Contig	JADKDF000000000	undefined	SAMN16426357	OdNW_18-Q3-R42-56_BAT3C.33_sub	Anaerolineae bacterium	
+GCA_016719785.1	Contig	JADJYJ000000000	undefined	SAMN16426226	Lyne_18-Q3-R50-59_BATAC.272	Anaerolineae bacterium	
+GCA_016718275.1	Contig	JADKEA000000000	undefined	SAMN16426378	OdNW_18-Q3-R42-56_MAXAC.037	Anaerolineales bacterium	
+GCA_016722685.1	Contig	JADKIK000000000	undefined	SAMN16426496	Skiv_18-Q3-R9-52_MAXAC.035	Anaerolineales bacterium	
+GCA_016721315.1	Contig	JADKIL000000000	undefined	SAMN16426497	Skiv_18-Q3-R9-52_MAXAC.043	Anaerolineales bacterium	
+GCA_016721115.1	Contig	JADKIW000000000	undefined	SAMN16426508	Skiv_18-Q3-R9-52_MAXAC.174	Anaerolineales bacterium	
+GCA_016717045.1	Contig	JADJUO000000000	undefined	SAMN16426113	Hirt_18-Q3-R61-65_MAXAC.030	Anaerolineales bacterium	
+GCA_016715195.1	Contig	JADKBB000000000	undefined	SAMN16426300	Mari_18-Q3-R65-66_MAXAC.029	Anaerolineales bacterium	
+GCA_016714565.1	Contig	JADKDM000000000	undefined	SAMN16426364	OdNW_18-Q3-R42-56_BATAC.378	Anaerolineales bacterium	
+GCA_016714625.1	Contig	JADKCM000000000	undefined	SAMN16426338	OdNE_18-Q3-R46-58_MAXAC.047	Anaerolineales bacterium	
+GCA_016713335.1	Contig	JADJPH000000000	undefined	SAMN16425967	Fred_18-Q3-R57-64_BATAC.359	Anaerolineales bacterium	
+GCA_016705895.1	Contig	JADJKT000000000	undefined	SAMN16425837	EsbE_18-Q3-R3-47_MAXAC.031_sub	Anaerolineales bacterium	
+GCA_016710365.1	Contig	JADJVW000000000	undefined	SAMN16426149	Hjor_18-Q3-R7-51_MAXAC.079_sub	Anaerolineales bacterium	
+GCA_016709305.1	Contig	JADJNA000000000	undefined	SAMN16425897	EsbW_18-Q3-R4-48_MAXAC.021	Anaerolineales bacterium	
+GCA_016709275.1	Contig	JADJNB000000000	undefined	SAMN16425898	EsbW_18-Q3-R4-48_MAXAC.032	Anaerolineales bacterium	
+GCA_016711665.1	Contig	JADJSO000000000	undefined	SAMN16426059	Hade_18-Q3-R52-61_MAXAC.042	Anaerolineales bacterium	
+GCA_016702885.1	Contig	JADJDD000000000	undefined	SAMN16425631	Aved_18-Q3-R54-62_MAXAC.057_sub	Anaerolineales bacterium	
+GCA_016703605.1	Contig	JADJBU000000000	undefined	SAMN16425595	Aved_18-Q3-R54-62_BAT3C.518	Anaerolineales bacterium	
+GCA_016718565.1	Contig	JADKCZ000000000	undefined	SAMN16426351	OdNW_18-Q3-R42-56_BAT3C.134_sub	Anaeromyxobacter sp.	
+GCA_016720265.1	Contig	JADKKZ000000000	undefined	SAMN16426566	Viby_18-Q3-R106-67_MAXAC.089	Anaeromyxobacter sp.	
+GCA_016714225.1	Contig	JADJNS000000000	undefined	SAMN16425916	EsbW_18-Q3-R4-48_MAXAC.252	Archangiaceae bacterium	
+GCA_016705495.1	Contig	JADIYC000000000	undefined	SAMN16425494	AalE_18-Q3-R2-46_BAT3C.204	Arcobacter sp.	
+GCA_016704125.1	Contig	JADJAU000000000	undefined	SAMN16425566	AalW_18-Q3-R10-53_MAXAC.024	Arcobacter sp.	
+GCA_016703025.1	Contig	JADJCV000000000	undefined	SAMN16425623	Aved_18-Q3-R54-62_BATAC.767	Ardenticatenales bacterium	
+GCA_016710785.1	Contig	JADJUE000000000	undefined	SAMN16426102	Hirt_18-Q3-R61-65_BATAC.427	Ardenticatenia bacterium	
+GCA_016709185.1	Contig	JADJNM000000000	undefined	SAMN16425909	EsbW_18-Q3-R4-48_MAXAC.090	Ardenticatenia bacterium	
+GCA_016711265.1	Contig	JADJTI000000000	undefined	SAMN16426079	Hirt_18-Q3-R61-65_BAT3C.202	Austwickia sp.	
+GCA_016706875.1	Contig	JADJIT000000000	undefined	SAMN16425783	Ejby_18-Q3-R6-50_BAT3C.203	Austwickia sp.	
+GCA_016719725.1	Contig	JADJYO000000000	undefined	SAMN16426232	Lyne_18-Q3-R50-59_BATAC.420	Austwickia sp.	
+GCA_016699675.1	Complete genome	undefined	1	SAMN16425987	Fred_18-Q3-R57-64_BATAC.85v2	Austwickia sp.	
+GCA_016719365.1	Contig	JADJZG000000000	undefined	SAMN16426250	Lyne_18-Q3-R50-59_MAXAC.021	Bacteroidales bacterium	
+GCA_016714605.1	Contig	JADKDL000000000	undefined	SAMN16426363	OdNW_18-Q3-R42-56_BATAC.352	Bacteroidales bacterium	
+GCA_016715075.1	Contig	JADKBK000000000	undefined	SAMN16426309	Mari_18-Q3-R65-66_MAXAC.219	Bacteroidales bacterium	
+GCA_016706775.1	Contig	JADJIY000000000	undefined	SAMN16425788	Ejby_18-Q3-R6-50_BAT3C.384	Bacteroidales bacterium	
+GCA_016706185.1	Contig	JADJKD000000000	undefined	SAMN16425820	EsbE_18-Q3-R3-47_BAT3C.210	Bacteroidales bacterium	
+GCA_016706115.1	Contig	JADJKH000000000	undefined	SAMN16425825	EsbE_18-Q3-R3-47_BATAC.189	Bacteroidales bacterium	
+GCA_016705005.1	Contig	JADIZB000000000	undefined	SAMN16425519	AalE_18-Q3-R2-46_MAXAC.025	Bacteroidales bacterium	
+GCA_016709425.1	Contig	JADJMR000000000	undefined	SAMN16425888	EsbW_18-Q3-R4-48_BATAC.459	Bacteroidales bacterium	
+GCA_016709865.1	Contig	JADJLX000000000	undefined	SAMN16425867	EsbW_18-Q3-R4-48_BAT3C.307	Bacteroidales bacterium	
+GCA_016709025.1	Contig	JADJEQ000000000	undefined	SAMN16425671	Bjer_18-Q3-R1-45_BAT3C.220	Bacteroidales bacterium	
+GCA_016709055.1	Contig	JADJEO000000000	undefined	SAMN16425668	Bjer_18-Q3-R1-45_BAT3C.178	Bacteroidales bacterium	
+GCA_016708515.1	Contig	JADJFO000000000	undefined	SAMN16425696	Bjer_18-Q3-R1-45_MAXAC.058_sub	Bacteroidales bacterium	
+GCA_016707705.1	Contig	JADJHD000000000	undefined	SAMN16425739	Damh_18-Q3-R51-60_MAXAC.107	Bacteroidales bacterium	
+GCA_016707785.1	Contig	JADJGZ000000000	undefined	SAMN16425735	Damh_18-Q3-R51-60_MAXAC.084	Bacteroidales bacterium	
+GCA_016708015.1	Contig	JADJGL000000000	undefined	SAMN16425720	Damh_18-Q3-R51-60_BAT3C.434	Bacteroidales bacterium	
+GCA_016699635.1	Chromosome	undefined	1	SAMN16425944	Fred_18-Q3-R57-64_BAT3C.517	Bacteroidetes bacterium	
+GCA_016699695.1	Chromosome	undefined	1	SAMN16426213	Lyne_18-Q3-R50-59_BAT3C.262	Bacteroidetes bacterium	
+GCA_016703275.1	Contig	JADJCJ000000000	undefined	SAMN16425611	Aved_18-Q3-R54-62_BATAC.362	Bacteroidetes bacterium	
+GCA_016703655.1	Contig	JADJBQ000000000	undefined	SAMN16425590	Aved_18-Q3-R54-62_BAT3C.302	Bacteroidetes bacterium	
+GCA_016702775.1	Contig	JADJDI000000000	undefined	SAMN16425636	Aved_18-Q3-R54-62_MAXAC.090	Bacteroidetes bacterium	
+GCA_016702705.1	Contig	JADJDM000000000	undefined	SAMN16425640	Aved_18-Q3-R54-62_MAXAC.142	Bacteroidetes bacterium	
+GCA_016702675.1	Contig	JADJDN000000000	undefined	SAMN16425641	Aved_18-Q3-R54-62_MAXAC.153	Bacteroidetes bacterium	
+GCA_016707995.1	Contig	JADJGP000000000	undefined	SAMN16425725	Damh_18-Q3-R51-60_BATAC.249	Bacteroidetes bacterium	
+GCA_016707905.1	Contig	JADJGT000000000	undefined	SAMN16425729	Damh_18-Q3-R51-60_BATAC.307	Bacteroidetes bacterium	
+GCA_016707105.1	Contig	JADJIK000000000	undefined	SAMN16425773	Ega_18-Q3-R5-49_MAXAC.074	Bacteroidetes bacterium	
+GCA_016706985.1	Contig	JADJIL000000000	undefined	SAMN16425774	Ega_18-Q3-R5-49_MAXAC.075	Bacteroidetes bacterium	
+GCA_016707305.1	Contig	JADJHY000000000	undefined	SAMN16425761	Ega_18-Q3-R5-49_BATAC.486	Bacteroidetes bacterium	
+GCA_016707685.1	Contig	JADJHE000000000	undefined	SAMN16425740	Damh_18-Q3-R51-60_MAXAC.126_sub	Bacteroidetes bacterium	
+GCA_016708205.1	Contig	JADJGE000000000	undefined	SAMN16425712	Bjer_18-Q3-R1-45_MAXAC.232	Bacteroidetes bacterium	
+GCA_016708845.1	Contig	JADJFB000000000	undefined	SAMN16425683	Bjer_18-Q3-R1-45_BATAC.331	Bacteroidetes bacterium	
+GCA_016708595.1	Contig	JADJFL000000000	undefined	SAMN16425693	Bjer_18-Q3-R1-45_MAXAC.024	Bacteroidetes bacterium	
+GCA_016708545.1	Contig	JADJFP000000000	undefined	SAMN16425697	Bjer_18-Q3-R1-45_MAXAC.065	Bacteroidetes bacterium	
+GCA_016708785.1	Contig	JADJFC000000000	undefined	SAMN16425684	Bjer_18-Q3-R1-45_BATAC.43	Bacteroidetes bacterium	
+GCA_016709805.1	Contig	JADJMC000000000	undefined	SAMN16425873	EsbW_18-Q3-R4-48_BATAC.159	Bacteroidetes bacterium	
+GCA_016709725.1	Contig	JADJMG000000000	undefined	SAMN16425877	EsbW_18-Q3-R4-48_BATAC.26	Bacteroidetes bacterium	
+GCA_016709625.1	Contig	JADJML000000000	undefined	SAMN16425882	EsbW_18-Q3-R4-48_BATAC.355	Bacteroidetes bacterium	
+GCA_016711065.1	Contig	JADJTS000000000	undefined	SAMN16426090	Hirt_18-Q3-R61-65_BAT3C.499	Bacteroidetes bacterium	
+GCA_016711545.1	Contig	JADJST000000000	undefined	SAMN16426064	Hade_18-Q3-R52-61_MAXAC.088	Bacteroidetes bacterium	
+GCA_016711505.1	Contig	JADJSV000000000	undefined	SAMN16426066	Hade_18-Q3-R52-61_MAXAC.102	Bacteroidetes bacterium	
+GCA_016711825.1	Contig	JADJSG000000000	undefined	SAMN16426051	Hade_18-Q3-R52-61_BATAC.692	Bacteroidetes bacterium	
+GCA_016711805.1	Contig	JADJSH000000000	undefined	SAMN16426052	Hade_18-Q3-R52-61_BATAC.713	Bacteroidetes bacterium	
+GCA_016711785.1	Contig	JADJSJ000000000	undefined	SAMN16426054	Hade_18-Q3-R52-61_BATAC.786	Bacteroidetes bacterium	
+GCA_016705135.1	Contig	JADIYV000000000	undefined	SAMN16425513	AalE_18-Q3-R2-46_BATAC.574	Bacteroidetes bacterium	
+GCA_016705125.1	Contig	JADIYW000000000	undefined	SAMN16425514	AalE_18-Q3-R2-46_BATAC.579	Bacteroidetes bacterium	
+GCA_016704865.1	Contig	JADIZI000000000	undefined	SAMN16425526	AalE_18-Q3-R2-46_MAXAC.103	Bacteroidetes bacterium	
+GCA_016704735.1	Contig	JADIZO000000000	undefined	SAMN16425532	AalW_18-Q3-R10-53_BAT3C.196	Bacteroidetes bacterium	
+GCA_016706265.1	Contig	JADJJW000000000	undefined	SAMN16425813	EsbE_18-Q3-R3-47_BAT3C.118	Bacteroidetes bacterium	
+GCA_016706255.1	Contig	JADJJZ000000000	undefined	SAMN16425816	EsbE_18-Q3-R3-47_BAT3C.161	Bacteroidetes bacterium	
+GCA_016706595.1	Contig	JADJJH000000000	undefined	SAMN16425797	Ejby_18-Q3-R6-50_BATAC.314	Bacteroidetes bacterium	
+GCA_016706485.1	Contig	JADJJN000000000	undefined	SAMN16425803	Ejby_18-Q3-R6-50_MAXAC.023	Bacteroidetes bacterium	
+GCA_016706865.1	Contig	JADJIS000000000	undefined	SAMN16425782	Ejby_18-Q3-R6-50_BAT3C.200	Bacteroidetes bacterium	
+GCA_016715425.1	Contig	JADKAC000000000	undefined	SAMN16426273	Lyne_18-Q3-R50-59_MAXAC.340	Bacteroidetes bacterium	
+GCA_016715945.1	Contig	JADJXJ000000000	undefined	SAMN16426194	Kalu_18-Q3-R12-55_MAXAC.091	Bacteroidetes bacterium	
+GCA_016715745.1	Contig	JADJZL000000000	undefined	SAMN16426255	Lyne_18-Q3-R50-59_MAXAC.074	Bacteroidetes bacterium	
+GCA_016715625.1	Contig	JADJZU000000000	undefined	SAMN16426264	Lyne_18-Q3-R50-59_MAXAC.253	Bacteroidetes bacterium	
+GCA_016715505.1	Contig	JADJZY000000000	undefined	SAMN16426268	Lyne_18-Q3-R50-59_MAXAC.310	Bacteroidetes bacterium	
+GCA_016717325.1	Contig	JADKFV000000000	undefined	SAMN16426426	Ribe_18-Q3-R11-54_BAT3C.3	Bacteroidetes bacterium	
+GCA_016717725.1	Contig	JADKFA000000000	undefined	SAMN16426405	Rand_18-Q3-R56-63_BATAC.320	Bacteroidetes bacterium	
+GCA_016717665.1	Contig	JADKFB000000000	undefined	SAMN16426406	Rand_18-Q3-R56-63_BATAC.479	Bacteroidetes bacterium	
+GCA_016716985.1	Contig	JADJUR000000000	undefined	SAMN16426116	Hirt_18-Q3-R61-65_MAXAC.063	Bacteroidetes bacterium	
+GCA_016714535.1	Contig	JADKDR000000000	undefined	SAMN16426369	OdNW_18-Q3-R42-56_BATAC.438	Bacteroidetes bacterium	
+GCA_016714615.1	Contig	JADKCJ000000000	undefined	SAMN16426335	OdNE_18-Q3-R46-58_MAXAC.025	Bacteroidetes bacterium	
+GCA_016714715.1	Contig	JADKCE000000000	undefined	SAMN16426330	OdNE_18-Q3-R46-58_BATAC.385_sub	Bacteroidetes bacterium	
+GCA_016714145.1	Contig	JADJNT000000000	undefined	SAMN16425917	EsbW_18-Q3-R4-48_MAXAC.253	Bacteroidetes bacterium	
+GCA_016714005.1	Contig	JADJOA000000000	undefined	SAMN16425930	Fred_18-Q3-R57-64_BAT3C.256	Bacteroidetes bacterium	
+GCA_016713925.1	Contig	JADJOH000000000	undefined	SAMN16425937	Fred_18-Q3-R57-64_BAT3C.394	Bacteroidetes bacterium	
+GCA_016713765.1	Contig	JADJON000000000	undefined	SAMN16425947	Fred_18-Q3-R57-64_BAT3C.606	Bacteroidetes bacterium	
+GCA_016713645.1	Contig	JADJOU000000000	undefined	SAMN16425954	Fred_18-Q3-R57-64_BATAC.17	Bacteroidetes bacterium	
+GCA_016713525.1	Contig	JADJOZ000000000	undefined	SAMN16425959	Fred_18-Q3-R57-64_BATAC.274	Bacteroidetes bacterium	
+GCA_016713445.1	Contig	JADJPB000000000	undefined	SAMN16425961	Fred_18-Q3-R57-64_BATAC.296	Bacteroidetes bacterium	
+GCA_016712665.1	Contig	JADJQP000000000	undefined	SAMN16426004	Fred_18-Q3-R57-64_MAXAC.283_sub	Bacteroidetes bacterium	
+GCA_016719345.1	Contig	JADJZH000000000	undefined	SAMN16426251	Lyne_18-Q3-R50-59_MAXAC.025	Bacteroidetes bacterium	
+GCA_016719285.1	Contig	JADJZM000000000	undefined	SAMN16426256	Lyne_18-Q3-R50-59_MAXAC.083	Bacteroidetes bacterium	
+GCA_016719205.1	Contig	JADKAG000000000	undefined	SAMN16426278	Mari_18-Q3-R65-66_BAT3C.187	Bacteroidetes bacterium	
+GCA_016719045.1	Contig	JADKAX000000000	undefined	SAMN16426296	Mari_18-Q3-R65-66_BATAC.401	Bacteroidetes bacterium	
+GCA_016719685.1	Contig	JADJYP000000000	undefined	SAMN16426233	Lyne_18-Q3-R50-59_BATAC.464	Bacteroidetes bacterium	
+GCA_016718365.1	Contig	JADKDO000000000	undefined	SAMN16426366	OdNW_18-Q3-R42-56_BATAC.395	Bacteroidetes bacterium	
+GCA_016719005.1	Contig	JADKBE000000000	undefined	SAMN16426303	Mari_18-Q3-R65-66_MAXAC.086	Bacteroidetes bacterium	
+GCA_016718875.1	Contig	JADKBL000000000	undefined	SAMN16426310	Mari_18-Q3-R65-66_MAXAC.224	Bacteroidetes bacterium	
+GCA_016718825.1	Contig	JADKCL000000000	undefined	SAMN16426337	OdNE_18-Q3-R46-58_MAXAC.036	Bacteroidetes bacterium	
+GCA_016718805.1	Contig	JADKCP000000000	undefined	SAMN16426341	OdNE_18-Q3-R46-58_MAXAC.070	Bacteroidetes bacterium	
+GCA_016718755.1	Contig	JADKCS000000000	undefined	SAMN16426344	OdNE_18-Q3-R46-58_MAXAC.085	Bacteroidetes bacterium	
+GCA_016718695.1	Contig	JADKCT000000000	undefined	SAMN16426345	OdNE_18-Q3-R46-58_MAXAC.086	Bacteroidetes bacterium	
+GCA_016717585.1	Contig	JADKFH000000000	undefined	SAMN16426412	Rand_18-Q3-R56-63_MAXAC.050	Bacteroidetes bacterium	
+GCA_016718035.1	Contig	JADKEK000000000	undefined	SAMN16426389	Rand_18-Q3-R56-63_BAT3C.178	Bacteroidetes bacterium	
+GCA_016718015.1	Contig	JADKEM000000000	undefined	SAMN16426391	Rand_18-Q3-R56-63_BAT3C.19	Bacteroidetes bacterium	
+GCA_016718125.1	Contig	JADKED000000000	undefined	SAMN16426381	OdNW_18-Q3-R42-56_MAXAC.127	Bacteroidetes bacterium	
+GCA_016721305.1	Contig	JADKIH000000000	undefined	SAMN16426493	Skiv_18-Q3-R9-52_BATAC.703	Bacteroidetes bacterium	
+GCA_016721275.1	Contig	JADKIJ000000000	undefined	SAMN16426495	Skiv_18-Q3-R9-52_MAXAC.022	Bacteroidetes bacterium	
+GCA_016721255.1	Contig	JADKIM000000000	undefined	SAMN16426498	Skiv_18-Q3-R9-52_MAXAC.058	Bacteroidetes bacterium	
+GCA_016721705.1	Contig	JADKHQ000000000	undefined	SAMN16426476	Skiv_18-Q3-R9-52_BAT3C.518	Bacteroidetes bacterium	
+GCA_016721635.1	Contig	JADKHU000000000	undefined	SAMN16426480	Skiv_18-Q3-R9-52_BATAC.251	Bacteroidetes bacterium	
+GCA_016721435.1	Contig	JADKIC000000000	undefined	SAMN16426488	Skiv_18-Q3-R9-52_BATAC.354	Bacteroidetes bacterium	
+GCA_016720935.1	Contig	JADKJP000000000	undefined	SAMN16426528	Vibo_18-Q3-R45-57_BATAC.209	Bacteroidetes bacterium	
+GCA_016720655.1	Contig	JADKKE000000000	undefined	SAMN16426545	Vibo_18-Q3-R45-57_MAXAC.083	Bacteroidetes bacterium	
+GCA_016720495.1	Contig	JADKKM000000000	undefined	SAMN16426553	Viby_18-Q3-R106-67_BAT3C.20	Bacteroidetes bacterium	
+GCA_016720365.1	Contig	JADKKU000000000	undefined	SAMN16426561	Viby_18-Q3-R106-67_BATAC.407	Bacteroidetes bacterium	
+GCA_016722565.1	Contig	JADKIU000000000	undefined	SAMN16426506	Skiv_18-Q3-R9-52_MAXAC.125	Bacteroidetes bacterium	
+GCA_016722525.1	Contig	JADKJB000000000	undefined	SAMN16426513	Skiv_18-Q3-R9-52_MAXAC.287	Bacteroidetes bacterium	
+GCA_016722375.1	Contig	JADKJG000000000	undefined	SAMN16426519	Vibo_18-Q3-R45-57_BAT3C.148	Bacteroidetes bacterium	
+GCA_016722005.1	Contig	JADKHA000000000	undefined	SAMN16426459	Skiv_18-Q3-R9-52_BAT3C.112	Bacteroidetes bacterium	
+GCA_016721775.1	Contig	JADKHJ000000000	undefined	SAMN16426469	Skiv_18-Q3-R9-52_BAT3C.325	Bacteroidetes bacterium	
+GCA_016721785.1	Contig	JADKHL000000000	undefined	SAMN16426471	Skiv_18-Q3-R9-52_BAT3C.378	Bacteroidetes bacterium	
+GCA_016721765.1	Contig	JADKHO000000000	undefined	SAMN16426474	Skiv_18-Q3-R9-52_BAT3C.50	Bacteroidetes bacterium	
+GCA_016719575.1	Contig	JADJYV000000000	undefined	SAMN16426239	Lyne_18-Q3-R50-59_BATAC.62	Bdellovibrionaceae bacterium	
+GCA_016712575.1	Contig	JADJQV000000000	undefined	SAMN16426010	Fred_18-Q3-R57-64_MAXAC.324	Bdellovibrionales bacterium	
+GCA_016713585.1	Contig	JADJOV000000000	undefined	SAMN16425955	Fred_18-Q3-R57-64_BATAC.187	Bdellovibrionales bacterium	
+GCA_016713885.1	Contig	JADJOF000000000	undefined	SAMN16425935	Fred_18-Q3-R57-64_BAT3C.339	Bdellovibrionales bacterium	
+GCA_016714165.1	Contig	JADJNU000000000	undefined	SAMN16425922	EsbW_18-Q3-R4-48_MAXAC.295	Bdellovibrionales bacterium	
+GCA_016716765.1	Contig	JADJVA000000000	undefined	SAMN16426125	Hirt_18-Q3-R61-65_MAXAC.305	Bdellovibrionales bacterium	
+GCA_016716425.1	Contig	JADJWJ000000000	undefined	SAMN16426164	Kalu_18-Q3-R12-55_BAT3C.229	Betaproteobacteria bacterium	
+GCA_016716535.1	Contig	JADJWD000000000	undefined	SAMN16426157	Kalu_18-Q3-R12-55_BAT3C.181	Betaproteobacteria bacterium	
+GCA_016717425.1	Contig	JADKFM000000000	undefined	SAMN16426417	Rand_18-Q3-R56-63_MAXAC.170	Betaproteobacteria bacterium	
+GCA_016717385.1	Contig	JADKFT000000000	undefined	SAMN16426424	Ribe_18-Q3-R11-54_BAT3C.208	Betaproteobacteria bacterium	
+GCA_016715515.1	Contig	JADJZW000000000	undefined	SAMN16426266	Lyne_18-Q3-R50-59_MAXAC.259	Betaproteobacteria bacterium	
+GCA_016715315.1	Contig	JADKAH000000000	undefined	SAMN16426279	Mari_18-Q3-R65-66_BAT3C.19	Betaproteobacteria bacterium	
+GCA_016714155.1	Contig	JADJNQ000000000	undefined	SAMN16425913	EsbW_18-Q3-R4-48_MAXAC.185_sub	Betaproteobacteria bacterium	
+GCA_016713705.1	Contig	JADJOQ000000000	undefined	SAMN16425950	Fred_18-Q3-R57-64_BAT3C.675	Betaproteobacteria bacterium	
+GCA_016713305.1	Contig	JADJPK000000000	undefined	SAMN16425971	Fred_18-Q3-R57-64_BATAC.422	Betaproteobacteria bacterium	
+GCA_016713125.1	Contig	JADJPT000000000	undefined	SAMN16425980	Fred_18-Q3-R57-64_BATAC.609	Betaproteobacteria bacterium	
+GCA_016712915.1	Contig	JADJQB000000000	undefined	SAMN16425989	Fred_18-Q3-R57-64_MAXAC.004	Betaproteobacteria bacterium	
+GCA_016720295.1	Contig	JADKKW000000000	undefined	SAMN16426563	Viby_18-Q3-R106-67_BATAC.55	Betaproteobacteria bacterium	
+GCA_016720065.1	Contig	JADJXY000000000	undefined	SAMN16426215	Lyne_18-Q3-R50-59_BAT3C.300	Betaproteobacteria bacterium	
+GCA_016717855.1	Contig	JADKEV000000000	undefined	SAMN16426400	Rand_18-Q3-R56-63_BATAC.171	Betaproteobacteria bacterium	
+GCA_016717765.1	Contig	JADKEW000000000	undefined	SAMN16426401	Rand_18-Q3-R56-63_BATAC.193	Betaproteobacteria bacterium	
+GCA_016718775.1	Contig	JADKCQ000000000	undefined	SAMN16426342	OdNE_18-Q3-R46-58_MAXAC.071	Betaproteobacteria bacterium	
+GCA_016718555.1	Contig	JADKDB000000000	undefined	SAMN16426353	OdNW_18-Q3-R42-56_BAT3C.155	Betaproteobacteria bacterium	
+GCA_016721925.1	Contig	JADKHE000000000	undefined	SAMN16426463	Skiv_18-Q3-R9-52_BAT3C.176	Betaproteobacteria bacterium	
+GCA_016720425.1	Contig	JADKKQ000000000	undefined	SAMN16426557	Viby_18-Q3-R106-67_BAT3C.83	Betaproteobacteria bacterium	
+GCA_016720925.1	Contig	JADKJR000000000	undefined	SAMN16426530	Vibo_18-Q3-R45-57_BATAC.224	Betaproteobacteria bacterium	
+GCA_016720855.1	Contig	JADKJU000000000	undefined	SAMN16426533	Vibo_18-Q3-R45-57_BATAC.298	Betaproteobacteria bacterium	
+GCA_016706705.1	Contig	JADJJB000000000	undefined	SAMN16425791	Ejby_18-Q3-R6-50_BATAC.207	Betaproteobacteria bacterium	
+GCA_016706525.1	Contig	JADJJM000000000	undefined	SAMN16425802	Ejby_18-Q3-R6-50_MAXAC.009	Betaproteobacteria bacterium	
+GCA_016706095.1	Contig	JADJKG000000000	undefined	SAMN16425824	EsbE_18-Q3-R3-47_BATAC.167	Betaproteobacteria bacterium	
+GCA_016705825.1	Contig	JADJKU000000000	undefined	SAMN16425838	EsbE_18-Q3-R3-47_MAXAC.052	Betaproteobacteria bacterium	
+GCA_016704895.1	Contig	JADIZG000000000	undefined	SAMN16425524	AalE_18-Q3-R2-46_MAXAC.086	Betaproteobacteria bacterium	
+GCA_016704535.1	Contig	JADIZZ000000000	undefined	SAMN16425545	AalW_18-Q3-R10-53_BATAC.157	Betaproteobacteria bacterium	
+GCA_016705145.1	Contig	JADIYT000000000	undefined	SAMN16425511	AalE_18-Q3-R2-46_BATAC.345	Betaproteobacteria bacterium	
+GCA_016705475.1	Contig	JADIYD000000000	undefined	SAMN16425495	AalE_18-Q3-R2-46_BAT3C.211	Betaproteobacteria bacterium	
+GCA_016711875.1	Contig	JADJSD000000000	undefined	SAMN16426048	Hade_18-Q3-R52-61_BATAC.452	Betaproteobacteria bacterium	
+GCA_016711895.1	Contig	JADJSC000000000	undefined	SAMN16426047	Hade_18-Q3-R52-61_BATAC.364	Betaproteobacteria bacterium	
+GCA_016710885.1	Contig	JADJUC000000000	undefined	SAMN16426100	Hirt_18-Q3-R61-65_BATAC.395	Betaproteobacteria bacterium	
+GCA_016709385.1	Contig	JADJMW000000000	undefined	SAMN16425893	EsbW_18-Q3-R4-48_MAXAC.006_sub	Betaproteobacteria bacterium	
+GCA_016709665.1	Contig	JADJMI000000000	undefined	SAMN16425879	EsbW_18-Q3-R4-48_BATAC.303	Betaproteobacteria bacterium	
+GCA_016709885.1	Contig	JADJLY000000000	undefined	SAMN16425869	EsbW_18-Q3-R4-48_BAT3C.485	Betaproteobacteria bacterium	
+GCA_016709965.1	Contig	JADJLT000000000	undefined	SAMN16425863	EsbW_18-Q3-R4-48_BAT3C.275	Betaproteobacteria bacterium	
+GCA_016710505.1	Contig	JADJVR000000000	undefined	SAMN16426144	Hjor_18-Q3-R7-51_BATAC.80	Betaproteobacteria bacterium	
+GCA_016708825.1	Contig	JADJEZ000000000	undefined	SAMN16425681	Bjer_18-Q3-R1-45_BATAC.230	Betaproteobacteria bacterium	
+GCA_016709235.1	Contig	JADJNE000000000	undefined	SAMN16425901	EsbW_18-Q3-R4-48_MAXAC.050	Betaproteobacteria bacterium	
+GCA_016708385.1	Contig	JADJFY000000000	undefined	SAMN16425706	Bjer_18-Q3-R1-45_MAXAC.193	Betaproteobacteria bacterium	
+GCA_016707325.1	Contig	JADJHW000000000	undefined	SAMN16425759	Ega_18-Q3-R5-49_BATAC.305	Betaproteobacteria bacterium	
+GCA_016707015.1	Contig	JADJIO000000000	undefined	SAMN16425778	Ega_18-Q3-R5-49_MAXAC.200	Betaproteobacteria bacterium	
+GCA_016702805.1	Contig	JADJDH000000000	undefined	SAMN16425635	Aved_18-Q3-R54-62_MAXAC.086	Betaproteobacteria bacterium	
+GCA_016703665.1	Contig	JADJBS000000000	undefined	SAMN16425593	Aved_18-Q3-R54-62_BAT3C.394	Betaproteobacteria bacterium	
+GCA_016703845.1	Contig	JADJBH000000000	undefined	SAMN16425579	AalW_18-Q3-R10-53_MAXAC.339	Betaproteobacteria bacterium	
+GCA_016703785.1	Contig	JADJBM000000000	undefined	SAMN16425584	AalW_18-Q3-R10-53_MAXAC.393	Betaproteobacteria bacterium	
+GCA_016702935.1	Contig	JADJDA000000000	undefined	SAMN16425628	Aved_18-Q3-R54-62_MAXAC.010	Betaproteobacteria bacterium	
+GCA_016705245.1	Contig	JADIYM000000000	undefined	SAMN16425504	AalE_18-Q3-R2-46_BATAC.155	Blastocatellia bacterium	
+GCA_016704725.1	Contig	JADIZP000000000	undefined	SAMN16425533	AalW_18-Q3-R10-53_BAT3C.204	Blastocatellia bacterium	
+GCA_016713405.1	Contig	JADJPF000000000	undefined	SAMN16425965	Fred_18-Q3-R57-64_BATAC.318	Blastocatellia bacterium	
+GCA_016713735.1	Contig	JADJOP000000000	undefined	SAMN16425949	Fred_18-Q3-R57-64_BAT3C.662	Bryobacterales bacterium	
+GCA_016716385.1	Contig	JADJWL000000000	undefined	SAMN16426166	Kalu_18-Q3-R12-55_BAT3C.261	Bryobacterales bacterium	
+GCA_016721425.1	Contig	JADKID000000000	undefined	SAMN16426489	Skiv_18-Q3-R9-52_BATAC.396	Bryobacterales bacterium	
+GCA_016710525.1	Contig	JADJVQ000000000	undefined	SAMN16426143	Hjor_18-Q3-R7-51_BATAC.292	Burkholderiaceae bacterium	
+GCA_016710065.1	Contig	JADJLP000000000	undefined	SAMN16425859	EsbW_18-Q3-R4-48_BAT3C.207	Burkholderiales bacterium	
+GCA_016707335.1	Contig	JADJHX000000000	undefined	SAMN16425760	Ega_18-Q3-R5-49_BATAC.333	Burkholderiales bacterium	
+GCA_016708715.1	Contig	JADJFG000000000	undefined	SAMN16425688	Bjer_18-Q3-R1-45_BATAC.569	Burkholderiales bacterium	
+GCA_016705575.1	Contig	JADIXX000000000	undefined	SAMN16425489	AalE_18-Q3-R2-46_BAT3C.116	Burkholderiales bacterium	
+GCA_016705985.1	Contig	JADJKN000000000	undefined	SAMN16425831	EsbE_18-Q3-R3-47_BATAC.414	Burkholderiales bacterium	
+GCA_016719405.1	Contig	JADJZE000000000	undefined	SAMN16426248	Lyne_18-Q3-R50-59_MAXAC.018	Burkholderiales bacterium	
+GCA_016716275.1	Contig	JADJWR000000000	undefined	SAMN16426172	Kalu_18-Q3-R12-55_BAT3C.359	Burkholderiales bacterium	
+GCA_016715585.1	Contig	JADJZT000000000	undefined	SAMN16426263	Lyne_18-Q3-R50-59_MAXAC.237	Burkholderiales bacterium	
+GCA_016703325.1	Contig	JADJCH000000000	undefined	SAMN16425608	Aved_18-Q3-R54-62_BATAC.321_sub	Burkholderiales bacterium	
+GCA_016703945.1	Contig	JADJBC000000000	undefined	SAMN16425574	AalW_18-Q3-R10-53_MAXAC.171	Burkholderiales bacterium	
+GCA_016704005.1	Contig	JADJAY000000000	undefined	SAMN16425570	AalW_18-Q3-R10-53_MAXAC.061	Burkholderiales bacterium	
+GCA_016702605.1	Contig	JADJDQ000000000	undefined	SAMN16425644	Aved_18-Q3-R54-62_MAXAC.235	Burkholderiales bacterium	
+GCA_016702555.1	Contig	JADJDV000000000	undefined	SAMN16425649	Aved_18-Q3-R54-62_MAXAC.293	Burkholderiales bacterium	
+GCA_016714935.1	Contig	JADKBU000000000	undefined	SAMN16426320	OdNE_18-Q3-R46-58_BAT3C.415	Candidatus Accumulibacter sp.	
+GCA_016713625.1	Contig	JADJOT000000000	undefined	SAMN16425953	Fred_18-Q3-R57-64_BAT3C.720	Candidatus Accumulibacter sp.	
+GCA_016712935.1	Contig	JADJQC000000000	undefined	SAMN16425990	Fred_18-Q3-R57-64_MAXAC.027	Candidatus Accumulibacter sp.	
+GCA_016709675.1	Contig	JADJMH000000000	undefined	SAMN16425878	EsbW_18-Q3-R4-48_BATAC.285	Candidatus Accumulibacter sp.	
+GCA_016711725.1	Contig	JADJSI000000000	undefined	SAMN16426053	Hade_18-Q3-R52-61_BATAC.726	Candidatus Accumulibacter sp.	
+GCA_016699285.1	Complete genome	undefined	1	SAMN16425776	Ega_18-Q3-R5-49_MAXAC.112v2	Candidatus Brocadia sp.	
+GCA_016699465.1	Complete genome	undefined	1	SAMN16425921	EsbW_18-Q3-R4-48_MAXAC.283_fly_man	Candidatus Campbellbacteria bacterium	
+GCA_016699715.1	Complete genome	undefined	1	SAMN16426231	Lyne_18-Q3-R50-59_BATAC.383_cln	Candidatus Competibacteraceae bacterium	
+GCA_016710825.1	Contig	JADJUD000000000	undefined	SAMN16426101	Hirt_18-Q3-R61-65_BATAC.422	Candidatus Competibacteraceae bacterium	
+GCA_016710995.1	Contig	JADJTV000000000	undefined	SAMN16426093	Hirt_18-Q3-R61-65_BATAC.101	Candidatus Competibacteraceae bacterium	
+GCA_016710535.1	Contig	JADJVO000000000	undefined	SAMN16426141	Hjor_18-Q3-R7-51_BATAC.2	Candidatus Competibacteraceae bacterium	
+GCA_016706355.1	Contig	JADJJS000000000	undefined	SAMN16425808	Ejby_18-Q3-R6-50_MAXAC.193	Candidatus Competibacteraceae bacterium	
+GCA_016712625.1	Contig	JADJQQ000000000	undefined	SAMN16426005	Fred_18-Q3-R57-64_MAXAC.287	Candidatus Competibacteraceae bacterium	
+GCA_016713505.1	Contig	JADJPA000000000	undefined	SAMN16425960	Fred_18-Q3-R57-64_BATAC.284	Candidatus Competibacteraceae bacterium	
+GCA_016715145.1	Contig	JADKBJ000000000	undefined	SAMN16426308	Mari_18-Q3-R65-66_MAXAC.212	Candidatus Competibacteraceae bacterium	
+GCA_016719985.1	Contig	JADJYA000000000	undefined	SAMN16426217	Lyne_18-Q3-R50-59_BAT3C.425	Candidatus Competibacteraceae bacterium	
+GCA_016722145.1	Contig	JADKGT000000000	undefined	SAMN16426452	Ribe_18-Q3-R11-54_MAXAC.188	Candidatus Competibacteraceae bacterium	
+GCA_016722705.1	Contig	JADKGN000000000	undefined	SAMN16426445	Ribe_18-Q3-R11-54_MAXAC.030	Candidatus Dechloromonas phosphoritropha	
+GCA_016721185.1	Contig	JADKIP000000000	undefined	SAMN16426501	Skiv_18-Q3-R9-52_MAXAC.078_sub	Candidatus Dechloromonas phosphorivorans	
+GCA_016714975.1	Contig	JADKBR000000000	undefined	SAMN16426317	OdNE_18-Q3-R46-58_BAT3C.305	Candidatus Dechloromonas phosphorivorans	
+GCA_016709495.1	Contig	JADJMS000000000	undefined	SAMN16425889	EsbW_18-Q3-R4-48_BATAC.463	Candidatus Dechloromonas phosphorivorans	
+GCA_016699555.1	Complete genome	undefined	1	SAMN16425940	Fred_18-Q3-R57-64_BAT3C.431	Candidatus Diapherotrites archaeon	
+GCA_016710095.1	Contig	JADJLL000000000	undefined	SAMN16425855	EsbW_18-Q3-R4-48_BAT3C.113	Candidatus Eisenbacteria bacterium	
+GCA_016712505.1	Contig	JADJQY000000000	undefined	SAMN16426014	Fred_18-Q3-R57-64_MAXAC.354	Candidatus Eisenbacteria bacterium	
+GCA_016699775.1	Complete genome	undefined	1	SAMN16426283	Mari_18-Q3-R65-66_BAT3C.341_fly	Candidatus Falkowbacteria bacterium	
+GCA_016699245.1	Complete genome	undefined	1	SAMN16425743	Damh_18-Q3-R51-60_MAXAC.235_fly	Candidatus Kaiserbacteria bacterium	
+GCA_016699165.1	Complete genome	undefined	1	SAMN16425610	Aved_18-Q3-R54-62_BATAC.358_cln	Candidatus Melainabacteria bacterium	
+GCA_016716405.1	Contig	JADJWK000000000	undefined	SAMN16426165	Kalu_18-Q3-R12-55_BAT3C.239	Candidatus Melainabacteria bacterium	
+GCA_016711925.1	Contig	JADJSA000000000	undefined	SAMN16426045	Hade_18-Q3-R52-61_BATAC.316	Candidatus Methylophosphatis haderslevensis	
+GCA_016708905.1	Contig	JADJEV000000000	undefined	SAMN16425677	Bjer_18-Q3-R1-45_BAT3C.347	Candidatus Methylophosphatis roskildensis	
+GCA_016708695.1	Contig	JADJFH000000000	undefined	SAMN16425689	Bjer_18-Q3-R1-45_MAXAC.004	Candidatus Microthrix sp.	
+GCA_016708795.1	Contig	JADJEY000000000	undefined	SAMN16425680	Bjer_18-Q3-R1-45_BATAC.226	Candidatus Microthrix sp.	
+GCA_016707825.1	Contig	JADJGW000000000	undefined	SAMN16425732	Damh_18-Q3-R51-60_MAXAC.005	Candidatus Microthrix sp.	
+GCA_016705925.1	Contig	JADJKP000000000	undefined	SAMN16425833	EsbE_18-Q3-R3-47_BATAC.457_sub	Candidatus Microthrix sp.	
+GCA_016705525.1	Contig	JADIYB000000000	undefined	SAMN16425493	AalE_18-Q3-R2-46_BAT3C.202	Candidatus Microthrix sp.	
+GCA_016704645.1	Contig	JADIZU000000000	undefined	SAMN16425539	AalW_18-Q3-R10-53_BAT3C.502	Candidatus Microthrix sp.	
+GCA_016704375.1	Contig	JADJAI000000000	undefined	SAMN16425554	AalW_18-Q3-R10-53_BATAC.377	Candidatus Microthrix sp.	
+GCA_016720445.1	Contig	JADKKP000000000	undefined	SAMN16426556	Viby_18-Q3-R106-67_BAT3C.52	Candidatus Microthrix sp.	
+GCA_016719385.1	Contig	JADJZA000000000	undefined	SAMN16426244	Lyne_18-Q3-R50-59_MAXAC.006	Candidatus Microthrix sp.	
+GCA_016718045.1	Contig	JADKEI000000000	undefined	SAMN16426386	Rand_18-Q3-R56-63_BAT3C.13	Candidatus Microthrix sp.	
+GCA_016699385.1	Complete genome	undefined	1	SAMN16425918	EsbW_18-Q3-R4-48_MAXAC.267_cln	Candidatus Moranbacteria bacterium	
+GCA_016699425.1	Complete genome	undefined	1	SAMN16425919	EsbW_18-Q3-R4-48_MAXAC.278_cln	Candidatus Moranbacteria bacterium	
+GCA_016699795.1	Complete genome	undefined	1	SAMN16426312	Mari_18-Q3-R65-66_MAXAC.243_uni	Candidatus Moranbacteria bacterium	
+GCA_016699975.1	Complete genome	undefined	1	SAMN16426129	Hirt_18-Q3-R61-65_MAXAC.378_cln	Candidatus Moranbacteria bacterium	
+GCA_016699875.1	Complete genome	undefined	1	SAMN16426026	Fred_18-Q3-R57-64_MAXAC.421_sub_cln	Candidatus Moranbacteria bacterium	
+GCA_016699365.1	Complete genome	undefined	1	SAMN16425914	EsbW_18-Q3-R4-48_MAXAC.200_cln	Candidatus Nomurabacteria bacterium	
+GCA_016699085.1	Complete genome	undefined	1	SAMN16425537	AalW_18-Q3-R10-53_BAT3C.395	Candidatus Nomurabacteria bacterium	
+GCA_016718315.1	Contig	JADKDV000000000	undefined	SAMN16426373	OdNW_18-Q3-R42-56_BATAC.52	Candidatus Obscuribacter sp.	
+GCA_016719695.1	Contig	JADJYR000000000	undefined	SAMN16426235	Lyne_18-Q3-R50-59_BATAC.510	Candidatus Obscuribacter sp.	
+GCA_016720765.1	Contig	JADKJY000000000	undefined	SAMN16426539	Vibo_18-Q3-R45-57_BATAC.463	Candidatus Obscuribacter sp.	
+GCA_016721225.1	Contig	JADKIN000000000	undefined	SAMN16426499	Skiv_18-Q3-R9-52_MAXAC.062	Candidatus Obscuribacter sp.	
+GCA_016716945.1	Contig	JADJUQ000000000	undefined	SAMN16426115	Hirt_18-Q3-R61-65_MAXAC.060	Candidatus Obscuribacter sp.	
+GCA_016712465.1	Contig	JADJQZ000000000	undefined	SAMN16426015	Fred_18-Q3-R57-64_MAXAC.356	Candidatus Obscuribacter sp.	
+GCA_016714375.1	Contig	JADJND000000000	undefined	SAMN16425900	EsbW_18-Q3-R4-48_MAXAC.047	Candidatus Obscuribacter sp.	
+GCA_016706695.1	Contig	JADJJA000000000	undefined	SAMN16425790	Ejby_18-Q3-R6-50_BATAC.123	Candidatus Obscuribacter sp.	
+GCA_016706995.1	Contig	JADJIP000000000	undefined	SAMN16425779	Ega_18-Q3-R5-49_MAXAC.254	Candidatus Omnitrophica bacterium	
+GCA_016699145.1	Complete genome	undefined	1	SAMN16425592	Aved_18-Q3-R54-62_BAT3C.344	Candidatus Peregrinibacteria bacterium	
+GCA_016699515.1	Complete genome	undefined	1	SAMN16425923	Fred_18-Q3-R57-64_BAT3C.1_cln	Candidatus Peregrinibacteria bacterium	
+GCA_016699755.1	Complete genome	undefined	1	SAMN16426277	Lyne_18-Q3-R50-59_MAXAC.411_cln	Candidatus Peregrinibacteria bacterium	
+GCA_016707605.1	Contig	JADJHJ000000000	undefined	SAMN16425746	Ega_18-Q3-R5-49_BAT3C.159	Candidatus Promineofilum sp.	
+GCA_016700135.1	Complete genome	undefined	1	SAMN16426207	Kalu_18-Q3-R12-55_MAXAC.194_uni	Candidatus Roizmanbacteria bacterium	
+GCA_016699265.1	Complete genome	undefined	1	SAMN16425721	Damh_18-Q3-R51-60_BAT3C.63_uni	Candidatus Roizmanbacteria bacterium	
+GCA_016699065.1	Complete genome	undefined	1	SAMN16425540	AalW_18-Q3-R10-53_BAT3C.508_uni	Candidatus Saccharibacteria bacterium	
+GCA_016700315.1	Complete genome	undefined	1	SAMN16426438	Ribe_18-Q3-R11-54_BATAC.540_fly	Candidatus Saccharibacteria bacterium	
+GCA_016700395.1	Complete genome	undefined	1	SAMN16426534	Vibo_18-Q3-R45-57_BATAC.32_fly	Candidatus Saccharibacteria bacterium	
+GCA_016700375.1	Complete genome	undefined	1	SAMN16426517	Vibo_18-Q3-R45-57_BAT3C.117_fly	Candidatus Saccharibacteria bacterium	
+GCA_016700355.1	Complete genome	undefined	1	SAMN16426466	Skiv_18-Q3-R9-52_BAT3C.188_fly	Candidatus Saccharibacteria bacterium	
+GCA_016699955.1	Complete genome	undefined	1	SAMN16426127	Hirt_18-Q3-R61-65_MAXAC.330_cln	Candidatus Saccharibacteria bacterium	
+GCA_016699935.1	Complete genome	undefined	1	SAMN16426110	Hirt_18-Q3-R61-65_BATAC.98_uni	Candidatus Saccharibacteria bacterium	
+GCA_016700015.1	Complete genome	undefined	1	SAMN16426151	Hjor_18-Q3-R7-51_MAXAC.102_uni	Candidatus Saccharibacteria bacterium	
+GCA_016699895.1	Complete genome	undefined	1	SAMN16426086	Hirt_18-Q3-R61-65_BAT3C.362_fly	Candidatus Saccharibacteria bacterium	
+GCA_016699205.1	Complete genome	undefined	1	SAMN16425670	Bjer_18-Q3-R1-45_BAT3C.201_fly	Candidatus Uhrbacteria bacterium	
+GCA_016700095.1	Complete genome	undefined	1	SAMN16426204	Kalu_18-Q3-R12-55_MAXAC.182_cln	Candidatus Woesebacteria bacterium	
+GCA_016703335.1	Contig	JADJCG000000000	undefined	SAMN16425607	Aved_18-Q3-R54-62_BATAC.292	Caulobacteraceae bacterium	
+GCA_016710795.1	Contig	JADJUG000000000	undefined	SAMN16426104	Hirt_18-Q3-R61-65_BATAC.448_sub	Caulobacteraceae bacterium	
+GCA_016712405.1	Contig	JADJRD000000000	undefined	SAMN16426019	Fred_18-Q3-R57-64_MAXAC.373	Cellvibrio sp.	
+GCA_016712055.1	Contig	JADJRS000000000	undefined	SAMN16426037	Hade_18-Q3-R52-61_BATAC.14	Cellvibrionales bacterium	
+GCA_016713115.1	Contig	JADJPU000000000	undefined	SAMN16425981	Fred_18-Q3-R57-64_BATAC.644	Cellvibrionales bacterium	
+GCA_016715485.1	Contig	JADJZZ000000000	undefined	SAMN16426269	Lyne_18-Q3-R50-59_MAXAC.318	Cellvibrionales bacterium	
+GCA_016714865.1	Contig	JADKBY000000000	undefined	SAMN16426324	OdNE_18-Q3-R46-58_BATAC.190	Chitinophagaceae bacterium	
+GCA_016715365.1	Contig	JADKAM000000000	undefined	SAMN16426285	Mari_18-Q3-R65-66_BAT3C.374	Chitinophagaceae bacterium	
+GCA_016717645.1	Contig	JADKFF000000000	undefined	SAMN16426410	Rand_18-Q3-R56-63_MAXAC.026	Chitinophagaceae bacterium	
+GCA_016717285.1	Contig	JADKFU000000000	undefined	SAMN16426425	Ribe_18-Q3-R11-54_BAT3C.271	Chitinophagaceae bacterium	
+GCA_016713085.1	Contig	JADJPV000000000	undefined	SAMN16425982	Fred_18-Q3-R57-64_BATAC.715	Chitinophagaceae bacterium	
+GCA_016712725.1	Contig	JADJQK000000000	undefined	SAMN16425999	Fred_18-Q3-R57-64_MAXAC.248	Chitinophagaceae bacterium	
+GCA_016712195.1	Contig	JADJRN000000000	undefined	SAMN16426032	Hade_18-Q3-R52-61_BAT3C.212	Chitinophagaceae bacterium	
+GCA_016713965.1	Contig	JADJOC000000000	undefined	SAMN16425932	Fred_18-Q3-R57-64_BAT3C.305	Chitinophagaceae bacterium	
+GCA_016721085.1	Contig	JADKJI000000000	undefined	SAMN16426521	Vibo_18-Q3-R45-57_BAT3C.204_sub	Chitinophagaceae bacterium	
+GCA_016721065.1	Contig	JADKJK000000000	undefined	SAMN16426523	Vibo_18-Q3-R45-57_BAT3C.70	Chitinophagaceae bacterium	
+GCA_016721385.1	Contig	JADKIE000000000	undefined	SAMN16426490	Skiv_18-Q3-R9-52_BATAC.474	Chitinophagaceae bacterium	
+GCA_016721515.1	Contig	JADKHZ000000000	undefined	SAMN16426485	Skiv_18-Q3-R9-52_BATAC.296	Chitinophagaceae bacterium	
+GCA_016721575.1	Contig	JADKHV000000000	undefined	SAMN16426481	Skiv_18-Q3-R9-52_BATAC.284	Chitinophagaceae bacterium	
+GCA_016720745.1	Contig	JADKKA000000000	undefined	SAMN16426541	Vibo_18-Q3-R45-57_MAXAC.049	Chitinophagaceae bacterium	
+GCA_016720825.1	Contig	JADKJV000000000	undefined	SAMN16426535	Vibo_18-Q3-R45-57_BATAC.411	Chitinophagaceae bacterium	
+GCA_016720775.1	Contig	JADKJX000000000	undefined	SAMN16426538	Vibo_18-Q3-R45-57_BATAC.460	Chitinophagaceae bacterium	
+GCA_016720565.1	Contig	JADKKJ000000000	undefined	SAMN16426550	Vibo_18-Q3-R45-57_MAXAC.200	Chitinophagaceae bacterium	
+GCA_016720585.1	Contig	JADKKH000000000	undefined	SAMN16426548	Vibo_18-Q3-R45-57_MAXAC.177	Chitinophagaceae bacterium	
+GCA_016721725.1	Contig	JADKHN000000000	undefined	SAMN16426473	Skiv_18-Q3-R9-52_BAT3C.489	Chitinophagaceae bacterium	
+GCA_016722125.1	Contig	JADKGU000000000	undefined	SAMN16426453	Ribe_18-Q3-R11-54_MAXAC.199	Chitinophagaceae bacterium	
+GCA_016722245.1	Contig	JADKGM000000000	undefined	SAMN16426444	Ribe_18-Q3-R11-54_MAXAC.016	Chitinophagaceae bacterium	
+GCA_016722395.1	Contig	JADKJD000000000	undefined	SAMN16426515	Skiv_18-Q3-R9-52_MAXAC.329	Chitinophagaceae bacterium	
+GCA_016722465.1	Contig	JADKJC000000000	undefined	SAMN16426514	Skiv_18-Q3-R9-52_MAXAC.311	Chitinophagaceae bacterium	
+GCA_016719815.1	Contig	JADJYK000000000	undefined	SAMN16426227	Lyne_18-Q3-R50-59_BATAC.274	Chitinophagaceae bacterium	
+GCA_016719995.1	Contig	JADJXX000000000	undefined	SAMN16426214	Lyne_18-Q3-R50-59_BAT3C.266	Chitinophagaceae bacterium	
+GCA_016720195.1	Contig	JADKLC000000000	undefined	SAMN16426569	Viby_18-Q3-R106-67_MAXAC.156	Chitinophagaceae bacterium	
+GCA_016720155.1	Contig	JADKLA000000000	undefined	SAMN16426567	Viby_18-Q3-R106-67_MAXAC.144	Chitinophagaceae bacterium	
+GCA_016719015.1	Contig	JADKAZ000000000	undefined	SAMN16426298	Mari_18-Q3-R65-66_MAXAC.024	Chitinophagaceae bacterium	
+GCA_016719165.1	Contig	JADKAJ000000000	undefined	SAMN16426281	Mari_18-Q3-R65-66_BAT3C.296	Chitinophagaceae bacterium	
+GCA_016718105.1	Contig	JADKEG000000000	undefined	SAMN16426384	OdNW_18-Q3-R42-56_MAXAC.195	Chitinophagaceae bacterium	
+GCA_016717985.1	Contig	JADKEQ000000000	undefined	SAMN16426395	Rand_18-Q3-R56-63_BAT3C.301	Chitinophagaceae bacterium	
+GCA_016718745.1	Contig	JADKCR000000000	undefined	SAMN16426343	OdNE_18-Q3-R46-58_MAXAC.077	Chitinophagaceae bacterium	
+GCA_016710745.1	Contig	JADJVB000000000	undefined	SAMN16426126	Hirt_18-Q3-R61-65_MAXAC.324_sub	Chitinophagaceae bacterium	
+GCA_016711005.1	Contig	JADJTU000000000	undefined	SAMN16426092	Hirt_18-Q3-R61-65_BAT3C.594	Chitinophagaceae bacterium	
+GCA_016710935.1	Contig	JADJTY000000000	undefined	SAMN16426096	Hirt_18-Q3-R61-65_BATAC.207	Chitinophagaceae bacterium	
+GCA_016711945.1	Contig	JADJSB000000000	undefined	SAMN16426046	Hade_18-Q3-R52-61_BATAC.34	Chitinophagaceae bacterium	
+GCA_016710395.1	Contig	JADJVY000000000	undefined	SAMN16426152	Hjor_18-Q3-R7-51_MAXAC.114	Chitinophagaceae bacterium	
+GCA_016710165.1	Contig	JADJLJ000000000	undefined	SAMN16425853	EsbE_18-Q3-R3-47_MAXAC.191	Chitinophagaceae bacterium	
+GCA_016709685.1	Contig	JADJMJ000000000	undefined	SAMN16425880	EsbW_18-Q3-R4-48_BATAC.313	Chitinophagaceae bacterium	
+GCA_016708275.1	Contig	JADJFZ000000000	undefined	SAMN16425707	Bjer_18-Q3-R1-45_MAXAC.202	Chitinophagaceae bacterium	
+GCA_016708085.1	Contig	JADJGK000000000	undefined	SAMN16425719	Damh_18-Q3-R51-60_BAT3C.395	Chitinophagaceae bacterium	
+GCA_016708765.1	Contig	JADJFD000000000	undefined	SAMN16425685	Bjer_18-Q3-R1-45_BATAC.444	Chitinophagaceae bacterium	
+GCA_016709045.1	Contig	JADJEP000000000	undefined	SAMN16425669	Bjer_18-Q3-R1-45_BAT3C.2	Chitinophagaceae bacterium	
+GCA_016706495.1	Contig	JADJJP000000000	undefined	SAMN16425805	Ejby_18-Q3-R6-50_MAXAC.157	Chitinophagaceae bacterium	
+GCA_016706785.1	Contig	JADJIX000000000	undefined	SAMN16425787	Ejby_18-Q3-R6-50_BAT3C.370	Chitinophagaceae bacterium	
+GCA_016705765.1	Contig	JADJKV000000000	undefined	SAMN16425839	EsbE_18-Q3-R3-47_MAXAC.055	Chitinophagaceae bacterium	
+GCA_016705635.1	Contig	JADJLF000000000	undefined	SAMN16425849	EsbE_18-Q3-R3-47_MAXAC.166	Chitinophagaceae bacterium	
+GCA_016706245.1	Contig	JADJKA000000000	undefined	SAMN16425817	EsbE_18-Q3-R3-47_BAT3C.162	Chitinophagaceae bacterium	
+GCA_016706055.1	Contig	JADJKL000000000	undefined	SAMN16425829	EsbE_18-Q3-R3-47_BATAC.289	Chitinophagaceae bacterium	
+GCA_016706205.1	Contig	JADJKC000000000	undefined	SAMN16425819	EsbE_18-Q3-R3-47_BAT3C.200	Chitinophagaceae bacterium	
+GCA_016704325.1	Contig	JADJAG000000000	undefined	SAMN16425552	AalW_18-Q3-R10-53_BATAC.339	Chitinophagaceae bacterium	
+GCA_016704945.1	Contig	JADIZF000000000	undefined	SAMN16425523	AalE_18-Q3-R2-46_MAXAC.082	Chitinophagaceae bacterium	
+GCA_016704985.1	Contig	JADIZC000000000	undefined	SAMN16425520	AalE_18-Q3-R2-46_MAXAC.039	Chitinophagaceae bacterium	
+GCA_016703625.1	Contig	JADJBP000000000	undefined	SAMN16425589	Aved_18-Q3-R54-62_BAT3C.258_sub	Chitinophagaceae bacterium	
+GCA_016703775.1	Contig	JADJBJ000000000	undefined	SAMN16425581	AalW_18-Q3-R10-53_MAXAC.364	Chitinophagaceae bacterium	
+GCA_016702745.1	Contig	JADJDJ000000000	undefined	SAMN16425637	Aved_18-Q3-R54-62_MAXAC.105	Chitinophagaceae bacterium	
+GCA_016699815.1	Complete genome	undefined	1	SAMN16426388	Rand_18-Q3-R56-63_BAT3C.147_cln	Chitinophagaceae bacterium	
+GCA_016706035.1	Contig	JADJKJ000000000	undefined	SAMN16425827	EsbE_18-Q3-R3-47_BATAC.228	Chloracidobacterium sp.	
+GCA_016706275.1	Contig	JADJJY000000000	undefined	SAMN16425815	EsbE_18-Q3-R3-47_BAT3C.144	Chloracidobacterium sp.	
+GCA_016711345.1	Contig	JADJTD000000000	undefined	SAMN16426074	Hade_18-Q3-R52-61_MAXAC.360	Chloracidobacterium sp.	
+GCA_016719125.1	Contig	JADKAU000000000	undefined	SAMN16426293	Mari_18-Q3-R65-66_BATAC.326	Chloracidobacterium sp.	
+GCA_016720705.1	Contig	JADKKB000000000	undefined	SAMN16426542	Vibo_18-Q3-R45-57_MAXAC.065	Chloracidobacterium sp.	
+GCA_016721095.1	Contig	JADKIT000000000	undefined	SAMN16426505	Skiv_18-Q3-R9-52_MAXAC.113	Chloracidobacterium sp.	
+GCA_016714265.1	Contig	JADJNJ000000000	undefined	SAMN16425906	EsbW_18-Q3-R4-48_MAXAC.080	Chloracidobacterium sp.	
+GCA_016712045.1	Contig	JADJRV000000000	undefined	SAMN16426040	Hade_18-Q3-R52-61_BATAC.229	Chloracidobacterium sp.	
+GCA_016716365.1	Contig	JADJWM000000000	undefined	SAMN16426167	Kalu_18-Q3-R12-55_BAT3C.268	Chloracidobacterium sp.	
+GCA_016716305.1	Contig	JADJWP000000000	undefined	SAMN16426170	Kalu_18-Q3-R12-55_BAT3C.355	Chloracidobacterium sp.	
+GCA_016715795.1	Contig	JADJXP000000000	undefined	SAMN16426201	Kalu_18-Q3-R12-55_MAXAC.141_sub	Chloracidobacterium sp.	
+GCA_016722625.1	Contig	JADKIV000000000	undefined	SAMN16426507	Skiv_18-Q3-R9-52_MAXAC.146	Chlorobi bacterium	
+GCA_016710285.1	Contig	JADJXR000000000	undefined	SAMN16426203	Kalu_18-Q3-R12-55_MAXAC.169	Chlorobi bacterium	
+GCA_016700335.1	Complete genome	undefined	1	SAMN16426450	Ribe_18-Q3-R11-54_MAXAC.096_cln	Chlorobi bacterium	
+GCA_016703445.1	Contig	JADJCB000000000	undefined	SAMN16425602	Aved_18-Q3-R54-62_BATAC.192	Chloroflexi bacterium	
+GCA_016711405.1	Contig	JADJSZ000000000	undefined	SAMN16426070	Hade_18-Q3-R52-61_MAXAC.236_sub	Chloroflexi bacterium	
+GCA_016707865.1	Contig	JADJGX000000000	undefined	SAMN16425733	Damh_18-Q3-R51-60_MAXAC.008	Chloroflexi bacterium	
+GCA_016705235.1	Contig	JADIYP000000000	undefined	SAMN16425507	AalE_18-Q3-R2-46_BATAC.251	Chloroflexi bacterium	
+GCA_016720015.1	Contig	JADJYB000000000	undefined	SAMN16426218	Lyne_18-Q3-R50-59_BAT3C.496	Chloroflexi bacterium	
+GCA_016716065.1	Contig	JADJXA000000000	undefined	SAMN16426181	Kalu_18-Q3-R12-55_BATAC.47	Chloroflexi bacterium	
+GCA_016716525.1	Contig	JADJWE000000000	undefined	SAMN16426158	Kalu_18-Q3-R12-55_BAT3C.186	Chloroflexi bacterium	
+GCA_016716885.1	Contig	JADJUV000000000	undefined	SAMN16426120	Hirt_18-Q3-R61-65_MAXAC.142	Chloroflexi bacterium	
+GCA_016717205.1	Contig	JADKGC000000000	undefined	SAMN16426433	Ribe_18-Q3-R11-54_BATAC.253	Chloroflexi bacterium	
+GCA_016712885.1	Contig	JADJQF000000000	undefined	SAMN16425994	Fred_18-Q3-R57-64_MAXAC.112	Chloroflexi bacterium	
+GCA_016713355.1	Contig	JADJPI000000000	undefined	SAMN16425968	Fred_18-Q3-R57-64_BATAC.369	Chloroflexi bacterium	
+GCA_016713325.1	Contig	JADJPJ000000000	undefined	SAMN16425970	Fred_18-Q3-R57-64_BATAC.421	Chloroflexi bacterium	
+GCA_016713795.1	Contig	JADJOL000000000	undefined	SAMN16425945	Fred_18-Q3-R57-64_BAT3C.529_sub	Chloroflexi bacterium	
+GCA_016714645.1	Contig	JADKCI000000000	undefined	SAMN16426334	OdNE_18-Q3-R46-58_MAXAC.011	Chromatiaceae bacterium	
+GCA_016713575.1	Contig	JADJOW000000000	undefined	SAMN16425956	Fred_18-Q3-R57-64_BATAC.223	Comamonadaceae bacterium	
+GCA_016719055.1	Contig	JADKAW000000000	undefined	SAMN16426295	Mari_18-Q3-R65-66_BATAC.397	Comamonadaceae bacterium	
+GCA_016705605.1	Contig	JADIXY000000000	undefined	SAMN16425490	AalE_18-Q3-R2-46_BAT3C.151	Comamonadaceae bacterium	
+GCA_016707245.1	Contig	JADJIE000000000	undefined	SAMN16425767	Ega_18-Q3-R5-49_MAXAC.022	Comamonadaceae bacterium	
+GCA_016709115.1	Contig	JADJEM000000000	undefined	SAMN16425666	Bjer_18-Q3-R1-45_BAT3C.132	Comamonadaceae bacterium	
+GCA_016708185.1	Contig	JADJGH000000000	undefined	SAMN16425715	Damh_18-Q3-R51-60_BAT3C.25	Comamonadaceae bacterium	
+GCA_016711745.1	Contig	JADJSM000000000	undefined	SAMN16426057	Hade_18-Q3-R52-61_MAXAC.026	Comamonadaceae bacterium	
+GCA_016704085.1	Contig	JADJAV000000000	undefined	SAMN16425567	AalW_18-Q3-R10-53_MAXAC.039	Comamonadaceae bacterium	
+GCA_016703905.1	Contig	JADJBF000000000	undefined	SAMN16425577	AalW_18-Q3-R10-53_MAXAC.302	Coprothermobacter sp.	
+GCA_016704245.1	Contig	JADJAM000000000	undefined	SAMN16425558	AalW_18-Q3-R10-53_BATAC.5	Crocinitomicaceae bacterium	
+GCA_016709005.1	Contig	JADJEU000000000	undefined	SAMN16425675	Bjer_18-Q3-R1-45_BAT3C.293	Crocinitomicaceae bacterium	
+GCA_016708105.1	Contig	JADJGJ000000000	undefined	SAMN16425717	Damh_18-Q3-R51-60_BAT3C.266	Crocinitomicaceae bacterium	
+GCA_016718305.1	Contig	JADKDW000000000	undefined	SAMN16426374	OdNW_18-Q3-R42-56_BATAC.93	Crocinitomicaceae bacterium	
+GCA_016720025.1	Contig	JADJXZ000000000	undefined	SAMN16426216	Lyne_18-Q3-R50-59_BAT3C.421	Crocinitomicaceae bacterium	
+GCA_016719925.1	Contig	JADJYC000000000	undefined	SAMN16426219	Lyne_18-Q3-R50-59_BAT3C.522	Crocinitomicaceae bacterium	
+GCA_016720225.1	Contig	JADKKY000000000	undefined	SAMN16426565	Viby_18-Q3-R106-67_MAXAC.070	Cytophagaceae bacterium	
+GCA_016718725.1	Contig	JADKCU000000000	undefined	SAMN16426346	OdNE_18-Q3-R46-58_MAXAC.096	Cytophagaceae bacterium	
+GCA_016722655.1	Contig	JADKIR000000000	undefined	SAMN16426503	Skiv_18-Q3-R9-52_MAXAC.090	Cytophagaceae bacterium	
+GCA_016722195.1	Contig	JADKGP000000000	undefined	SAMN16426447	Ribe_18-Q3-R11-54_MAXAC.058	Cytophagaceae bacterium	
+GCA_016708935.1	Contig	JADJEX000000000	undefined	SAMN16425679	Bjer_18-Q3-R1-45_BATAC.113	Cytophagaceae bacterium	
+GCA_016708155.1	Contig	JADJGI000000000	undefined	SAMN16425716	Damh_18-Q3-R51-60_BAT3C.259	Dehalococcoidia bacterium	
+GCA_016710695.1	Contig	JADJUK000000000	undefined	SAMN16426108	Hirt_18-Q3-R61-65_BATAC.715	Dehalococcoidia bacterium	
+GCA_016705355.1	Contig	JADIYK000000000	undefined	SAMN16425502	AalE_18-Q3-R2-46_BAT3C.409	Dehalococcoidia bacterium	
+GCA_016705845.1	Contig	JADJKS000000000	undefined	SAMN16425836	EsbE_18-Q3-R3-47_MAXAC.015	Dehalococcoidia bacterium	
+GCA_016706855.1	Contig	JADJIU000000000	undefined	SAMN16425784	Ejby_18-Q3-R6-50_BAT3C.216	Dehalococcoidia bacterium	
+GCA_016718215.1	Contig	JADKDY000000000	undefined	SAMN16426376	OdNW_18-Q3-R42-56_MAXAC.019	Dehalococcoidia bacterium	
+GCA_016717905.1	Contig	JADKEO000000000	undefined	SAMN16426393	Rand_18-Q3-R56-63_BAT3C.210	Dehalococcoidia bacterium	
+GCA_016719395.1	Contig	JADJZF000000000	undefined	SAMN16426249	Lyne_18-Q3-R50-59_MAXAC.019	Dehalococcoidia bacterium	
+GCA_016704105.1	Contig	JADJAT000000000	undefined	SAMN16425565	AalW_18-Q3-R10-53_MAXAC.018	Dehalococcoidia bacterium	
+GCA_016703535.1	Contig	JADJBV000000000	undefined	SAMN16425596	Aved_18-Q3-R54-62_BAT3C.540	Deltaproteobacteria bacterium	
+GCA_016699445.1	Complete genome	undefined	1	SAMN16425920	EsbW_18-Q3-R4-48_MAXAC.279_cln	Deltaproteobacteria bacterium	
+GCA_016719515.1	Contig	JADJYZ000000000	undefined	SAMN16426243	Lyne_18-Q3-R50-59_MAXAC.002	Deltaproteobacteria bacterium	
+GCA_016713665.1	Contig	JADJOR000000000	undefined	SAMN16425951	Fred_18-Q3-R57-64_BAT3C.701	Deltaproteobacteria bacterium	
+GCA_016713535.1	Contig	JADJOY000000000	undefined	SAMN16425958	Fred_18-Q3-R57-64_BATAC.269	Deltaproteobacteria bacterium	
+GCA_016713425.1	Contig	JADJPE000000000	undefined	SAMN16425964	Fred_18-Q3-R57-64_BATAC.308	Deltaproteobacteria bacterium	
+GCA_016712475.1	Contig	JADJRA000000000	undefined	SAMN16426016	Fred_18-Q3-R57-64_MAXAC.359	Deltaproteobacteria bacterium	
+GCA_016717595.1	Contig	JADKFE000000000	undefined	SAMN16426409	Rand_18-Q3-R56-63_MAXAC.001	Deltaproteobacteria bacterium	
+GCA_016715675.1	Contig	JADJZP000000000	undefined	SAMN16426259	Lyne_18-Q3-R50-59_MAXAC.106_sub	Deltaproteobacteria bacterium	
+GCA_016715415.1	Contig	JADKAD000000000	undefined	SAMN16426274	Lyne_18-Q3-R50-59_MAXAC.349	Deltaproteobacteria bacterium	
+GCA_016706815.1	Contig	JADJIW000000000	undefined	SAMN16425786	Ejby_18-Q3-R6-50_BAT3C.362	Deltaproteobacteria bacterium	
+GCA_016704445.1	Contig	JADJAE000000000	undefined	SAMN16425550	AalW_18-Q3-R10-53_BATAC.29	Deltaproteobacteria bacterium	
+GCA_016708475.1	Contig	JADJFQ000000000	undefined	SAMN16425698	Bjer_18-Q3-R1-45_MAXAC.089	Deltaproteobacteria bacterium	
+GCA_016709225.1	Contig	JADJEE000000000	undefined	SAMN16425658	Aved_18-Q3-R54-62_MAXAC.397_sub	Deltaproteobacteria bacterium	
+GCA_016713105.1	Contig	JADJPS000000000	undefined	SAMN16425979	Fred_18-Q3-R57-64_BATAC.601	Devosia sp.	
+GCA_016712865.1	Contig	JADJQH000000000	undefined	SAMN16425996	Fred_18-Q3-R57-64_MAXAC.209	Dokdonella sp.	
+GCA_016705335.1	Contig	JADIYN000000000	undefined	SAMN16425505	AalE_18-Q3-R2-46_BATAC.180	Draconibacterium sp.	
+GCA_016706945.1	Contig	JADJIN000000000	undefined	SAMN16425777	Ega_18-Q3-R5-49_MAXAC.199	Elusimicrobia bacterium	
+GCA_016706425.1	Contig	JADJJR000000000	undefined	SAMN16425807	Ejby_18-Q3-R6-50_MAXAC.192	Elusimicrobia bacterium	
+GCA_016707615.1	Contig	JADJHG000000000	undefined	SAMN16425742	Damh_18-Q3-R51-60_MAXAC.210	Elusimicrobia bacterium	
+GCA_016709555.1	Contig	JADJMP000000000	undefined	SAMN16425886	EsbW_18-Q3-R4-48_BATAC.445	Elusimicrobia bacterium	
+GCA_016711425.1	Contig	JADJTB000000000	undefined	SAMN16426072	Hade_18-Q3-R52-61_MAXAC.319	Elusimicrobia bacterium	
+GCA_016712845.1	Contig	JADJQJ000000000	undefined	SAMN16425998	Fred_18-Q3-R57-64_MAXAC.222	Elusimicrobia bacterium	
+GCA_016714745.1	Contig	JADKCG000000000	undefined	SAMN16426332	OdNE_18-Q3-R46-58_BATAC.493	Elusimicrobia bacterium	
+GCA_016715575.1	Contig	JADJZV000000000	undefined	SAMN16426265	Lyne_18-Q3-R50-59_MAXAC.254	Elusimicrobia bacterium	
+GCA_016715645.1	Contig	JADJZR000000000	undefined	SAMN16426261	Lyne_18-Q3-R50-59_MAXAC.215	Elusimicrobia bacterium	
+GCA_016717495.1	Contig	JADKFN000000000	undefined	SAMN16426418	Rand_18-Q3-R56-63_MAXAC.175	Elusimicrobia bacterium	
+GCA_016716755.1	Contig	JADJUZ000000000	undefined	SAMN16426124	Hirt_18-Q3-R61-65_MAXAC.245	Elusimicrobia bacterium	
+GCA_016722605.1	Contig	JADKJA000000000	undefined	SAMN16426512	Skiv_18-Q3-R9-52_MAXAC.277	Elusimicrobia bacterium	
+GCA_016722575.1	Contig	JADKIY000000000	undefined	SAMN16426510	Skiv_18-Q3-R9-52_MAXAC.212	Elusimicrobia bacterium	
+GCA_016722185.1	Contig	JADKGS000000000	undefined	SAMN16426451	Ribe_18-Q3-R11-54_MAXAC.186	Elusimicrobia bacterium	
+GCA_016721625.1	Contig	JADKHR000000000	undefined	SAMN16426477	Skiv_18-Q3-R9-52_BATAC.164	Elusimicrobia bacterium	
+GCA_016720205.1	Contig	JADKLB000000000	undefined	SAMN16426568	Viby_18-Q3-R106-67_MAXAC.151	Elusimicrobia bacterium	
+GCA_016718955.1	Contig	JADKBI000000000	undefined	SAMN16426307	Mari_18-Q3-R65-66_MAXAC.209	Elusimicrobia bacterium	
+GCA_016702405.1	Contig	JADJDY000000000	undefined	SAMN16425652	Aved_18-Q3-R54-62_MAXAC.321	Elusimicrobia bacterium	
+GCA_016718115.1	Contig	JADKEE000000000	undefined	SAMN16426382	OdNW_18-Q3-R42-56_MAXAC.143	Fibrobacteres bacterium	
+GCA_016715065.1	Contig	JADKBN000000000	undefined	SAMN16426313	OdNE_18-Q3-R46-58_BAT3C.189	Fibrobacteres bacterium	
+GCA_016699655.1	Complete genome	undefined	1	SAMN16425993	Fred_18-Q3-R57-64_MAXAC.109_cln	Fibrobacteres bacterium	
+GCA_016712035.1	Contig	JADJRT000000000	undefined	SAMN16426038	Hade_18-Q3-R52-61_BATAC.180	Flammeovirgaceae bacterium	
+GCA_016709845.1	Contig	JADJMA000000000	undefined	SAMN16425871	EsbW_18-Q3-R4-48_BAT3C.7	Flammeovirgaceae bacterium	
+GCA_016710685.1	Contig	JADJVC000000000	undefined	SAMN16426128	Hirt_18-Q3-R61-65_MAXAC.366	Flavobacteriales bacterium	
+GCA_016710015.1	Contig	JADJLR000000000	undefined	SAMN16425861	EsbW_18-Q3-R4-48_BAT3C.247	Flavobacteriales bacterium	
+GCA_016710965.1	Contig	JADJTW000000000	undefined	SAMN16426094	Hirt_18-Q3-R61-65_BATAC.102	Flavobacteriales bacterium	
+GCA_016710705.1	Contig	JADJUI000000000	undefined	SAMN16426106	Hirt_18-Q3-R61-65_BATAC.519	Flavobacteriales bacterium	
+GCA_016708985.1	Contig	JADJER000000000	undefined	SAMN16425672	Bjer_18-Q3-R1-45_BAT3C.224	Flavobacteriales bacterium	
+GCA_016708425.1	Contig	JADJFW000000000	undefined	SAMN16425704	Bjer_18-Q3-R1-45_MAXAC.115	Flavobacteriales bacterium	
+GCA_016708235.1	Contig	JADJGD000000000	undefined	SAMN16425711	Bjer_18-Q3-R1-45_MAXAC.229	Flavobacteriales bacterium	
+GCA_016708225.1	Contig	JADJGG000000000	undefined	SAMN16425714	Damh_18-Q3-R51-60_BAT3C.248	Flavobacteriales bacterium	
+GCA_016707465.1	Contig	JADJHO000000000	undefined	SAMN16425751	Ega_18-Q3-R5-49_BAT3C.230	Flavobacteriales bacterium	
+GCA_016707385.1	Contig	JADJHT000000000	undefined	SAMN16425756	Ega_18-Q3-R5-49_BATAC.220	Flavobacteriales bacterium	
+GCA_016707365.1	Contig	JADJHV000000000	undefined	SAMN16425758	Ega_18-Q3-R5-49_BATAC.280	Flavobacteriales bacterium	
+GCA_016706435.1	Contig	JADJJQ000000000	undefined	SAMN16425806	Ejby_18-Q3-R6-50_MAXAC.161	Flavobacteriales bacterium	
+GCA_016706735.1	Contig	JADJJC000000000	undefined	SAMN16425792	Ejby_18-Q3-R6-50_BATAC.215_sub	Flavobacteriales bacterium	
+GCA_016705805.1	Contig	JADJKY000000000	undefined	SAMN16425842	EsbE_18-Q3-R3-47_MAXAC.074	Flavobacteriales bacterium	
+GCA_016705955.1	Contig	JADJKO000000000	undefined	SAMN16425832	EsbE_18-Q3-R3-47_BATAC.451	Flavobacteriales bacterium	
+GCA_016706145.1	Contig	JADJKF000000000	undefined	SAMN16425823	EsbE_18-Q3-R3-47_BAT3C.309	Flavobacteriales bacterium	
+GCA_016705675.1	Contig	JADJLC000000000	undefined	SAMN16425846	EsbE_18-Q3-R3-47_MAXAC.140	Flavobacteriales bacterium	
+GCA_016705545.1	Contig	JADIYA000000000	undefined	SAMN16425492	AalE_18-Q3-R2-46_BAT3C.189	Flavobacteriales bacterium	
+GCA_016705095.1	Contig	JADIYX000000000	undefined	SAMN16425515	AalE_18-Q3-R2-46_BATAC.604	Flavobacteriales bacterium	
+GCA_016704485.1	Contig	JADJAA000000000	undefined	SAMN16425546	AalW_18-Q3-R10-53_BATAC.16	Flavobacteriales bacterium	
+GCA_016704785.1	Contig	JADIZL000000000	undefined	SAMN16425529	AalE_18-Q3-R2-46_MAXAC.235	Flavobacteriales bacterium	
+GCA_016712025.1	Contig	JADJRW000000000	undefined	SAMN16426041	Hade_18-Q3-R52-61_BATAC.255	Flavobacteriales bacterium	
+GCA_016712535.1	Contig	JADJQW000000000	undefined	SAMN16426012	Fred_18-Q3-R57-64_MAXAC.344	Flavobacteriales bacterium	
+GCA_016713875.1	Contig	JADJOI000000000	undefined	SAMN16425938	Fred_18-Q3-R57-64_BAT3C.401	Flavobacteriales bacterium	
+GCA_016713865.1	Contig	JADJOG000000000	undefined	SAMN16425936	Fred_18-Q3-R57-64_BAT3C.352	Flavobacteriales bacterium	
+GCA_016714845.1	Contig	JADKCB000000000	undefined	SAMN16426327	OdNE_18-Q3-R46-58_BATAC.288	Flavobacteriales bacterium	
+GCA_016715385.1	Contig	JADKAB000000000	undefined	SAMN16426272	Lyne_18-Q3-R50-59_MAXAC.330	Flavobacteriales bacterium	
+GCA_016715895.1	Contig	JADJXH000000000	undefined	SAMN16426191	Kalu_18-Q3-R12-55_MAXAC.077	Flavobacteriales bacterium	
+GCA_016715995.1	Contig	JADJXF000000000	undefined	SAMN16426188	Kalu_18-Q3-R12-55_MAXAC.064	Flavobacteriales bacterium	
+GCA_016716825.1	Contig	JADJUY000000000	undefined	SAMN16426123	Hirt_18-Q3-R61-65_MAXAC.232	Flavobacteriales bacterium	
+GCA_016716865.1	Contig	JADJUU000000000	undefined	SAMN16426119	Hirt_18-Q3-R61-65_MAXAC.133	Flavobacteriales bacterium	
+GCA_016717225.1	Contig	JADKGB000000000	undefined	SAMN16426432	Ribe_18-Q3-R11-54_BAT3C.87	Flavobacteriales bacterium	
+GCA_016716605.1	Contig	JADJWA000000000	undefined	SAMN16426154	Kalu_18-Q3-R12-55_BAT3C.130	Flavobacteriales bacterium	
+GCA_016717445.1	Contig	JADKFQ000000000	undefined	SAMN16426421	Rand_18-Q3-R56-63_MAXAC.211	Flavobacteriales bacterium	
+GCA_016717305.1	Contig	JADKFY000000000	undefined	SAMN16426429	Ribe_18-Q3-R11-54_BAT3C.418	Flavobacteriales bacterium	
+GCA_016717735.1	Contig	JADKEX000000000	undefined	SAMN16426402	Rand_18-Q3-R56-63_BATAC.229	Flavobacteriales bacterium	
+GCA_016717915.1	Contig	JADKET000000000	undefined	SAMN16426398	Rand_18-Q3-R56-63_BAT3C.48	Flavobacteriales bacterium	
+GCA_016718925.1	Contig	JADKBF000000000	undefined	SAMN16426304	Mari_18-Q3-R65-66_MAXAC.089_sub	Flavobacteriales bacterium	
+GCA_016718655.1	Contig	JADKCV000000000	undefined	SAMN16426347	OdNE_18-Q3-R46-58_MAXAC.100_sub	Flavobacteriales bacterium	
+GCA_016718415.1	Contig	JADKDH000000000	undefined	SAMN16426359	OdNW_18-Q3-R42-56_BAT3C.379	Flavobacteriales bacterium	
+GCA_016718615.1	Contig	JADKDA000000000	undefined	SAMN16426352	OdNW_18-Q3-R42-56_BAT3C.137	Flavobacteriales bacterium	
+GCA_016718545.1	Contig	JADKDC000000000	undefined	SAMN16426354	OdNW_18-Q3-R42-56_BAT3C.192	Flavobacteriales bacterium	
+GCA_016720105.1	Contig	JADJXU000000000	undefined	SAMN16426210	Lyne_18-Q3-R50-59_BAT3C.189	Flavobacteriales bacterium	
+GCA_016719255.1	Contig	JADKAI000000000	undefined	SAMN16426280	Mari_18-Q3-R65-66_BAT3C.227	Flavobacteriales bacterium	
+GCA_016719225.1	Contig	JADKAN000000000	undefined	SAMN16426286	Mari_18-Q3-R65-66_BAT3C.397	Flavobacteriales bacterium	
+GCA_016722445.1	Contig	JADKIZ000000000	undefined	SAMN16426511	Skiv_18-Q3-R9-52_MAXAC.254	Flavobacteriales bacterium	
+GCA_016721825.1	Contig	JADKHI000000000	undefined	SAMN16426468	Skiv_18-Q3-R9-52_BAT3C.268	Flavobacteriales bacterium	
+GCA_016721685.1	Contig	JADKHP000000000	undefined	SAMN16426475	Skiv_18-Q3-R9-52_BAT3C.511	Flavobacteriales bacterium	
+GCA_016721005.1	Contig	JADKJM000000000	undefined	SAMN16426525	Vibo_18-Q3-R45-57_BATAC.153	Flavobacteriales bacterium	
+GCA_016700415.1	Complete genome	undefined	1	SAMN16426537	Vibo_18-Q3-R45-57_BATAC.458_cln	Flavobacteriales bacterium	
+GCA_016702315.1	Contig	JADJEC000000000	undefined	SAMN16425656	Aved_18-Q3-R54-62_MAXAC.390	Flavobacteriales bacterium	
+GCA_016702475.1	Contig	JADJDX000000000	undefined	SAMN16425651	Aved_18-Q3-R54-62_MAXAC.302	Flavobacteriales bacterium	
+GCA_016702645.1	Contig	JADJDP000000000	undefined	SAMN16425643	Aved_18-Q3-R54-62_MAXAC.228_sub	Flavobacteriales bacterium	
+GCA_016703005.1	Contig	JADJCX000000000	undefined	SAMN16425625	Aved_18-Q3-R54-62_BATAC.823_sub	Flavobacteriales bacterium	
+GCA_016703105.1	Contig	JADJCS000000000	undefined	SAMN16425620	Aved_18-Q3-R54-62_BATAC.626	Flavobacteriales bacterium	
+GCA_016704195.1	Contig	JADJAP000000000	undefined	SAMN16425561	AalW_18-Q3-R10-53_BATAC.822	Flavobacteriales bacterium	
+GCA_016704175.1	Contig	JADJAQ000000000	undefined	SAMN16425562	AalW_18-Q3-R10-53_BATAC.872	Flavobacteriales bacterium	
+GCA_016703685.1	Contig	JADJBO000000000	undefined	SAMN16425586	AalW_18-Q3-R10-53_MAXAC.410	Flavobacteriales bacterium	
+GCA_016699575.1	Complete genome	undefined	1	SAMN16425927	Fred_18-Q3-R57-64_BAT3C.208	Flavobacteriales bacterium	
+GCA_016721735.1	Contig	JADKHM000000000	undefined	SAMN16426472	Skiv_18-Q3-R9-52_BAT3C.440	Flavobacterium sp.	
+GCA_016718345.1	Contig	JADKDN000000000	undefined	SAMN16426365	OdNW_18-Q3-R42-56_BATAC.385	Flavobacterium sp.	
+GCA_016714905.1	Contig	JADKBW000000000	undefined	SAMN16426322	OdNE_18-Q3-R46-58_BATAC.16	Flavobacterium sp.	
+GCA_016703985.1	Contig	JADJAZ000000000	undefined	SAMN16425571	AalW_18-Q3-R10-53_MAXAC.084	Gammaproteobacteria bacterium	
+GCA_016716075.1	Contig	JADJXB000000000	undefined	SAMN16426182	Kalu_18-Q3-R12-55_BATAC.81	Gammaproteobacteria bacterium	
+GCA_016716465.1	Contig	JADJWH000000000	undefined	SAMN16426162	Kalu_18-Q3-R12-55_BAT3C.208	Gammaproteobacteria bacterium	
+GCA_016712635.1	Contig	JADJQS000000000	undefined	SAMN16426007	Fred_18-Q3-R57-64_MAXAC.292	Gammaproteobacteria bacterium	
+GCA_016712905.1	Contig	JADJQE000000000	undefined	SAMN16425992	Fred_18-Q3-R57-64_MAXAC.073	Gammaproteobacteria bacterium	
+GCA_016718385.1	Contig	JADKDK000000000	undefined	SAMN16426362	OdNW_18-Q3-R42-56_BATAC.277	Gammaproteobacteria bacterium	
+GCA_016718945.1	Contig	JADKBG000000000	undefined	SAMN16426305	Mari_18-Q3-R65-66_MAXAC.093	Gammaproteobacteria bacterium	
+GCA_016717785.1	Contig	JADKEY000000000	undefined	SAMN16426403	Rand_18-Q3-R56-63_BATAC.255	Gammaproteobacteria bacterium	
+GCA_016705225.1	Contig	JADIYQ000000000	undefined	SAMN16425508	AalE_18-Q3-R2-46_BATAC.258	Gammaproteobacteria bacterium	
+GCA_016705365.1	Contig	JADIYI000000000	undefined	SAMN16425500	AalE_18-Q3-R2-46_BAT3C.320	Gammaproteobacteria bacterium	
+GCA_016706085.1	Contig	JADJKI000000000	undefined	SAMN16425826	EsbE_18-Q3-R3-47_BATAC.204	Gammaproteobacteria bacterium	
+GCA_016707425.1	Contig	JADJHU000000000	undefined	SAMN16425757	Ega_18-Q3-R5-49_BATAC.239	Gammaproteobacteria bacterium	
+GCA_016707795.1	Contig	JADJGY000000000	undefined	SAMN16425734	Damh_18-Q3-R51-60_MAXAC.071	Gammaproteobacteria bacterium	
+GCA_016708925.1	Contig	JADJET000000000	undefined	SAMN16425674	Bjer_18-Q3-R1-45_BAT3C.258	Gammaproteobacteria bacterium	
+GCA_016711975.1	Contig	JADJRX000000000	undefined	SAMN16426042	Hade_18-Q3-R52-61_BATAC.282	Gammaproteobacteria bacterium	
+GCA_016709565.1	Contig	JADJMN000000000	undefined	SAMN16425884	EsbW_18-Q3-R4-48_BATAC.420	Gammaproteobacteria bacterium	
+GCA_016720905.1	Contig	JADKJT000000000	undefined	SAMN16426532	Vibo_18-Q3-R45-57_BATAC.273	Gemmatimonadaceae bacterium	
+GCA_016720805.1	Contig	JADKJZ000000000	undefined	SAMN16426540	Vibo_18-Q3-R45-57_BATAC.481	Gemmatimonadetes bacterium	
+GCA_016721935.1	Contig	JADKHD000000000	undefined	SAMN16426462	Skiv_18-Q3-R9-52_BAT3C.167	Gemmatimonadetes bacterium	
+GCA_016717965.1	Contig	JADKEP000000000	undefined	SAMN16426394	Rand_18-Q3-R56-63_BAT3C.236	Gemmatimonadetes bacterium	
+GCA_016719105.1	Contig	JADKAQ000000000	undefined	SAMN16426289	Mari_18-Q3-R65-66_BATAC.295	Gemmatimonadetes bacterium	
+GCA_016713015.1	Contig	JADJPX000000000	undefined	SAMN16425984	Fred_18-Q3-R57-64_BATAC.76	Gemmatimonadetes bacterium	
+GCA_016712265.1	Contig	JADJRJ000000000	undefined	SAMN16426027	Fred_18-Q3-R57-64_MAXAC.423	Gemmatimonadetes bacterium	
+GCA_016713785.1	Contig	JADJOM000000000	undefined	SAMN16425946	Fred_18-Q3-R57-64_BAT3C.6	Gemmatimonadetes bacterium	
+GCA_016714015.1	Contig	JADJNZ000000000	undefined	SAMN16425929	Fred_18-Q3-R57-64_BAT3C.243	Gemmatimonadetes bacterium	
+GCA_016713435.1	Contig	JADJPD000000000	undefined	SAMN16425963	Fred_18-Q3-R57-64_BATAC.299	Gemmatimonadetes bacterium	
+GCA_016714295.1	Contig	JADJNK000000000	undefined	SAMN16425907	EsbW_18-Q3-R4-48_MAXAC.084	Gemmatimonadetes bacterium	
+GCA_016716895.1	Contig	JADJUT000000000	undefined	SAMN16426118	Hirt_18-Q3-R61-65_MAXAC.111	Gemmatimonadetes bacterium	
+GCA_016717475.1	Contig	JADKFK000000000	undefined	SAMN16426415	Rand_18-Q3-R56-63_MAXAC.104	Gemmatimonadetes bacterium	
+GCA_016715665.1	Contig	JADJZO000000000	undefined	SAMN16426258	Lyne_18-Q3-R50-59_MAXAC.102	Gemmatimonadetes bacterium	
+GCA_016709265.1	Contig	JADJNL000000000	undefined	SAMN16425908	EsbW_18-Q3-R4-48_MAXAC.089	Gemmatimonadetes bacterium	
+GCA_016709975.1	Contig	JADJLS000000000	undefined	SAMN16425862	EsbW_18-Q3-R4-48_BAT3C.251	Gemmatimonadetes bacterium	
+GCA_016705815.1	Contig	JADJKZ000000000	undefined	SAMN16425843	EsbE_18-Q3-R3-47_MAXAC.085	Gemmatimonadetes bacterium	
+GCA_016706765.1	Contig	JADJIZ000000000	undefined	SAMN16425789	Ejby_18-Q3-R6-50_BAT3C.80	Gemmatimonadetes bacterium	
+GCA_016705425.1	Contig	JADIYG000000000	undefined	SAMN16425498	AalE_18-Q3-R2-46_BAT3C.235	Gemmatimonadetes bacterium	
+GCA_016704625.1	Contig	JADIZT000000000	undefined	SAMN16425538	AalW_18-Q3-R10-53_BAT3C.461	Gemmatimonadetes bacterium	
+GCA_016704795.1	Contig	JADIZK000000000	undefined	SAMN16425528	AalE_18-Q3-R2-46_MAXAC.133	Gemmatimonadetes bacterium	
+GCA_016704275.1	Contig	JADJAK000000000	undefined	SAMN16425556	AalW_18-Q3-R10-53_BATAC.41	Gemmatimonadetes bacterium	
+GCA_016704465.1	Contig	JADJAD000000000	undefined	SAMN16425549	AalW_18-Q3-R10-53_BATAC.281	Gemmatimonadetes bacterium	
+GCA_016702955.1	Contig	JADJCY000000000	undefined	SAMN16425626	Aved_18-Q3-R54-62_BATAC.843	Gemmatimonadetes bacterium	
+GCA_016702715.1	Contig	JADJDL000000000	undefined	SAMN16425639	Aved_18-Q3-R54-62_MAXAC.126	Gemmatimonadetes bacterium	
+GCA_016720395.1	Contig	JADKKR000000000	undefined	SAMN16426558	Viby_18-Q3-R106-67_BAT3C.94	Geobacteraceae bacterium	
+GCA_016716085.1	Contig	JADJWY000000000	undefined	SAMN16426179	Kalu_18-Q3-R12-55_BATAC.288	Hahellaceae bacterium	
+GCA_016704305.1	Contig	JADJAL000000000	undefined	SAMN16425557	AalW_18-Q3-R10-53_BATAC.498	Haliea sp.	
+GCA_016703175.1	Contig	JADJCN000000000	undefined	SAMN16425615	Aved_18-Q3-R54-62_BATAC.558	Haliea sp.	
+GCA_016709065.1	Contig	JADJEN000000000	undefined	SAMN16425667	Bjer_18-Q3-R1-45_BAT3C.170	Haliscomenobacter sp.	
+GCA_016707205.1	Contig	JADJHZ000000000	undefined	SAMN16425762	Ega_18-Q3-R5-49_BATAC.545	Haliscomenobacter sp.	
+GCA_016715565.1	Contig	JADJZS000000000	undefined	SAMN16426262	Lyne_18-Q3-R50-59_MAXAC.221	Haliscomenobacter sp.	
+GCA_016715005.1	Contig	JADKBQ000000000	undefined	SAMN16426316	OdNE_18-Q3-R46-58_BAT3C.223	Haliscomenobacter sp.	
+GCA_016713275.1	Contig	JADJPL000000000	undefined	SAMN16425972	Fred_18-Q3-R57-64_BATAC.439	Haliscomenobacter sp.	
+GCA_016718685.1	Contig	JADKCX000000000	undefined	SAMN16426349	OdNE_18-Q3-R46-58_MAXAC.223	Haliscomenobacter sp.	
+GCA_016715205.1	Contig	JADKBC000000000	undefined	SAMN16426301	Mari_18-Q3-R65-66_MAXAC.049	Holophaga sp.	
+GCA_016714685.1	Contig	JADKCH000000000	undefined	SAMN16426333	OdNE_18-Q3-R46-58_MAXAC.008	Holophagaceae bacterium	
+GCA_016714485.1	Contig	JADKDS000000000	undefined	SAMN16426370	OdNW_18-Q3-R42-56_BATAC.478	Holophagaceae bacterium	
+GCA_016720465.1	Contig	JADKKO000000000	undefined	SAMN16426555	Viby_18-Q3-R106-67_BAT3C.260	Holophagaceae bacterium	
+GCA_016721195.1	Contig	JADKIO000000000	undefined	SAMN16426500	Skiv_18-Q3-R9-52_MAXAC.067	Holophagaceae bacterium	
+GCA_016722505.1	Contig	JADKJH000000000	undefined	SAMN16426520	Vibo_18-Q3-R45-57_BAT3C.161	Holophagaceae bacterium	
+GCA_016710635.1	Contig	JADJVL000000000	undefined	SAMN16426138	Hjor_18-Q3-R7-51_BATAC.136	Holophagaceae bacterium	
+GCA_016705945.1	Contig	JADJKR000000000	undefined	SAMN16425835	EsbE_18-Q3-R3-47_MAXAC.007	Holophagaceae bacterium	
+GCA_016705025.1	Contig	JADIYZ000000000	undefined	SAMN16425517	AalE_18-Q3-R2-46_MAXAC.019	Holophagales bacterium	
+GCA_016722225.1	Contig	JADKGR000000000	undefined	SAMN16426449	Ribe_18-Q3-R11-54_MAXAC.077	Holophagales bacterium	
+GCA_016719485.1	Contig	JADJZB000000000	undefined	SAMN16426245	Lyne_18-Q3-R50-59_MAXAC.015	Holophagales bacterium	
+GCA_016714815.1	Contig	JADKBZ000000000	undefined	SAMN16426325	OdNE_18-Q3-R46-58_BATAC.193	Holophagales bacterium	
+GCA_016716705.1	Contig	JADJVF000000000	undefined	SAMN16426132	Hjor_18-Q3-R7-51_BAT3C.239	Holophagales bacterium	
+GCA_016699405.1	Complete genome	undefined	1	SAMN16425868	EsbW_18-Q3-R4-48_BAT3C.4_cln	Holophagales bacterium	
+GCA_016703155.1	Contig	JADJCP000000000	undefined	SAMN16425617	Aved_18-Q3-R54-62_BATAC.570	Hydrogenophilales bacterium	
+GCA_016719465.1	Contig	JADJYY000000000	undefined	SAMN16426242	Lyne_18-Q3-R50-59_BATAC.79	Hydrogenophilales bacterium	
+GCA_016716745.1	Contig	JADJVD000000000	undefined	SAMN16426130	Hjor_18-Q3-R7-51_BAT3C.155	Hyphomicrobiales bacterium	
+GCA_016713235.1	Contig	JADJPN000000000	undefined	SAMN16425974	Fred_18-Q3-R57-64_BATAC.466	Hyphomicrobiales bacterium	
+GCA_016710435.1	Contig	JADJVV000000000	undefined	SAMN16426148	Hjor_18-Q3-R7-51_MAXAC.078	Hyphomicrobiales bacterium	
+GCA_016716675.1	Contig	JADJVG000000000	undefined	SAMN16426133	Hjor_18-Q3-R7-51_BAT3C.262	Hyphomicrobium sp.	
+GCA_016714495.1	Contig	JADKDU000000000	undefined	SAMN16426372	OdNW_18-Q3-R42-56_BATAC.488	Hyphomonadaceae bacterium	
+GCA_016721465.1	Contig	JADKIA000000000	undefined	SAMN16426486	Skiv_18-Q3-R9-52_BATAC.318	Ideonella sp.	
+GCA_016720945.1	Contig	JADKJQ000000000	undefined	SAMN16426529	Vibo_18-Q3-R45-57_BATAC.215	Ideonella sp.	
+GCA_016702655.1	Contig	JADJDO000000000	undefined	SAMN16425642	Aved_18-Q3-R54-62_MAXAC.186	Ideonella sp.	
+GCA_016702515.1	Contig	JADJDW000000000	undefined	SAMN16425650	Aved_18-Q3-R54-62_MAXAC.297	Ignavibacteria bacterium	
+GCA_016703055.1	Contig	JADJCW000000000	undefined	SAMN16425624	Aved_18-Q3-R54-62_BATAC.785	Ignavibacteria bacterium	
+GCA_016702925.1	Contig	JADJDB000000000	undefined	SAMN16425629	Aved_18-Q3-R54-62_MAXAC.030	Ignavibacteria bacterium	
+GCA_016704225.1	Contig	JADJAO000000000	undefined	SAMN16425560	AalW_18-Q3-R10-53_BATAC.706	Ignavibacteria bacterium	
+GCA_016720835.1	Contig	JADKJW000000000	undefined	SAMN16426536	Vibo_18-Q3-R45-57_BATAC.435	Ignavibacteria bacterium	
+GCA_016721345.1	Contig	JADKII000000000	undefined	SAMN16426494	Skiv_18-Q3-R9-52_MAXAC.018	Ignavibacteria bacterium	
+GCA_016722455.1	Contig	JADKJJ000000000	undefined	SAMN16426522	Vibo_18-Q3-R45-57_BAT3C.26	Ignavibacteria bacterium	
+GCA_016719565.1	Contig	JADJYU000000000	undefined	SAMN16426238	Lyne_18-Q3-R50-59_BATAC.576	Ignavibacteria bacterium	
+GCA_016720145.1	Contig	JADJXV000000000	undefined	SAMN16426211	Lyne_18-Q3-R50-59_BAT3C.229	Ignavibacteria bacterium	
+GCA_016719845.1	Contig	JADJYI000000000	undefined	SAMN16426225	Lyne_18-Q3-R50-59_BATAC.229	Ignavibacteria bacterium	
+GCA_016718975.1	Contig	JADKBA000000000	undefined	SAMN16426299	Mari_18-Q3-R65-66_MAXAC.025	Ignavibacteria bacterium	
+GCA_016713455.1	Contig	JADJPC000000000	undefined	SAMN16425962	Fred_18-Q3-R57-64_BATAC.298	Ignavibacteria bacterium	
+GCA_016717015.1	Contig	JADJUL000000000	undefined	SAMN16426109	Hirt_18-Q3-R61-65_BATAC.72	Ignavibacteria bacterium	
+GCA_016716125.1	Contig	JADJWZ000000000	undefined	SAMN16426180	Kalu_18-Q3-R12-55_BATAC.336	Ignavibacteria bacterium	
+GCA_016709315.1	Contig	JADJMZ000000000	undefined	SAMN16425896	EsbW_18-Q3-R4-48_MAXAC.017	Ignavibacteria bacterium	
+GCA_016711675.1	Contig	JADJSN000000000	undefined	SAMN16426058	Hade_18-Q3-R52-61_MAXAC.028	Ignavibacteria bacterium	
+GCA_016710985.1	Contig	JADJTX000000000	undefined	SAMN16426095	Hirt_18-Q3-R61-65_BATAC.172	Ignavibacteria bacterium	
+GCA_016706965.1	Contig	JADJIM000000000	undefined	SAMN16425775	Ega_18-Q3-R5-49_MAXAC.109	Ignavibacteria bacterium	
+GCA_016707005.1	Contig	JADJIQ000000000	undefined	SAMN16425780	Ejby_18-Q3-R6-50_BAT3C.119	Ignavibacteria bacterium	
+GCA_016707395.1	Contig	JADJHS000000000	undefined	SAMN16425755	Ega_18-Q3-R5-49_BATAC.213	Ignavibacteria bacterium	
+GCA_016707915.1	Contig	JADJGS000000000	undefined	SAMN16425728	Damh_18-Q3-R51-60_BATAC.300	Ignavibacteria bacterium	
+GCA_016707835.1	Contig	JADJHA000000000	undefined	SAMN16425736	Damh_18-Q3-R51-60_MAXAC.102	Ignavibacteria bacterium	
+GCA_016708405.1	Contig	JADJFS000000000	undefined	SAMN16425700	Bjer_18-Q3-R1-45_MAXAC.094	Ignavibacteria bacterium	
+GCA_016704805.1	Contig	JADIZM000000000	undefined	SAMN16425530	AalW_18-Q3-R10-53_BAT3C.147	Ignavibacteria bacterium	
+GCA_016704345.1	Contig	JADJAH000000000	undefined	SAMN16425553	AalW_18-Q3-R10-53_BATAC.340	Ignavibacteria bacterium	
+GCA_016705185.1	Contig	JADIYS000000000	undefined	SAMN16425510	AalE_18-Q3-R2-46_BATAC.321	Ignavibacteria bacterium	
+GCA_016708125.1	Contig	JADJGF000000000	undefined	SAMN16425713	Bjer_18-Q3-R1-45_MAXAC.250	Ignavibacteriae bacterium	
+GCA_016707525.1	Contig	JADJHP000000000	undefined	SAMN16425752	Ega_18-Q3-R5-49_BATAC.118	Ignavibacteriae bacterium	
+GCA_016716225.1	Contig	JADJWT000000000	undefined	SAMN16426174	Kalu_18-Q3-R12-55_BAT3C.58	Ignavibacteriae bacterium	
+GCA_016713565.1	Contig	JADJOX000000000	undefined	SAMN16425957	Fred_18-Q3-R57-64_BATAC.232	Ignavibacteriae bacterium	
+GCA_016714125.1	Contig	JADJNX000000000	undefined	SAMN16425926	Fred_18-Q3-R57-64_BAT3C.169	Ignavibacteriales bacterium	
+GCA_016715695.1	Contig	JADJZQ000000000	undefined	SAMN16426260	Lyne_18-Q3-R50-59_MAXAC.197	Ignavibacteriales bacterium	
+GCA_016707585.1	Contig	JADJHL000000000	undefined	SAMN16425748	Ega_18-Q3-R5-49_BAT3C.193	Ignavibacteriales bacterium	
+GCA_016707115.1	Contig	JADJIH000000000	undefined	SAMN16425770	Ega_18-Q3-R5-49_MAXAC.056	Ignavibacteriales bacterium	
+GCA_016707285.1	Contig	JADJIA000000000	undefined	SAMN16425763	Ega_18-Q3-R5-49_BATAC.76	Ignavibacteriales bacterium	
+GCA_016709155.1	Contig	JADJEI000000000	undefined	SAMN16425662	Aved_18-Q3-R54-62_MAXAC.426	Ignavibacteriales bacterium	
+GCA_016709765.1	Contig	JADJMD000000000	undefined	SAMN16425874	EsbW_18-Q3-R4-48_BATAC.168	Ignavibacteriales bacterium	
+GCA_016710175.1	Contig	JADJLK000000000	undefined	SAMN16425854	EsbE_18-Q3-R3-47_MAXAC.197	Ignavibacteriales bacterium	
+GCA_016703385.1	Contig	JADJCD000000000	undefined	SAMN16425604	Aved_18-Q3-R54-62_BATAC.249	Ignavibacteriales bacterium	
+GCA_016700155.1	Complete genome	undefined	1	SAMN16426198	Kalu_18-Q3-R12-55_MAXAC.127v2	Ignavibacteriales bacterium	
+GCA_016702615.1	Contig	JADJDR000000000	undefined	SAMN16425645	Aved_18-Q3-R54-62_MAXAC.248_sub	Kineosporiaceae bacterium	
+GCA_016709945.1	Contig	JADJLV000000000	undefined	SAMN16425865	EsbW_18-Q3-R4-48_BAT3C.288	Kineosporiaceae bacterium	
+GCA_016713225.1	Contig	JADJPO000000000	undefined	SAMN16425975	Fred_18-Q3-R57-64_BATAC.480	Kineosporiaceae bacterium	
+GCA_016722075.1	Contig	JADKGW000000000	undefined	SAMN16426455	Ribe_18-Q3-R11-54_MAXAC.235	Kouleothrix sp.	
+GCA_016717335.1	Contig	JADKFS000000000	undefined	SAMN16426423	Ribe_18-Q3-R11-54_BAT3C.183	Kouleothrix sp.	
+GCA_016703885.1	Contig	JADJBD000000000	undefined	SAMN16425575	AalW_18-Q3-R10-53_MAXAC.200	Leptospiraceae bacterium	
+GCA_016711485.1	Contig	JADJSX000000000	undefined	SAMN16426068	Hade_18-Q3-R52-61_MAXAC.192	Leptospiraceae bacterium	
+GCA_016708435.1	Contig	JADJFV000000000	undefined	SAMN16425703	Bjer_18-Q3-R1-45_MAXAC.114	Leptospiraceae bacterium	
+GCA_016720625.1	Contig	JADKKG000000000	undefined	SAMN16426547	Vibo_18-Q3-R45-57_MAXAC.094	Leptospiraceae bacterium	
+GCA_016718635.1	Contig	JADKCW000000000	undefined	SAMN16426348	OdNE_18-Q3-R46-58_MAXAC.176	Leptospiraceae bacterium	
+GCA_016719605.1	Contig	JADJYW000000000	undefined	SAMN16426240	Lyne_18-Q3-R50-59_BATAC.66	Lewinellaceae bacterium	
+GCA_016712415.1	Contig	JADJRC000000000	undefined	SAMN16426018	Fred_18-Q3-R57-64_MAXAC.370	Lewinellaceae bacterium	
+GCA_016713985.1	Contig	JADJOD000000000	undefined	SAMN16425933	Fred_18-Q3-R57-64_BAT3C.308	Lewinellaceae bacterium	
+GCA_016716135.1	Contig	JADJWX000000000	undefined	SAMN16426178	Kalu_18-Q3-R12-55_BATAC.22	Lewinellaceae bacterium	
+GCA_016708875.1	Contig	JADJFA000000000	undefined	SAMN16425682	Bjer_18-Q3-R1-45_BATAC.327	Lewinellaceae bacterium	
+GCA_016711435.1	Contig	JADJSY000000000	undefined	SAMN16426069	Hade_18-Q3-R52-61_MAXAC.228	Lewinellaceae bacterium	
+GCA_016710765.1	Contig	JADJUJ000000000	undefined	SAMN16426107	Hirt_18-Q3-R61-65_BATAC.551	Lewinellaceae bacterium	
+GCA_016699325.1	Chromosome	undefined	1	SAMN16425822	EsbE_18-Q3-R3-47_BAT3C.270	Methanolinea sp.	
+GCA_016706325.1	Contig	JADJJX000000000	undefined	SAMN16425814	EsbE_18-Q3-R3-47_BAT3C.140	Methanothrix sp.	
+GCA_016715325.1	Contig	JADKAL000000000	undefined	SAMN16426284	Mari_18-Q3-R65-66_BAT3C.366	Methylococcaceae bacterium	
+GCA_016717875.1	Contig	JADKER000000000	undefined	SAMN16426396	Rand_18-Q3-R56-63_BAT3C.326	Micavibrio sp.	
+GCA_016710185.1	Contig	JADJLI000000000	undefined	SAMN16425852	EsbE_18-Q3-R3-47_MAXAC.188	Micavibrio sp.	
+GCA_016719135.1	Contig	JADKAV000000000	undefined	SAMN16426294	Mari_18-Q3-R65-66_BATAC.348	Micrococcales bacterium	
+GCA_016703125.1	Contig	JADJCR000000000	undefined	SAMN16425619	Aved_18-Q3-R54-62_BATAC.616	Micrococcales bacterium	
+GCA_016716635.1	Contig	JADJVZ000000000	undefined	SAMN16426153	Hjor_18-Q3-R7-51_MAXAC.115	Micropruina sp.	
+GCA_016711105.1	Contig	JADJTO000000000	undefined	SAMN16426085	Hirt_18-Q3-R61-65_BAT3C.320	Micropruina sp.	
+GCA_016711205.1	Contig	JADJTM000000000	undefined	SAMN16426083	Hirt_18-Q3-R61-65_BAT3C.279	Micropruina sp.	
+GCA_016702505.1	Contig	JADJDU000000000	undefined	SAMN16425648	Aved_18-Q3-R54-62_MAXAC.290	Microthrixaceae bacterium	
+GCA_016703035.1	Contig	JADJCT000000000	undefined	SAMN16425621	Aved_18-Q3-R54-62_BATAC.645_sub	Moraxellaceae bacterium	
+GCA_016711955.1	Contig	JADJRZ000000000	undefined	SAMN16426044	Hade_18-Q3-R52-61_BATAC.311	Moraxellaceae bacterium	
+GCA_016706005.1	Contig	JADJKM000000000	undefined	SAMN16425830	EsbE_18-Q3-R3-47_BATAC.309	Moraxellaceae bacterium	
+GCA_016719965.1	Contig	JADJYD000000000	undefined	SAMN16426220	Lyne_18-Q3-R50-59_BAT3C.546	Moraxellaceae bacterium	
+GCA_016721165.1	Contig	JADKJF000000000	undefined	SAMN16426518	Vibo_18-Q3-R45-57_BAT3C.142	Moraxellaceae bacterium	
+GCA_016699535.1	Chromosome	undefined	1	SAMN16425939	Fred_18-Q3-R57-64_BAT3C.417	Myxococcales bacterium	
+GCA_016703425.1	Contig	JADJCA000000000	undefined	SAMN16425601	Aved_18-Q3-R54-62_BATAC.150	Myxococcales bacterium	
+GCA_016720595.1	Contig	JADKKI000000000	undefined	SAMN16426549	Vibo_18-Q3-R45-57_MAXAC.190	Myxococcales bacterium	
+GCA_016720545.1	Contig	JADKKK000000000	undefined	SAMN16426551	Viby_18-Q3-R106-67_BAT3C.149	Myxococcales bacterium	
+GCA_016716835.1	Contig	JADJUW000000000	undefined	SAMN16426121	Hirt_18-Q3-R61-65_MAXAC.229	Myxococcales bacterium	
+GCA_016717005.1	Contig	JADJUF000000000	undefined	SAMN16426103	Hirt_18-Q3-R61-65_BATAC.430	Myxococcales bacterium	
+GCA_016716175.1	Contig	JADJWW000000000	undefined	SAMN16426177	Kalu_18-Q3-R12-55_BATAC.116	Myxococcales bacterium	
+GCA_016712525.1	Contig	JADJQX000000000	undefined	SAMN16426013	Fred_18-Q3-R57-64_MAXAC.347	Myxococcales bacterium	
+GCA_016706225.1	Contig	JADJKB000000000	undefined	SAMN16425818	EsbE_18-Q3-R3-47_BAT3C.181	Myxococcales bacterium	
+GCA_016706545.1	Contig	JADJJK000000000	undefined	SAMN16425800	Ejby_18-Q3-R6-50_BATAC.353	Myxococcales bacterium	
+GCA_016704525.1	Contig	JADIZX000000000	undefined	SAMN16425543	AalW_18-Q3-R10-53_BAT3C.9	Myxococcales bacterium	
+GCA_016709545.1	Contig	JADJMO000000000	undefined	SAMN16425885	EsbW_18-Q3-R4-48_BATAC.438	Myxococcales bacterium	
+GCA_016708565.1	Contig	JADJFN000000000	undefined	SAMN16425695	Bjer_18-Q3-R1-45_MAXAC.048	Myxococcales bacterium	
+GCA_016707895.1	Contig	JADJGV000000000	undefined	SAMN16425731	Damh_18-Q3-R51-60_BATAC.454	Myxococcales bacterium	
+GCA_016712315.1	Contig	JADJRG000000000	undefined	SAMN16426022	Fred_18-Q3-R57-64_MAXAC.384	Nannocystis sp.	
+GCA_016714285.1	Contig	JADJNN000000000	undefined	SAMN16425910	EsbW_18-Q3-R4-48_MAXAC.145	Nannocystis sp.	
+GCA_016717175.1	Contig	JADKFZ000000000	undefined	SAMN16426430	Ribe_18-Q3-R11-54_BAT3C.433	Nannocystis sp.	
+GCA_016699915.1	Complete genome	undefined	1	SAMN16426028	Fred_18-Q3-R57-64_MAXAC.425_cln	Neisseriales bacterium	
+GCA_016710595.1	Contig	JADJVM000000000	undefined	SAMN16426139	Hjor_18-Q3-R7-51_BATAC.166	Niastella sp.	
+GCA_016711325.1	Contig	JADJTH000000000	undefined	SAMN16426078	Hirt_18-Q3-R61-65_BAT3C.167	Nigerium sp.	
+GCA_016716325.1	Contig	JADJWO000000000	undefined	SAMN16426169	Kalu_18-Q3-R12-55_BAT3C.337	Nitrosomonadales bacterium	
+GCA_016714885.1	Contig	JADKBX000000000	undefined	SAMN16426323	OdNE_18-Q3-R46-58_BATAC.187	Nitrosomonadales bacterium	
+GCA_016721605.1	Contig	JADKHS000000000	undefined	SAMN16426478	Skiv_18-Q3-R9-52_BATAC.176	Nitrosomonadales bacterium	
+GCA_016721865.1	Contig	JADKHF000000000	undefined	SAMN16426464	Skiv_18-Q3-R9-52_BAT3C.180	Nitrosomonas sp.	
+GCA_016717525.1	Contig	JADKFI000000000	undefined	SAMN16426413	Rand_18-Q3-R56-63_MAXAC.058	Nitrosomonas sp.	
+GCA_016710135.1	Contig	JADJLM000000000	undefined	SAMN16425856	EsbW_18-Q3-R4-48_BAT3C.13	Nitrosomonas sp.	
+GCA_016707165.1	Contig	JADJIF000000000	undefined	SAMN16425768	Ega_18-Q3-R5-49_MAXAC.038	Nitrosomonas sp.	
+GCA_016708955.1	Contig	JADJES000000000	undefined	SAMN16425673	Bjer_18-Q3-R1-45_BAT3C.235	Nitrosomonas sp.	
+GCA_016705625.1	Contig	JADJLE000000000	undefined	SAMN16425848	EsbE_18-Q3-R3-47_MAXAC.155	Nitrosomonas sp.	
+GCA_016703745.1	Contig	JADJBK000000000	undefined	SAMN16425582	AalW_18-Q3-R10-53_MAXAC.389	Nitrosomonas sp.	
+GCA_016706135.1	Contig	JADJKE000000000	undefined	SAMN16425821	EsbE_18-Q3-R3-47_BAT3C.226	Nitrospira sp.	
+GCA_016709365.1	Contig	JADJMY000000000	undefined	SAMN16425895	EsbW_18-Q3-R4-48_MAXAC.012	Nitrospira sp.	
+GCA_016712165.1	Contig	JADJRP000000000	undefined	SAMN16426034	Hade_18-Q3-R52-61_BAT3C.250	Nitrospira sp.	
+GCA_016711755.1	Contig	JADJSL000000000	undefined	SAMN16426056	Hade_18-Q3-R52-61_MAXAC.023	Nitrospira sp.	
+GCA_016715825.1	Contig	JADJXO000000000	undefined	SAMN16426200	Kalu_18-Q3-R12-55_MAXAC.132v2	Nitrospira sp.	
+GCA_016722055.1	Contig	JADKGV000000000	undefined	SAMN16426454	Ribe_18-Q3-R11-54_MAXAC.200	Nitrospira sp.	
+GCA_016722315.1	Contig	JADKGJ000000000	undefined	SAMN16426441	Ribe_18-Q3-R11-54_BATAC.650	Nitrospira sp.	
+GCA_016719745.1	Contig	JADJYN000000000	undefined	SAMN16426230	Lyne_18-Q3-R50-59_BATAC.375	Nitrospira sp.	
+GCA_016719755.1	Contig	JADJYM000000000	undefined	SAMN16426229	Lyne_18-Q3-R50-59_BATAC.36	Novosphingobium sp.	
+GCA_016702815.1	Contig	JADJDG000000000	undefined	SAMN16425634	Aved_18-Q3-R54-62_MAXAC.082_sub	Novosphingobium sp.	
+GCA_016715815.1	Contig	JADJXN000000000	undefined	SAMN16426199	Kalu_18-Q3-R12-55_MAXAC.131	Oligoflexia bacterium	
+GCA_016715765.1	Contig	JADJZJ000000000	undefined	SAMN16426253	Lyne_18-Q3-R50-59_MAXAC.062	Opitutaceae bacterium	
+GCA_016711225.1	Contig	JADJTK000000000	undefined	SAMN16426081	Hirt_18-Q3-R61-65_BAT3C.235	Opitutaceae bacterium	
+GCA_016703855.1	Contig	JADJBG000000000	undefined	SAMN16425578	AalW_18-Q3-R10-53_MAXAC.327	Ottowia sp.	
+GCA_016703145.1	Contig	JADJCO000000000	undefined	SAMN16425616	Aved_18-Q3-R54-62_BATAC.560	Ottowia sp.	
+GCA_016699835.1	Complete genome	undefined	1	SAMN16426011	Fred_18-Q3-R57-64_MAXAC.330_cln	Phycisphaerales bacterium	
+GCA_016709445.1	Contig	JADJMV000000000	undefined	SAMN16425892	EsbW_18-Q3-R4-48_BATAC.72	Phycisphaerales bacterium	
+GCA_016710275.1	Contig	JADJXS000000000	undefined	SAMN16426206	Kalu_18-Q3-R12-55_MAXAC.193	Phycisphaerales bacterium	
+GCA_016716165.1	Contig	JADJWU000000000	undefined	SAMN16426175	Kalu_18-Q3-R12-55_BAT3C.68	Phycisphaerales bacterium	
+GCA_016716475.1	Contig	JADJWG000000000	undefined	SAMN16426160	Kalu_18-Q3-R12-55_BAT3C.197	Phycisphaerales bacterium	
+GCA_016716585.1	Contig	JADJWB000000000	undefined	SAMN16426155	Kalu_18-Q3-R12-55_BAT3C.140	Phycisphaerales bacterium	
+GCA_016711085.1	Contig	JADJTR000000000	undefined	SAMN16426089	Hirt_18-Q3-R61-65_BAT3C.487	Phyllobacteriaceae bacterium	
+GCA_016706565.1	Contig	JADJJI000000000	undefined	SAMN16425798	Ejby_18-Q3-R6-50_BATAC.337	Piscinibacter sp.	
+GCA_016721365.1	Contig	JADKIG000000000	undefined	SAMN16426492	Skiv_18-Q3-R9-52_BATAC.52	Piscinibacter sp.	
+GCA_016722065.1	Contig	JADKGX000000000	undefined	SAMN16426456	Ribe_18-Q3-R11-54_MAXAC.269	Planctomycetes bacterium	
+GCA_016719295.1	Contig	JADKAF000000000	undefined	SAMN16426276	Lyne_18-Q3-R50-59_MAXAC.409	Planctomycetes bacterium	
+GCA_016716265.1	Contig	JADJWQ000000000	undefined	SAMN16426171	Kalu_18-Q3-R12-55_BAT3C.357	Planctomycetes bacterium	
+GCA_016714045.1	Contig	JADJNY000000000	undefined	SAMN16425928	Fred_18-Q3-R57-64_BAT3C.229	Planctomycetes bacterium	
+GCA_016712285.1	Contig	JADJRK000000000	undefined	SAMN16426029	Fred_18-Q3-R57-64_MAXAC.456	Planctomycetes bacterium	
+GCA_016712275.1	Contig	JADJRI000000000	undefined	SAMN16426025	Fred_18-Q3-R57-64_MAXAC.418	Planctomycetes bacterium	
+GCA_016712565.1	Contig	JADJQU000000000	undefined	SAMN16426009	Fred_18-Q3-R57-64_MAXAC.309	Planctomycetes bacterium	
+GCA_016713175.1	Contig	JADJPQ000000000	undefined	SAMN16425977	Fred_18-Q3-R57-64_BATAC.530	Planctomycetes bacterium	
+GCA_016709875.1	Contig	JADJLZ000000000	undefined	SAMN16425870	EsbW_18-Q3-R4-48_BAT3C.505	Planctomycetes bacterium	
+GCA_016709145.1	Contig	JADJEK000000000	undefined	SAMN16425664	Aved_18-Q3-R54-62_MAXAC.457	Planctomycetes bacterium	
+GCA_016708645.1	Contig	JADJFJ000000000	undefined	SAMN16425691	Bjer_18-Q3-R1-45_MAXAC.012	Polaromonas sp.	
+GCA_016707235.1	Contig	JADJIC000000000	undefined	SAMN16425765	Ega_18-Q3-R5-49_MAXAC.013	Polaromonas sp.	
+GCA_016705065.1	Contig	JADIYY000000000	undefined	SAMN16425516	AalE_18-Q3-R2-46_MAXAC.018	Polaromonas sp.	
+GCA_016720475.1	Contig	JADKKN000000000	undefined	SAMN16426554	Viby_18-Q3-R106-67_BAT3C.243	Polaromonas sp.	
+GCA_016719945.1	Contig	JADJYE000000000	undefined	SAMN16426221	Lyne_18-Q3-R50-59_BAT3C.601	Polyangiaceae bacterium	
+GCA_016715885.1	Contig	JADJXL000000000	undefined	SAMN16426196	Kalu_18-Q3-R12-55_MAXAC.107	Polyangiaceae bacterium	
+GCA_016704335.1	Contig	JADJAJ000000000	undefined	SAMN16425555	AalW_18-Q3-R10-53_BATAC.388	Polyangiaceae bacterium	
+GCA_016712345.1	Contig	JADJRH000000000	undefined	SAMN16426024	Fred_18-Q3-R57-64_MAXAC.407	Polyangiaceae bacterium	
+GCA_016717345.1	Contig	JADKFR000000000	undefined	SAMN16426422	Ribe_18-Q3-R11-54_BAT3C.101	Propionibacteriaceae bacterium	
+GCA_016715185.1	Contig	JADKBH000000000	undefined	SAMN16426306	Mari_18-Q3-R65-66_MAXAC.196	Propionivibrio sp.	
+GCA_016718855.1	Contig	JADKCO000000000	undefined	SAMN16426340	OdNE_18-Q3-R46-58_MAXAC.062_sub	Propionivibrio sp.	
+GCA_016720985.1	Contig	JADKJO000000000	undefined	SAMN16426527	Vibo_18-Q3-R45-57_BATAC.199	Propionivibrio sp.	
+GCA_016721045.1	Contig	JADKJN000000000	undefined	SAMN16426526	Vibo_18-Q3-R45-57_BATAC.19	Propionivibrio sp.	
+GCA_016711395.1	Contig	JADJTA000000000	undefined	SAMN16426071	Hade_18-Q3-R52-61_MAXAC.304	Propionivibrio sp.	
+GCA_016709335.1	Contig	JADJNC000000000	undefined	SAMN16425899	EsbW_18-Q3-R4-48_MAXAC.044	Propionivibrio sp.	
+GCA_016710425.1	Contig	JADJVU000000000	undefined	SAMN16426147	Hjor_18-Q3-R7-51_MAXAC.072	Propionivibrio sp.	
+GCA_016707065.1	Contig	JADJIJ000000000	undefined	SAMN16425772	Ega_18-Q3-R5-49_MAXAC.071	Propionivibrio sp.	
+GCA_016705685.1	Contig	JADJLB000000000	undefined	SAMN16425845	EsbE_18-Q3-R3-47_MAXAC.131	Propionivibrio sp.	
+GCA_016705775.1	Contig	JADJKW000000000	undefined	SAMN16425840	EsbE_18-Q3-R3-47_MAXAC.059	Propionivibrio sp.	
+GCA_016704655.1	Contig	JADIZR000000000	undefined	SAMN16425535	AalW_18-Q3-R10-53_BAT3C.245	Proteobacteria bacterium	
+GCA_016705325.1	Contig	JADIYJ000000000	undefined	SAMN16425501	AalE_18-Q3-R2-46_BAT3C.357	Proteobacteria bacterium	
+GCA_016711215.1	Contig	JADJTL000000000	undefined	SAMN16426082	Hirt_18-Q3-R61-65_BAT3C.274	Proteobacteria bacterium	
+GCA_016708055.1	Contig	JADJGM000000000	undefined	SAMN16425722	Damh_18-Q3-R51-60_BAT3C.98	Proteobacteria bacterium	
+GCA_016720075.1	Contig	JADJXW000000000	undefined	SAMN16426212	Lyne_18-Q3-R50-59_BAT3C.242	Proteobacteria bacterium	
+GCA_016719885.1	Contig	JADJYF000000000	undefined	SAMN16426222	Lyne_18-Q3-R50-59_BAT3C.630	Proteobacteria bacterium	
+GCA_016713725.1	Contig	JADJOO000000000	undefined	SAMN16425948	Fred_18-Q3-R57-64_BAT3C.617	Proteobacteria bacterium	
+GCA_016703495.1	Contig	JADJBZ000000000	undefined	SAMN16425600	Aved_18-Q3-R54-62_BAT3C.95	Proteobacteria bacterium	
+GCA_016703575.1	Contig	JADJBT000000000	undefined	SAMN16425594	Aved_18-Q3-R54-62_BAT3C.448	Proteobacteria bacterium	
+GCA_016703895.1	Contig	JADJBE000000000	undefined	SAMN16425576	AalW_18-Q3-R10-53_MAXAC.296	Proteobacteria bacterium	
+GCA_016702545.1	Contig	JADJDT000000000	undefined	SAMN16425647	Aved_18-Q3-R54-62_MAXAC.289	Proteobacteria bacterium	
+GCA_016713005.1	Contig	JADJPY000000000	undefined	SAMN16425985	Fred_18-Q3-R57-64_BATAC.8	Ramlibacter sp.	
+GCA_016722385.1	Contig	JADKGG000000000	undefined	SAMN16426437	Ribe_18-Q3-R11-54_BATAC.537	Rhodanobacteraceae bacterium	
+GCA_016713135.1	Contig	JADJPR000000000	undefined	SAMN16425978	Fred_18-Q3-R57-64_BATAC.568	Rhodanobacteraceae bacterium	
+GCA_016717705.1	Contig	JADKFD000000000	undefined	SAMN16426408	Rand_18-Q3-R56-63_BATAC.88	Rhodanobacteraceae bacterium	
+GCA_016708465.1	Contig	JADJFT000000000	undefined	SAMN16425701	Bjer_18-Q3-R1-45_MAXAC.099	Rhodanobacteraceae bacterium	
+GCA_016704695.1	Contig	JADIZQ000000000	undefined	SAMN16425534	AalW_18-Q3-R10-53_BAT3C.243	Rhodanobacteraceae bacterium	
+GCA_016704435.1	Contig	JADJAB000000000	undefined	SAMN16425547	AalW_18-Q3-R10-53_BATAC.174	Rhodobacter sp.	
+GCA_016711185.1	Contig	JADJTJ000000000	undefined	SAMN16426080	Hirt_18-Q3-R61-65_BAT3C.204	Rhodobacter sp.	
+GCA_016721965.1	Contig	JADKHB000000000	undefined	SAMN16426460	Skiv_18-Q3-R9-52_BAT3C.148	Rhodocyclaceae bacterium	
+GCA_016721505.1	Contig	JADKHX000000000	undefined	SAMN16426483	Skiv_18-Q3-R9-52_BATAC.289	Rhodocyclaceae bacterium	
+GCA_016719325.1	Contig	JADJZK000000000	undefined	SAMN16426254	Lyne_18-Q3-R50-59_MAXAC.071_sub	Rhodocyclaceae bacterium	
+GCA_016718525.1	Contig	JADKDD000000000	undefined	SAMN16426355	OdNW_18-Q3-R42-56_BAT3C.215	Rhodocyclaceae bacterium	
+GCA_016718245.1	Contig	JADKEC000000000	undefined	SAMN16426380	OdNW_18-Q3-R42-56_MAXAC.118	Rhodocyclaceae bacterium	
+GCA_016714425.1	Contig	JADJNG000000000	undefined	SAMN16425903	EsbW_18-Q3-R4-48_MAXAC.070	Rhodocyclaceae bacterium	
+GCA_016709745.1	Contig	JADJMF000000000	undefined	SAMN16425876	EsbW_18-Q3-R4-48_BATAC.233	Rhodocyclaceae bacterium	
+GCA_016704885.1	Contig	JADIZH000000000	undefined	SAMN16425525	AalE_18-Q3-R2-46_MAXAC.100	Rhodocyclaceae bacterium	
+GCA_016702335.1	Contig	JADJEF000000000	undefined	SAMN16425659	Aved_18-Q3-R54-62_MAXAC.403	Rhodocyclaceae bacterium	
+GCA_016704145.1	Contig	JADJAS000000000	undefined	SAMN16425564	AalW_18-Q3-R10-53_BATAC.909	Rhodocyclaceae bacterium	
+GCA_016703725.1	Contig	JADJBN000000000	undefined	SAMN16425585	AalW_18-Q3-R10-53_MAXAC.406	Rhodocyclaceae bacterium	
+GCA_016703435.1	Contig	JADJCC000000000	undefined	SAMN16425603	Aved_18-Q3-R54-62_BATAC.241	Rhodocyclaceae bacterium	
+GCA_016707985.1	Contig	JADJGO000000000	undefined	SAMN16425724	Damh_18-Q3-R51-60_BATAC.247	Rhodocyclales bacterium	
+GCA_016717825.1	Contig	JADKEU000000000	undefined	SAMN16426399	Rand_18-Q3-R56-63_BAT3C.8	Rhodocyclales bacterium	
+GCA_016718155.1	Contig	JADKEH000000000	undefined	SAMN16426385	Rand_18-Q3-R56-63_BAT3C.105_sub	Rhodoferax sp.	
+GCA_016718405.1	Contig	JADKDJ000000000	undefined	SAMN16426361	OdNW_18-Q3-R42-56_BAT3C.399	Rhodoferax sp.	
+GCA_016719475.1	Contig	JADJZC000000000	undefined	SAMN16426246	Lyne_18-Q3-R50-59_MAXAC.016	Rhodoferax sp.	
+GCA_016720285.1	Contig	JADKKX000000000	undefined	SAMN16426564	Viby_18-Q3-R106-67_MAXAC.046	Rhodoferax sp.	
+GCA_016707075.1	Contig	JADJII000000000	undefined	SAMN16425771	Ega_18-Q3-R5-49_MAXAC.062	Rhodoferax sp.	
+GCA_016708345.1	Contig	JADJFX000000000	undefined	SAMN16425705	Bjer_18-Q3-R1-45_MAXAC.141	Rhodoferax sp.	
+GCA_016708725.1	Contig	JADJFE000000000	undefined	SAMN16425686	Bjer_18-Q3-R1-45_BATAC.458	Rhodoferax sp.	
+GCA_016704915.1	Contig	JADIZE000000000	undefined	SAMN16425522	AalE_18-Q3-R2-46_MAXAC.077_sub	Rhodoferax sp.	
+GCA_016705305.1	Contig	JADIYO000000000	undefined	SAMN16425506	AalE_18-Q3-R2-46_BATAC.194_sub	Rhodoferax sp.	
+GCA_016722635.1	Contig	JADKIX000000000	undefined	SAMN16426509	Skiv_18-Q3-R9-52_MAXAC.177	Rhodospirillaceae bacterium	
+GCA_016712715.1	Contig	JADJQM000000000	undefined	SAMN16426001	Fred_18-Q3-R57-64_MAXAC.274	Rhodospirillaceae bacterium	
+GCA_016712375.1	Contig	JADJRE000000000	undefined	SAMN16426020	Fred_18-Q3-R57-64_MAXAC.378	Rhodospirillales bacterium	
+GCA_016712595.1	Contig	JADJQT000000000	undefined	SAMN16426008	Fred_18-Q3-R57-64_MAXAC.307	Rhodospirillales bacterium	
+GCA_016710335.1	Contig	JADJXQ000000000	undefined	SAMN16426202	Kalu_18-Q3-R12-55_MAXAC.148	Rhodospirillales bacterium	
+GCA_016699855.1	Complete genome	undefined	1	SAMN16426023	Fred_18-Q3-R57-64_MAXAC.396_cln	Rhodospirillales bacterium	
+GCA_016710865.1	Contig	JADJUB000000000	undefined	SAMN16426099	Hirt_18-Q3-R61-65_BATAC.371	Rubrivivax sp.	
+GCA_016708365.1	Contig	JADJFU000000000	undefined	SAMN16425702	Bjer_18-Q3-R1-45_MAXAC.113	Rubrivivax sp.	
+GCA_016707445.1	Contig	JADJHR000000000	undefined	SAMN16425754	Ega_18-Q3-R5-49_BATAC.212	Rubrivivax sp.	
+GCA_016719535.1	Contig	JADJYX000000000	undefined	SAMN16426241	Lyne_18-Q3-R50-59_BATAC.68	Rubrivivax sp.	
+GCA_016706685.1	Contig	JADJJE000000000	undefined	SAMN16425794	Ejby_18-Q3-R6-50_BATAC.260	Sandaracinaceae bacterium	
+GCA_016711615.1	Contig	JADJSQ000000000	undefined	SAMN16426061	Hade_18-Q3-R52-61_MAXAC.060	Sandaracinaceae bacterium	
+GCA_016708135.1	Contig	JADJGN000000000	undefined	SAMN16425723	Damh_18-Q3-R51-60_BATAC.231	Sandaracinaceae bacterium	
+GCA_016714965.1	Contig	JADKBT000000000	undefined	SAMN16426319	OdNE_18-Q3-R46-58_BAT3C.392	Sandaracinaceae bacterium	
+GCA_016712745.1	Contig	JADJQN000000000	undefined	SAMN16426002	Fred_18-Q3-R57-64_MAXAC.276	Sandaracinaceae bacterium	
+GCA_016704065.1	Contig	JADJAW000000000	undefined	SAMN16425568	AalW_18-Q3-R10-53_MAXAC.051	Sandaracinaceae bacterium	
+GCA_016702865.1	Contig	JADJDE000000000	undefined	SAMN16425632	Aved_18-Q3-R54-62_MAXAC.060	Sandaracinaceae bacterium	
+GCA_016702835.1	Contig	JADJDF000000000	undefined	SAMN16425633	Aved_18-Q3-R54-62_MAXAC.067	Saprospiraceae bacterium	
+GCA_016702755.1	Contig	JADJDK000000000	undefined	SAMN16425638	Aved_18-Q3-R54-62_MAXAC.112	Saprospiraceae bacterium	
+GCA_016702565.1	Contig	JADJDS000000000	undefined	SAMN16425646	Aved_18-Q3-R54-62_MAXAC.265	Saprospiraceae bacterium	
+GCA_016704045.1	Contig	JADJAX000000000	undefined	SAMN16425569	AalW_18-Q3-R10-53_MAXAC.054	Saprospiraceae bacterium	
+GCA_016704015.1	Contig	JADJBA000000000	undefined	SAMN16425572	AalW_18-Q3-R10-53_MAXAC.123	Saprospiraceae bacterium	
+GCA_016704395.1	Contig	JADJAF000000000	undefined	SAMN16425551	AalW_18-Q3-R10-53_BATAC.324	Saprospiraceae bacterium	
+GCA_016704165.1	Contig	JADJAR000000000	undefined	SAMN16425563	AalW_18-Q3-R10-53_BATAC.906	Saprospiraceae bacterium	
+GCA_016703485.1	Contig	JADJBY000000000	undefined	SAMN16425599	Aved_18-Q3-R54-62_BAT3C.695	Saprospiraceae bacterium	
+GCA_016703345.1	Contig	JADJCF000000000	undefined	SAMN16425606	Aved_18-Q3-R54-62_BATAC.266	Saprospiraceae bacterium	
+GCA_016702905.1	Contig	JADJDC000000000	undefined	SAMN16425630	Aved_18-Q3-R54-62_MAXAC.055	Saprospiraceae bacterium	
+GCA_016712705.1	Contig	JADJQO000000000	undefined	SAMN16426003	Fred_18-Q3-R57-64_MAXAC.280	Saprospiraceae bacterium	
+GCA_016712925.1	Contig	JADJQD000000000	undefined	SAMN16425991	Fred_18-Q3-R57-64_MAXAC.070	Saprospiraceae bacterium	
+GCA_016713025.1	Contig	JADJPZ000000000	undefined	SAMN16425986	Fred_18-Q3-R57-64_BATAC.80	Saprospiraceae bacterium	
+GCA_016713205.1	Contig	JADJPP000000000	undefined	SAMN16425976	Fred_18-Q3-R57-64_BATAC.512	Saprospiraceae bacterium	
+GCA_016712225.1	Contig	JADJRL000000000	undefined	SAMN16426030	Hade_18-Q3-R52-61_BAT3C.141	Saprospiraceae bacterium	
+GCA_016713905.1	Contig	JADJOE000000000	undefined	SAMN16425934	Fred_18-Q3-R57-64_BAT3C.331	Saprospiraceae bacterium	
+GCA_016714025.1	Contig	JADJOB000000000	undefined	SAMN16425931	Fred_18-Q3-R57-64_BAT3C.3	Saprospiraceae bacterium	
+GCA_016714385.1	Contig	JADKDX000000000	undefined	SAMN16426375	OdNW_18-Q3-R42-56_MAXAC.016	Saprospiraceae bacterium	
+GCA_016714365.1	Contig	JADJNH000000000	undefined	SAMN16425904	EsbW_18-Q3-R4-48_MAXAC.074	Saprospiraceae bacterium	
+GCA_016714315.1	Contig	JADJNI000000000	undefined	SAMN16425905	EsbW_18-Q3-R4-48_MAXAC.076	Saprospiraceae bacterium	
+GCA_016714085.1	Contig	JADJNW000000000	undefined	SAMN16425925	Fred_18-Q3-R57-64_BAT3C.164	Saprospiraceae bacterium	
+GCA_016714175.1	Contig	JADJNR000000000	undefined	SAMN16425915	EsbW_18-Q3-R4-48_MAXAC.238	Saprospiraceae bacterium	
+GCA_016714445.1	Contig	JADJNF000000000	undefined	SAMN16425902	EsbW_18-Q3-R4-48_MAXAC.058_sub	Saprospiraceae bacterium	
+GCA_016714525.1	Contig	JADKDQ000000000	undefined	SAMN16426368	OdNW_18-Q3-R42-56_BATAC.423	Saprospiraceae bacterium	
+GCA_016714585.1	Contig	JADKDP000000000	undefined	SAMN16426367	OdNW_18-Q3-R42-56_BATAC.410	Saprospiraceae bacterium	
+GCA_016714695.1	Contig	JADKCD000000000	undefined	SAMN16426329	OdNE_18-Q3-R46-58_BATAC.381_sub	Saprospiraceae bacterium	
+GCA_016714785.1	Contig	JADKCC000000000	undefined	SAMN16426328	OdNE_18-Q3-R46-58_BATAC.302	Saprospiraceae bacterium	
+GCA_016714765.1	Contig	JADKCF000000000	undefined	SAMN16426331	OdNE_18-Q3-R46-58_BATAC.404	Saprospiraceae bacterium	
+GCA_016715105.1	Contig	JADKBO000000000	undefined	SAMN16426314	OdNE_18-Q3-R46-58_BAT3C.195	Saprospiraceae bacterium	
+GCA_016715025.1	Contig	JADKBP000000000	undefined	SAMN16426315	OdNE_18-Q3-R46-58_BAT3C.201	Saprospiraceae bacterium	
+GCA_016714985.1	Contig	JADKBS000000000	undefined	SAMN16426318	OdNE_18-Q3-R46-58_BAT3C.319	Saprospiraceae bacterium	
+GCA_016714895.1	Contig	JADKBV000000000	undefined	SAMN16426321	OdNE_18-Q3-R46-58_BAT3C.84	Saprospiraceae bacterium	
+GCA_016715165.1	Contig	JADKBD000000000	undefined	SAMN16426302	Mari_18-Q3-R65-66_MAXAC.061	Saprospiraceae bacterium	
+GCA_016715245.1	Contig	JADKAS000000000	undefined	SAMN16426291	Mari_18-Q3-R65-66_BATAC.305	Saprospiraceae bacterium	
+GCA_016715295.1	Contig	JADKAP000000000	undefined	SAMN16426288	Mari_18-Q3-R65-66_BATAC.234_sub	Saprospiraceae bacterium	
+GCA_016715405.1	Contig	JADKAE000000000	undefined	SAMN16426275	Lyne_18-Q3-R50-59_MAXAC.376	Saprospiraceae bacterium	
+GCA_016715785.1	Contig	JADJZI000000000	undefined	SAMN16426252	Lyne_18-Q3-R50-59_MAXAC.052	Saprospiraceae bacterium	
+GCA_016715705.1	Contig	JADJZN000000000	undefined	SAMN16426257	Lyne_18-Q3-R50-59_MAXAC.097	Saprospiraceae bacterium	
+GCA_016715465.1	Contig	JADKAA000000000	undefined	SAMN16426271	Lyne_18-Q3-R50-59_MAXAC.326	Saprospiraceae bacterium	
+GCA_016715985.1	Contig	JADJXD000000000	undefined	SAMN16426184	Kalu_18-Q3-R12-55_MAXAC.032	Saprospiraceae bacterium	
+GCA_016715965.1	Contig	JADJXG000000000	undefined	SAMN16426190	Kalu_18-Q3-R12-55_MAXAC.076	Saprospiraceae bacterium	
+GCA_016717605.1	Contig	JADKFG000000000	undefined	SAMN16426411	Rand_18-Q3-R56-63_MAXAC.049	Saprospiraceae bacterium	
+GCA_016717655.1	Contig	JADKFC000000000	undefined	SAMN16426407	Rand_18-Q3-R56-63_BATAC.6	Saprospiraceae bacterium	
+GCA_016717405.1	Contig	JADKFP000000000	undefined	SAMN16426420	Rand_18-Q3-R56-63_MAXAC.203	Saprospiraceae bacterium	
+GCA_016717265.1	Contig	JADKFX000000000	undefined	SAMN16426428	Ribe_18-Q3-R11-54_BAT3C.388	Saprospiraceae bacterium	
+GCA_016717245.1	Contig	JADKFW000000000	undefined	SAMN16426427	Ribe_18-Q3-R11-54_BAT3C.373	Saprospiraceae bacterium	
+GCA_016717145.1	Contig	JADKGD000000000	undefined	SAMN16426434	Ribe_18-Q3-R11-54_BATAC.261	Saprospiraceae bacterium	
+GCA_016717105.1	Contig	JADKGF000000000	undefined	SAMN16426436	Ribe_18-Q3-R11-54_BATAC.507	Saprospiraceae bacterium	
+GCA_016717085.1	Contig	JADJUM000000000	undefined	SAMN16426111	Hirt_18-Q3-R61-65_MAXAC.013	Saprospiraceae bacterium	
+GCA_016716185.1	Contig	JADJWV000000000	undefined	SAMN16426176	Kalu_18-Q3-R12-55_BAT3C.8	Saprospiraceae bacterium	
+GCA_016716335.1	Contig	JADJWN000000000	undefined	SAMN16426168	Kalu_18-Q3-R12-55_BAT3C.288	Saprospiraceae bacterium	
+GCA_016716665.1	Contig	JADJVH000000000	undefined	SAMN16426134	Hjor_18-Q3-R7-51_BAT3C.56	Saprospiraceae bacterium	
+GCA_016721495.1	Contig	JADKHY000000000	undefined	SAMN16426484	Skiv_18-Q3-R9-52_BATAC.294	Saprospiraceae bacterium	
+GCA_016721645.1	Contig	JADKHT000000000	undefined	SAMN16426479	Skiv_18-Q3-R9-52_BATAC.232	Saprospiraceae bacterium	
+GCA_016721375.1	Contig	JADKIF000000000	undefined	SAMN16426491	Skiv_18-Q3-R9-52_BATAC.484	Saprospiraceae bacterium	
+GCA_016720875.1	Contig	JADKJS000000000	undefined	SAMN16426531	Vibo_18-Q3-R45-57_BATAC.233	Saprospiraceae bacterium	
+GCA_016720695.1	Contig	JADKKD000000000	undefined	SAMN16426544	Vibo_18-Q3-R45-57_MAXAC.073	Saprospiraceae bacterium	
+GCA_016720525.1	Contig	JADKKL000000000	undefined	SAMN16426552	Viby_18-Q3-R106-67_BAT3C.196	Saprospiraceae bacterium	
+GCA_016720635.1	Contig	JADKKF000000000	undefined	SAMN16426546	Vibo_18-Q3-R45-57_MAXAC.086_sub	Saprospiraceae bacterium	
+GCA_016720325.1	Contig	JADKKT000000000	undefined	SAMN16426560	Viby_18-Q3-R106-67_BATAC.284	Saprospiraceae bacterium	
+GCA_016722045.1	Contig	JADKGY000000000	undefined	SAMN16426457	Ribe_18-Q3-R11-54_MAXAC.273	Saprospiraceae bacterium	
+GCA_016721905.1	Contig	JADKHH000000000	undefined	SAMN16426467	Skiv_18-Q3-R9-52_BAT3C.266	Saprospiraceae bacterium	
+GCA_016722155.1	Contig	JADKGQ000000000	undefined	SAMN16426448	Ribe_18-Q3-R11-54_MAXAC.069	Saprospiraceae bacterium	
+GCA_016722285.1	Contig	JADKGI000000000	undefined	SAMN16426440	Ribe_18-Q3-R11-54_BATAC.612	Saprospiraceae bacterium	
+GCA_016722295.1	Contig	JADKGL000000000	undefined	SAMN16426443	Ribe_18-Q3-R11-54_MAXAC.005	Saprospiraceae bacterium	
+GCA_016722265.1	Contig	JADKGO000000000	undefined	SAMN16426446	Ribe_18-Q3-R11-54_MAXAC.036	Saprospiraceae bacterium	
+GCA_016717565.1	Contig	JADKFJ000000000	undefined	SAMN16426414	Rand_18-Q3-R56-63_MAXAC.091	Saprospiraceae bacterium	
+GCA_016717775.1	Contig	JADKEZ000000000	undefined	SAMN16426404	Rand_18-Q3-R56-63_BATAC.260	Saprospiraceae bacterium	
+GCA_016718205.1	Contig	JADKEB000000000	undefined	SAMN16426379	OdNW_18-Q3-R42-56_MAXAC.048	Saprospiraceae bacterium	
+GCA_016718065.1	Contig	JADKEL000000000	undefined	SAMN16426390	Rand_18-Q3-R56-63_BAT3C.184	Saprospiraceae bacterium	
+GCA_016718005.1	Contig	JADKEJ000000000	undefined	SAMN16426387	Rand_18-Q3-R56-63_BAT3C.136	Saprospiraceae bacterium	
+GCA_016718505.1	Contig	JADKDE000000000	undefined	SAMN16426356	OdNW_18-Q3-R42-56_BAT3C.227	Saprospiraceae bacterium	
+GCA_016718465.1	Contig	JADKDG000000000	undefined	SAMN16426358	OdNW_18-Q3-R42-56_BAT3C.339	Saprospiraceae bacterium	
+GCA_016718895.1	Contig	JADKCN000000000	undefined	SAMN16426339	OdNE_18-Q3-R46-58_MAXAC.056	Saprospiraceae bacterium	
+GCA_016719855.1	Contig	JADJYH000000000	undefined	SAMN16426224	Lyne_18-Q3-R50-59_BATAC.195	Saprospiraceae bacterium	
+GCA_016719805.1	Contig	JADJYL000000000	undefined	SAMN16426228	Lyne_18-Q3-R50-59_BATAC.346	Saprospiraceae bacterium	
+GCA_016719615.1	Contig	JADJYQ000000000	undefined	SAMN16426234	Lyne_18-Q3-R50-59_BATAC.473	Saprospiraceae bacterium	
+GCA_016719085.1	Contig	JADKAY000000000	undefined	SAMN16426297	Mari_18-Q3-R65-66_MAXAC.015	Saprospiraceae bacterium	
+GCA_016708675.1	Contig	JADJFF000000000	undefined	SAMN16425687	Bjer_18-Q3-R1-45_BATAC.496	Saprospiraceae bacterium	
+GCA_016707695.1	Contig	JADJHH000000000	undefined	SAMN16425744	Damh_18-Q3-R51-60_MAXAC.246	Saprospiraceae bacterium	
+GCA_016708265.1	Contig	JADJGA000000000	undefined	SAMN16425708	Bjer_18-Q3-R1-45_MAXAC.214	Saprospiraceae bacterium	
+GCA_016707555.1	Contig	JADJHK000000000	undefined	SAMN16425747	Ega_18-Q3-R5-49_BAT3C.165_sub	Saprospiraceae bacterium	
+GCA_016707545.1	Contig	JADJHM000000000	undefined	SAMN16425749	Ega_18-Q3-R5-49_BAT3C.215	Saprospiraceae bacterium	
+GCA_016707665.1	Contig	JADJHI000000000	undefined	SAMN16425745	Ega_18-Q3-R5-49_BAT3C.104	Saprospiraceae bacterium	
+GCA_016707125.1	Contig	JADJIG000000000	undefined	SAMN16425769	Ega_18-Q3-R5-49_MAXAC.048	Saprospiraceae bacterium	
+GCA_016707225.1	Contig	JADJID000000000	undefined	SAMN16425766	Ega_18-Q3-R5-49_MAXAC.016	Saprospiraceae bacterium	
+GCA_016711705.1	Contig	JADJSK000000000	undefined	SAMN16426055	Hade_18-Q3-R52-61_MAXAC.021	Saprospiraceae bacterium	
+GCA_016711515.1	Contig	JADJSU000000000	undefined	SAMN16426065	Hade_18-Q3-R52-61_MAXAC.092	Saprospiraceae bacterium	
+GCA_016711575.1	Contig	JADJSR000000000	undefined	SAMN16426062	Hade_18-Q3-R52-61_MAXAC.064	Saprospiraceae bacterium	
+GCA_016711565.1	Contig	JADJSW000000000	undefined	SAMN16426067	Hade_18-Q3-R52-61_MAXAC.112	Saprospiraceae bacterium	
+GCA_016712145.1	Contig	JADJRO000000000	undefined	SAMN16426033	Hade_18-Q3-R52-61_BAT3C.248	Saprospiraceae bacterium	
+GCA_016712125.1	Contig	JADJRR000000000	undefined	SAMN16426036	Hade_18-Q3-R52-61_BAT3C.470	Saprospiraceae bacterium	
+GCA_016711865.1	Contig	JADJSF000000000	undefined	SAMN16426050	Hade_18-Q3-R52-61_BATAC.500	Saprospiraceae bacterium	
+GCA_016711145.1	Contig	JADJTN000000000	undefined	SAMN16426084	Hirt_18-Q3-R61-65_BAT3C.307	Saprospiraceae bacterium	
+GCA_016711125.1	Contig	JADJTQ000000000	undefined	SAMN16426088	Hirt_18-Q3-R61-65_BAT3C.449	Saprospiraceae bacterium	
+GCA_016711385.1	Contig	JADJTC000000000	undefined	SAMN16426073	Hade_18-Q3-R52-61_MAXAC.344	Saprospiraceae bacterium	
+GCA_016710925.1	Contig	JADJTZ000000000	undefined	SAMN16426097	Hirt_18-Q3-R61-65_BATAC.270	Saprospiraceae bacterium	
+GCA_016710875.1	Contig	JADJUA000000000	undefined	SAMN16426098	Hirt_18-Q3-R61-65_BATAC.343	Saprospiraceae bacterium	
+GCA_016710835.1	Contig	JADJUH000000000	undefined	SAMN16426105	Hirt_18-Q3-R61-65_BATAC.511	Saprospiraceae bacterium	
+GCA_016709375.1	Contig	JADJMX000000000	undefined	SAMN16425894	EsbW_18-Q3-R4-48_MAXAC.007	Saprospiraceae bacterium	
+GCA_016709475.1	Contig	JADJMT000000000	undefined	SAMN16425890	EsbW_18-Q3-R4-48_BATAC.476_sub	Saprospiraceae bacterium	
+GCA_016710115.1	Contig	JADJLN000000000	undefined	SAMN16425857	EsbW_18-Q3-R4-48_BAT3C.148	Saprospiraceae bacterium	
+GCA_016709995.1	Contig	JADJLQ000000000	undefined	SAMN16425860	EsbW_18-Q3-R4-48_BAT3C.222	Saprospiraceae bacterium	
+GCA_016710025.1	Contig	JADJLU000000000	undefined	SAMN16425864	EsbW_18-Q3-R4-48_BAT3C.281	Saprospiraceae bacterium	
+GCA_016710485.1	Contig	JADJVT000000000	undefined	SAMN16426146	Hjor_18-Q3-R7-51_MAXAC.008	Saprospiraceae bacterium	
+GCA_016710265.1	Contig	JADJJL000000000	undefined	SAMN16425801	Ejby_18-Q3-R6-50_BATAC.463	Saprospiraceae bacterium	
+GCA_016710235.1	Contig	JADJLG000000000	undefined	SAMN16425850	EsbE_18-Q3-R3-47_MAXAC.169	Saprospiraceae bacterium	
+GCA_016710625.1	Contig	JADJVK000000000	undefined	SAMN16426137	Hjor_18-Q3-R7-51_BATAC.116	Saprospiraceae bacterium	
+GCA_016710585.1	Contig	JADJVN000000000	undefined	SAMN16426140	Hjor_18-Q3-R7-51_BATAC.198	Saprospiraceae bacterium	
+GCA_016706665.1	Contig	JADJJD000000000	undefined	SAMN16425793	Ejby_18-Q3-R6-50_BATAC.240	Saprospiraceae bacterium	
+GCA_016706925.1	Contig	JADJIR000000000	undefined	SAMN16425781	Ejby_18-Q3-R6-50_BAT3C.142_sub	Saprospiraceae bacterium	
+GCA_016706585.1	Contig	JADJJG000000000	undefined	SAMN16425796	Ejby_18-Q3-R6-50_BATAC.272	Saprospiraceae bacterium	
+GCA_016706465.1	Contig	JADJJO000000000	undefined	SAMN16425804	Ejby_18-Q3-R6-50_MAXAC.047	Saprospiraceae bacterium	
+GCA_016706365.1	Contig	JADJJU000000000	undefined	SAMN16425811	Ejby_18-Q3-R6-50_MAXAC.240	Saprospiraceae bacterium	
+GCA_016705745.1	Contig	JADJKX000000000	undefined	SAMN16425841	EsbE_18-Q3-R3-47_MAXAC.073	Saprospiraceae bacterium	
+GCA_016705665.1	Contig	JADJLD000000000	undefined	SAMN16425847	EsbE_18-Q3-R3-47_MAXAC.154	Saprospiraceae bacterium	
+GCA_016706025.1	Contig	JADJKK000000000	undefined	SAMN16425828	EsbE_18-Q3-R3-47_BATAC.232	Saprospiraceae bacterium	
+GCA_016704955.1	Contig	JADIZD000000000	undefined	SAMN16425521	AalE_18-Q3-R2-46_MAXAC.064	Saprospiraceae bacterium	
+GCA_016705015.1	Contig	JADIZA000000000	undefined	SAMN16425518	AalE_18-Q3-R2-46_MAXAC.020	Saprospiraceae bacterium	
+GCA_016705285.1	Contig	JADIYL000000000	undefined	SAMN16425503	AalE_18-Q3-R2-46_BATAC.147	Saprospiraceae bacterium	
+GCA_016705435.1	Contig	JADIYF000000000	undefined	SAMN16425497	AalE_18-Q3-R2-46_BAT3C.229	Saprospiraceae bacterium	
+GCA_016704575.1	Contig	JADIZY000000000	undefined	SAMN16425544	AalW_18-Q3-R10-53_BATAC.11	Saprospiraceae bacterium	
+GCA_016704595.1	Contig	JADIZW000000000	undefined	SAMN16425542	AalW_18-Q3-R10-53_BAT3C.64	Saprospiraceae bacterium	
+GCA_016705195.1	Contig	JADIYR000000000	undefined	SAMN16425509	AalE_18-Q3-R2-46_BATAC.29	Saprospirales bacterium	
+GCA_016710225.1	Contig	JADJLH000000000	undefined	SAMN16425851	EsbE_18-Q3-R3-47_MAXAC.180	Saprospirales bacterium	
+GCA_016709465.1	Contig	JADJMU000000000	undefined	SAMN16425891	EsbW_18-Q3-R4-48_BATAC.523	Saprospirales bacterium	
+GCA_016711045.1	Contig	JADJTT000000000	undefined	SAMN16426091	Hirt_18-Q3-R61-65_BAT3C.578	Saprospirales bacterium	
+GCA_016711605.1	Contig	JADJSS000000000	undefined	SAMN16426063	Hade_18-Q3-R52-61_MAXAC.079	Saprospirales bacterium	
+GCA_016709195.1	Contig	JADJEJ000000000	undefined	SAMN16425663	Aved_18-Q3-R54-62_MAXAC.439	Saprospirales bacterium	
+GCA_016719895.1	Contig	JADJYG000000000	undefined	SAMN16426223	Lyne_18-Q3-R50-59_BATAC.172	Saprospirales bacterium	
+GCA_016703765.1	Contig	JADJBL000000000	undefined	SAMN16425583	AalW_18-Q3-R10-53_MAXAC.392	Saprospirales bacterium	
+GCA_016702455.1	Contig	JADJEB000000000	undefined	SAMN16425655	Aved_18-Q3-R54-62_MAXAC.386	Saprospirales bacterium	
+GCA_016709515.1	Contig	JADJMQ000000000	undefined	SAMN16425887	EsbW_18-Q3-R4-48_BATAC.453	Simplicispira sp.	
+GCA_016712175.1	Contig	JADJRQ000000000	undefined	SAMN16426035	Hade_18-Q3-R52-61_BAT3C.352	Solirubrobacterales bacterium	
+GCA_016714245.1	Contig	JADJNO000000000	undefined	SAMN16425911	EsbW_18-Q3-R4-48_MAXAC.154	Sphingobacteriaceae bacterium	
+GCA_016715905.1	Contig	JADJXI000000000	undefined	SAMN16426193	Kalu_18-Q3-R12-55_MAXAC.082	Sphingobacteriaceae bacterium	
+GCA_016709575.1	Contig	JADJMM000000000	undefined	SAMN16425883	EsbW_18-Q3-R4-48_BATAC.389	Sphingobacteriaceae bacterium	
+GCA_016704255.1	Contig	JADJAN000000000	undefined	SAMN16425559	AalW_18-Q3-R10-53_BATAC.545	Sphingobacteriaceae bacterium	
+GCA_016705695.1	Contig	JADJLA000000000	undefined	SAMN16425844	EsbE_18-Q3-R3-47_MAXAC.117_sub	Sphingobacteriaceae bacterium	
+GCA_016706405.1	Contig	JADJJT000000000	undefined	SAMN16425810	Ejby_18-Q3-R6-50_MAXAC.201	Sphingobacteriales bacterium	
+GCA_016711295.1	Contig	JADJTE000000000	undefined	SAMN16426075	Hade_18-Q3-R52-61_MAXAC.389	Sphingobacteriales bacterium	
+GCA_016711285.1	Contig	JADJTG000000000	undefined	SAMN16426077	Hirt_18-Q3-R61-65_BAT3C.134	Sphingobacteriales bacterium	
+GCA_016708305.1	Contig	JADJGB000000000	undefined	SAMN16425709	Bjer_18-Q3-R1-45_MAXAC.222	Sphingobacteriales bacterium	
+GCA_016715545.1	Contig	JADJZX000000000	undefined	SAMN16426267	Lyne_18-Q3-R50-59_MAXAC.278	Sphingobacteriales bacterium	
+GCA_016721245.1	Contig	JADKIQ000000000	undefined	SAMN16426502	Skiv_18-Q3-R9-52_MAXAC.081	Sphingobacteriales bacterium	
+GCA_016719635.1	Contig	JADJYT000000000	undefined	SAMN16426237	Lyne_18-Q3-R50-59_BATAC.569	Sphingobacteriales bacterium	
+GCA_016720185.1	Contig	JADKLD000000000	undefined	SAMN16426570	Viby_18-Q3-R106-67_MAXAC.158	Sphingobacteriales bacterium	
+GCA_016718845.1	Contig	JADKCK000000000	undefined	SAMN16426336	OdNE_18-Q3-R46-58_MAXAC.028	Sphingobacteriales bacterium	
+GCA_016699615.1	Chromosome	undefined	1	SAMN16425969	Fred_18-Q3-R57-64_BATAC.414	Sphingobacteriales bacterium	
+GCA_016700115.1	Complete genome	undefined	1	SAMN16426189	Kalu_18-Q3-R12-55_MAXAC.067_cln	Sphingobacteriales bacterium	
+GCA_016702425.1	Contig	JADJDZ000000000	undefined	SAMN16425653	Aved_18-Q3-R54-62_MAXAC.344	Sphingobacteriales bacterium	
+GCA_016703795.1	Contig	JADJBI000000000	undefined	SAMN16425580	AalW_18-Q3-R10-53_MAXAC.353	Sphingobacteriales bacterium	
+GCA_016703235.1	Contig	JADJCL000000000	undefined	SAMN16425613	Aved_18-Q3-R54-62_BATAC.490	Sphingomonadales bacterium	
+GCA_016703395.1	Contig	JADJCE000000000	undefined	SAMN16425605	Aved_18-Q3-R54-62_BATAC.253	Sphingomonadales bacterium	
+GCA_016717925.1	Contig	JADKEN000000000	undefined	SAMN16426392	Rand_18-Q3-R56-63_BAT3C.197	Sphingomonadales bacterium	
+GCA_016720115.1	Contig	JADJXT000000000	undefined	SAMN16426209	Lyne_18-Q3-R50-59_BAT3C.1	Sphingomonadales bacterium	
+GCA_016719185.1	Contig	JADKAT000000000	undefined	SAMN16426292	Mari_18-Q3-R65-66_BATAC.31	Sphingomonadales bacterium	
+GCA_016721485.1	Contig	JADKIB000000000	undefined	SAMN16426487	Skiv_18-Q3-R9-52_BATAC.351	Sphingomonadales bacterium	
+GCA_016721875.1	Contig	JADKHG000000000	undefined	SAMN16426465	Skiv_18-Q3-R9-52_BAT3C.184	Sphingomonadales bacterium	
+GCA_016722365.1	Contig	JADKGH000000000	undefined	SAMN16426439	Ribe_18-Q3-R11-54_BATAC.569	Sphingomonadales bacterium	
+GCA_016716035.1	Contig	JADJXC000000000	undefined	SAMN16426183	Kalu_18-Q3-R12-55_MAXAC.026	Sphingomonadales bacterium	
+GCA_016715255.1	Contig	JADKAR000000000	undefined	SAMN16426290	Mari_18-Q3-R65-66_BATAC.299	Sphingomonadales bacterium	
+GCA_016714795.1	Contig	JADKCA000000000	undefined	SAMN16426326	OdNE_18-Q3-R46-58_BATAC.286	Sphingomonadales bacterium	
+GCA_016712215.1	Contig	JADJRM000000000	undefined	SAMN16426031	Hade_18-Q3-R52-61_BAT3C.208	Sphingomonadales bacterium	
+GCA_016707885.1	Contig	JADJGU000000000	undefined	SAMN16425730	Damh_18-Q3-R51-60_BATAC.316	Sphingomonadales bacterium	
+GCA_016711625.1	Contig	JADJSP000000000	undefined	SAMN16426060	Hade_18-Q3-R52-61_MAXAC.056	Sphingomonadales bacterium	
+GCA_016705885.1	Contig	JADJKQ000000000	undefined	SAMN16425834	EsbE_18-Q3-R3-47_BATAC.463	Sphingomonadales bacterium	
+GCA_016704425.1	Contig	JADJAC000000000	undefined	SAMN16425548	AalW_18-Q3-R10-53_BATAC.245	Sphingomonadales bacterium	
+GCA_016705395.1	Contig	JADIYH000000000	undefined	SAMN16425499	AalE_18-Q3-R2-46_BAT3C.277	Sphingomonadales bacterium	
+GCA_016704835.1	Contig	JADIZJ000000000	undefined	SAMN16425527	AalE_18-Q3-R2-46_MAXAC.104	Sphingopyxis sp.	
+GCA_016716805.1	Contig	JADJUX000000000	undefined	SAMN16426122	Hirt_18-Q3-R61-65_MAXAC.231	Sterolibacteriaceae bacterium	
+GCA_016709795.1	Contig	JADJMB000000000	undefined	SAMN16425872	EsbW_18-Q3-R4-48_BAT3C.93	Sterolibacteriaceae bacterium	
+GCA_016707455.1	Contig	JADJHQ000000000	undefined	SAMN16425753	Ega_18-Q3-R5-49_BATAC.204	Sterolibacteriaceae bacterium	
+GCA_016712795.1	Contig	JADJQI000000000	undefined	SAMN16425997	Fred_18-Q3-R57-64_MAXAC.220	Streptococcus sp.	
+GCA_016712985.1	Contig	JADJQA000000000	undefined	SAMN16425988	Fred_18-Q3-R57-64_BATAC.880	Sulfuritalea sp.	
+GCA_016716965.1	Contig	JADJUP000000000	undefined	SAMN16426114	Hirt_18-Q3-R61-65_MAXAC.059	Sulfuritalea sp.	
+GCA_016719445.1	Contig	JADJZD000000000	undefined	SAMN16426247	Lyne_18-Q3-R50-59_MAXAC.017	Sulfuritalea sp.	
+GCA_016708665.1	Contig	JADJFI000000000	undefined	SAMN16425690	Bjer_18-Q3-R1-45_MAXAC.011	Sulfuritalea sp.	
+GCA_016708585.1	Contig	JADJFK000000000	undefined	SAMN16425692	Bjer_18-Q3-R1-45_MAXAC.014	Sulfuritalea sp.	
+GCA_016710465.1	Contig	JADJVS000000000	undefined	SAMN16426145	Hjor_18-Q3-R7-51_MAXAC.006	Sulfuritalea sp.	
+GCA_016706645.1	Contig	JADJJF000000000	undefined	SAMN16425795	Ejby_18-Q3-R6-50_BATAC.262	Sulfuritalea sp.	
+GCA_016706345.1	Contig	JADJJV000000000	undefined	SAMN16425812	EsbE_18-Q3-R3-47_BAT3C.110	Syntrophaceae bacterium	
+GCA_016714275.1	Contig	JADJNP000000000	undefined	SAMN16425912	EsbW_18-Q3-R4-48_MAXAC.167_sub	Tessaracoccus sp.	
+GCA_016716625.1	Contig	JADJVJ000000000	undefined	SAMN16426136	Hjor_18-Q3-R7-51_BAT3C.94	Tetrasphaera sp.	
+GCA_016710545.1	Contig	JADJVP000000000	undefined	SAMN16426142	Hjor_18-Q3-R7-51_BATAC.29	Tetrasphaera sp.	
+GCA_016702415.1	Contig	JADJEA000000000	undefined	SAMN16425654	Aved_18-Q3-R54-62_MAXAC.378	Tetrasphaera sp.	
+GCA_016703545.1	Contig	JADJBX000000000	undefined	SAMN16425598	Aved_18-Q3-R54-62_BAT3C.689	Thermoflexaceae bacterium	
+GCA_016709105.1	Contig	JADJEL000000000	undefined	SAMN16425665	Bjer_18-Q3-R1-45_BAT3C.1	Thermomonas sp.	
+GCA_016707625.1	Contig	JADJHF000000000	undefined	SAMN16425741	Damh_18-Q3-R51-60_MAXAC.170	Thermomonas sp.	
+GCA_016704755.1	Contig	JADIZN000000000	undefined	SAMN16425531	AalW_18-Q3-R10-53_BAT3C.180	Thermomonas sp.	
+GCA_016705465.1	Contig	JADIYE000000000	undefined	SAMN16425496	AalE_18-Q3-R2-46_BAT3C.214	Thermomonas sp.	
+GCA_016717535.1	Contig	JADKFL000000000	undefined	SAMN16426416	Rand_18-Q3-R56-63_MAXAC.155	Thermomonas sp.	
+GCA_016720345.1	Contig	JADKKV000000000	undefined	SAMN16426562	Viby_18-Q3-R106-67_BATAC.53	Thermomonas sp.	
+GCA_016711335.1	Contig	JADJTF000000000	undefined	SAMN16426076	Hade_18-Q3-R52-61_MAXAC.390	Thiofilum sp.	
+GCA_016718265.1	Contig	JADKDZ000000000	undefined	SAMN16426377	OdNW_18-Q3-R42-56_MAXAC.029	Uliginosibacterium sp.	
+GCA_016719245.1	Contig	JADKAK000000000	undefined	SAMN16426282	Mari_18-Q3-R65-66_BAT3C.310_sub	Uliginosibacterium sp.	
+GCA_016717055.1	Contig	JADJUN000000000	undefined	SAMN16426112	Hirt_18-Q3-R61-65_MAXAC.022	Uliginosibacterium sp.	
+GCA_016712355.1	Contig	JADJRF000000000	undefined	SAMN16426021	Fred_18-Q3-R57-64_MAXAC.379	Vampirovibrionales bacterium	
+GCA_016713835.1	Contig	JADJOK000000000	undefined	SAMN16425943	Fred_18-Q3-R57-64_BAT3C.485	Veillonella sp.	
+GCA_016713365.1	Contig	JADJPG000000000	undefined	SAMN16425966	Fred_18-Q3-R57-64_BATAC.349	Verrucomicrobia bacterium	
+GCA_016716505.1	Contig	JADJWF000000000	undefined	SAMN16426159	Kalu_18-Q3-R12-55_BAT3C.19	Verrucomicrobia bacterium	
+GCA_016721945.1	Contig	JADKHC000000000	undefined	SAMN16426461	Skiv_18-Q3-R9-52_BAT3C.155	Verrucomicrobia bacterium	
+GCA_016713245.1	Contig	JADJPM000000000	undefined	SAMN16425973	Fred_18-Q3-R57-64_BATAC.459	Verrucomicrobiaceae bacterium	
+GCA_016713035.1	Contig	JADJPW000000000	undefined	SAMN16425983	Fred_18-Q3-R57-64_BATAC.716	Verrucomicrobiaceae bacterium	
+GCA_016721845.1	Contig	JADKHK000000000	undefined	SAMN16426470	Skiv_18-Q3-R9-52_BAT3C.331	Xanthomonadales bacterium	
+GCA_016720385.1	Contig	JADKKS000000000	undefined	SAMN16426559	Viby_18-Q3-R106-67_BATAC.169	Xanthomonadales bacterium	
+GCA_016721015.1	Contig	JADKJL000000000	undefined	SAMN16426524	Vibo_18-Q3-R45-57_BAT3C.98	Xanthomonadales bacterium	
+GCA_016718605.1	Contig	JADKCY000000000	undefined	SAMN16426350	OdNE_18-Q3-R46-58_MAXAC.230	Xanthomonadales bacterium	
+GCA_016707485.1	Contig	JADJHN000000000	undefined	SAMN16425750	Ega_18-Q3-R5-49_BAT3C.216	Xanthomonadales bacterium	
+GCA_016707955.1	Contig	JADJGR000000000	undefined	SAMN16425727	Damh_18-Q3-R51-60_BATAC.285	Xanthomonadales bacterium	
+GCA_016708575.1	Contig	JADJFM000000000	undefined	SAMN16425694	Bjer_18-Q3-R1-45_MAXAC.033	Xanthomonadales bacterium	
+GCA_016705085.1	Contig	JADIYU000000000	undefined	SAMN16425512	AalE_18-Q3-R2-46_BATAC.376	Xanthomonadales bacterium	
+GCA_016703225.1	Contig	JADJCM000000000	undefined	SAMN16425614	Aved_18-Q3-R54-62_BATAC.500	Xanthomonadales bacterium	
+GCA_016703645.1	Contig	JADJBR000000000	undefined	SAMN16425591	Aved_18-Q3-R54-62_BAT3C.309	Zoogloea sp.	
+GCA_016720685.1	Contig	JADKKC000000000	undefined	SAMN16426543	Vibo_18-Q3-R45-57_MAXAC.072	Zoogloea sp.	
+GCA_016714095.1	Contig	JADJNV000000000	undefined	SAMN16425924	Fred_18-Q3-R57-64_BAT3C.162	Zoogloea sp.	
+GCA_016699595.1	Complete genome	undefined	1	SAMN16425942	Fred_18-Q3-R57-64_BAT3C.481	bacterium	
+GCA_016699225.1	Complete genome	undefined	1	SAMN16425718	Damh_18-Q3-R51-60_BAT3C.350	bacterium	
+GCA_016699045.1	Complete genome	undefined	1	SAMN16425488	AalE_18-Q3-R2-46_BAT3C.1_cln	bacterium	
+GCA_016699185.1	Complete genome	undefined	1	SAMN16425676	Bjer_18-Q3-R1-45_BAT3C.298	bacterium	
+GCA_016699125.1	Complete genome	undefined	1	SAMN16425588	Aved_18-Q3-R54-62_BAT3C.210	bacterium	
+GCA_016699105.1	Complete genome	undefined	1	SAMN16425587	Aved_18-Q3-R54-62_BAT3C.16_uni	bacterium	
+GCA_016703265.1	Contig	JADJCK000000000	undefined	SAMN16425612	Aved_18-Q3-R54-62_BATAC.392	bacterium	
+GCA_016703065.1	Contig	JADJCU000000000	undefined	SAMN16425622	Aved_18-Q3-R54-62_BATAC.765	bacterium	
+GCA_016702345.1	Contig	JADJEG000000000	undefined	SAMN16425660	Aved_18-Q3-R54-62_MAXAC.406	bacterium	
+GCA_016702305.1	Contig	JADJEH000000000	undefined	SAMN16425661	Aved_18-Q3-R54-62_MAXAC.418	bacterium	
+GCA_016700035.1	Complete genome	undefined	1	SAMN16426186	Kalu_18-Q3-R12-55_MAXAC.052_cln	bacterium	
+GCA_016699995.1	Complete genome	undefined	1	SAMN16426161	Kalu_18-Q3-R12-55_BAT3C.2_fly	bacterium	
+GCA_016712825.1	Contig	JADJQG000000000	undefined	SAMN16425995	Fred_18-Q3-R57-64_MAXAC.148	bacterium	
+GCA_016712675.1	Contig	JADJQR000000000	undefined	SAMN16426006	Fred_18-Q3-R57-64_MAXAC.288	bacterium	
+GCA_016716565.1	Contig	JADJWC000000000	undefined	SAMN16426156	Kalu_18-Q3-R12-55_BAT3C.173	bacterium	
+GCA_016721145.1	Contig	JADKIS000000000	undefined	SAMN16426504	Skiv_18-Q3-R9-52_MAXAC.110	bacterium	
+GCA_016721565.1	Contig	JADKHW000000000	undefined	SAMN16426482	Skiv_18-Q3-R9-52_BATAC.286	bacterium	
+GCA_016718425.1	Contig	JADKDI000000000	undefined	SAMN16426360	OdNW_18-Q3-R42-56_BAT3C.388	bacterium	
+GCA_016719645.1	Contig	JADJYS000000000	undefined	SAMN16426236	Lyne_18-Q3-R50-59_BATAC.526	bacterium	
+GCA_016706575.1	Contig	JADJJJ000000000	undefined	SAMN16425799	Ejby_18-Q3-R6-50_BATAC.338	bacterium	
+GCA_016706845.1	Contig	JADJIV000000000	undefined	SAMN16425785	Ejby_18-Q3-R6-50_BAT3C.246	bacterium	
+GCA_016708315.1	Contig	JADJGC000000000	undefined	SAMN16425710	Bjer_18-Q3-R1-45_MAXAC.225	bacterium	
+GCA_016708495.1	Contig	JADJFR000000000	undefined	SAMN16425699	Bjer_18-Q3-R1-45_MAXAC.090	bacterium	
+GCA_016708025.1	Contig	JADJGQ000000000	undefined	SAMN16425726	Damh_18-Q3-R51-60_BATAC.282	bacterium	
+GCA_016707765.1	Contig	JADJHB000000000	undefined	SAMN16425737	Damh_18-Q3-R51-60_MAXAC.104	bacterium	
+GCA_016709775.1	Contig	JADJME000000000	undefined	SAMN16425875	EsbW_18-Q3-R4-48_BATAC.211	bacterium	
