@@ -1,7 +1,13 @@
-name: bgc_analytics
+name: as_hqmags
 channels:
   - conda-forge
 dependencies:
+  - jupyterlab
+  - jupytext
   - seaborn
   - pandas
   - pysqlite3
+  - r-tidyverse
+  - pip
+  - pip:
+      - azure-cli
