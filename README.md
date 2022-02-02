@@ -1,3 +1,4 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/robertosanchezn/AS_hqMAGs/main)
 # bgcflow_AS_hqMAGs
 This repository contains the code required to reproduce the analysis of BGCs diversity in 1000 MAGs from waste water treatment plant in Denmark. The genomes are publicly available from https://www.ncbi.nlm.nih.gov/bioproject/prjna629478.
 
