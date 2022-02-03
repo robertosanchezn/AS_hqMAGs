@@ -1,9 +1,6 @@
 ```{r}
-suppressPackageStartupMessages({
   library('tidyverse')
-})
 ```
-
 
 
 ```{bash}
@@ -12,17 +9,106 @@ Rscript notebook/bgc_table.R \
   --bigscape_dir ~/bgcflow/data/interim/bigscape/Nitrospira_tree_antismash_6.0.1/ \
   --output tables/Nitrospira_tree_bgcs.csv 
 ```
+
 ```{bash}
 Rscript notebook/mag_table.R \
   --bgcs_table tables/Nitrospira_tree_bgcs.csv \
   --gtdbtk_dir data/ \
   --supplementary_file data/singleton_2021_table3.xlsx \
   --assembly_details data/assembly_details.txt \
-  --output tables/mags_csv 
+  --output tables/mags.csv 
 ```
+
 ```{r}
-read_csv("tables/mags.csv")
+mags <- read_csv("tables/mags.csv", 
+                 col_select = c(1,3), 
+                 col_types = "cc")
+
+nitro_bgcs <- read_csv("tables/Nitrospira_tree_bgcs.csv", 
+                       col_select = c(2,3,4,8,9), 
+                       col_types = "ccccl")
 ```
+
+New classes, and color palette
+
+```{r}
+bigscape_classes <- c("Terpene",
+                      "RiPPs", 
+                      "NRPS",
+                      "PKS-NRP_Hybrids",
+                      "PKSI",
+                      "PKSother", 
+                      "Saccharides",
+                      "Others")                             
+
+my_classes <- c("Terpene", 
+                "RiPP", 
+                "NRPS", 
+                "NRPS-PKS", 
+                "PKS", 
+                "PKS", 
+                "Other", 
+                "Other")
+
+my_colors <- c("#ff8800",
+               "#20c200",
+               "#ff0000",
+               "#dd00ff",
+               "#0d00ff",
+               "#757575")
+```
+
+Zoom (subset) gtdb tree to taxon of interest, here, f__Nitrospiraceae
+
+```{r}
+library(treeio)
+library(ggtree)
+
+gtdb_tree <- read.newick("data/gtdbtk.bac120.classify.tree")
+
+taxon <- "p__Myxococcota"
+
+taxon_node <- gtdb_tree$node.label[str_detect(gtdb_tree$node.label, taxon)]
+
+tree <- tree_subset(gtdb_tree, node = taxon_node, levels_back = 1)
+
+```
+How many genomes in total? How many are MAGs?
+
+```{r}
+length(tree$tip.label)
+
+sum(tree$tip.label %in% mags$genome_id)
+```
+How many families?
+
+```{r}
+family_nodes <- as_tibble(tree) %>%
+  filter(str_detect(label, 'f__')) %>%
+  pull(node)
+
+tip_nodes <- sapply(family_nodes, 
+                     offspring,
+                     .data = tree,
+                     tiponly = TRUE)
+
+names(tip_nodes) <- family_nodes
+
+tibble(family_node = rep(family_nodes, sapply(tip_nodes, length)),
+       node = unlist(tip_nodes, use.names = FALSE)) %>%
+  left_join(as_tibble(tree)[,c("node", "label")], by = c("node")) %>%
+  mutate(genome_id = label, .keep = "unused") %>%
+  left_join(as_tibble(tree)[,c("node", "label")], by = c("family_node" = "node")) %>%
+  mutate(family = str_extract(label, 'f__.*'),
+         family = str_replace(family, '\'|-g.*', ""),
+         .keep = "unused") %>%
+  group_by(family) %>%
+  summarise(n = n(), 
+            n_mags = sum(genome_id %in% mags$genome_id)) %>%
+  arrange(desc(n_mags)) 
+
+```
+
 
 
 
