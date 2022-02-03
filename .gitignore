@@ -1,0 +1,7 @@
+.git/
+*.pyc
+*.cache
+*.ipynb
+*.log
+jupyter_notebook/secret/
+data/
