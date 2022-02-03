@@ -27,6 +27,20 @@ mags <- read_csv("tables/mags.csv",
 nitro_bgcs <- read_csv("tables/Nitrospira_tree_bgcs.csv", 
                        col_select = c(2,3,4,8,9), 
                        col_types = "ccccl")
+
+gtdb_tax_files <- list.files("~/bgcflow/data/interim/gtdb",
+                             pattern = '*json',
+                             full.names = TRUE)
+
+get_taxonomy <- function(file){ jsonlite::fromJSON(file)$gtdb_taxonomy}
+
+gtdb_tax <- lapply(gtdb_tax_files, get_taxonomy)
+
+names(gtdb_tax) <- str_sub(start = 2, end = -6, str_extract(gtdb_tax_files, '/G.*?$'))
+  
+gtdb_tax <- do.call(rbind.data.frame, gtdb_tax) %>%
+  rownames_to_column("genome_id")
+
 ```
 
 New classes, and color palette
@@ -59,6 +73,150 @@ my_colors <- c("#ff8800",
 ```
 
 Zoom (subset) gtdb tree to taxon of interest, here, f__Nitrospiraceae
+
+```{r}
+library(treeio)
+
+gtdb_tree <- read.newick("data/gtdbtk.bac120.classify.tree")
+
+taxon <- "f__Nitrospiraceae"
+
+taxon_node <- gtdb_tree$node.label[str_detect(gtdb_tree$node.label, taxon)]
+
+tree <- tree_subset(gtdb_tree, node = taxon_node, levels_back = 0)
+
+tree$node.label <- str_extract(tree$node.label, '.__.*$')
+```
+
+BGC data for the tree
+
+```{r}
+matrix_ds <- nitro_bgcs %>%
+  filter(genome_id %in% tree$tip.label) %>%
+  mutate(class = factor(class, levels = bigscape_classes), 
+         class = my_classes[as.numeric(class)], 
+         class = factor(class, levels = unique(my_classes))) %>%
+  arrange(class, product) %>%
+  mutate(GCF = factor(GCF, levels = unique(GCF))) %>%
+  arrange(GCF) %>%
+  mutate(string = paste0(GCF, ": ", product), 
+         string = factor(string, levels = unique(string))) %>%
+  select(genome_id, string, class)
+
+matrix_ds <- expand_grid(matrix_ds$string, matrix_ds$genome_id) %>%
+  setNames(c("string", "genome_id")) %>%
+  left_join(matrix_ds, by = c("string", "genome_id"))
+```
+
+Genus and Species annotations for the tree
+
+```{r}
+genera <- as_tibble(tree) %>% 
+  filter(str_detect(label, 'g__')) %>% 
+  pull(label) %>%
+  str_replace('\'', '')
+
+genera_nodes <- as_tibble(tree) %>% 
+  filter(str_detect(label, 'g__')) %>%
+  pull(node)
+
+get_tips <- function(i){
+as_tibble(tree) %>% 
+  filter(isTip(tree, node)) %>% 
+  filter(node %in% offspring(tree, genera_nodes[i])) %>%
+    mutate(genus = genera[i]) %>%
+    select(genus, label)
+}
+
+genera_df <- bind_rows(lapply(1:length(genera), get_tips))
+
+species <- gtdb_tax[gtdb_tax$genome_id %in% tree$tip.label, ]$species
+names(species) <-  gtdb_tax[gtdb_tax$genome_id %in% tree$tip.label, ]$genome_id
+
+species_df <- bind_rows(genome = names(species), species = species) %>%
+  mutate(species = str_extract(species, " .*"))
+
+tips_to_drop <- 
+  gtdb_tree$tip.label[gtdb_tree$tip.label %in% nitro_bgcs$genome_id == FALSE]
+
+tree <- drop.tip(tree, tips_to_drop)
+
+labels_df <- genera_df %>% 
+  filter(label %in% tree$tip.label) %>%
+  group_by(genus) %>%
+  summarise(node = MRCA(tree, label))
+```
+
+Plot tree
+
+```{r}
+library(ggtree)
+library(ggtreeExtra)
+
+figure <-  ggtree(tree) + 
+   
+  geom_highlight(data = labels_df, 
+                 aes(node = node),
+                 fill  = NA, 
+                 color = "grey",
+                 extend = 10) +
+    
+  geom_tippoint(aes(shape = label %in% mags$genome_id),
+                size =1, 
+                align = TRUE) +
+   
+   geom_cladelab(data = labels_df, 
+                 mapping = aes(node = node, label = genus),
+                 geom = "shadowtext",
+                 color = "black", 
+                 bg.colour = "white",
+                 bg.r = 0.3,
+                 fontsize = 2.5,
+                 barsize = NA, 
+                 offset.text = -0.2) +
+    
+  geom_fruit(
+  geom = "geom_point", 
+  data = matrix_ds[is.na(matrix_ds$class) == FALSE,], 
+  mapping = aes(
+    fill = class,
+    x = string, 
+    y = genome_id), 
+  size = 1.7, 
+  offset = 0.25,
+  shape = 21, 
+  pwidth = 4,
+  axis.params = list(axis = "x", 
+                     text.size = 2.5, 
+                     text.angle = 90, 
+                     hjust =1),
+  grid.params = list(vline = TRUE, 
+                     size = 1, 
+                     color = "gray95"),
+  color = "gray95") +
+  scale_fill_manual(values = my_colors, 
+                    na.value = "gray95")  +
+  theme(legend.position = "top", 
+        legend.direction = "horizontal",
+        legend.box.spacing = unit(x=c(0,0,0,0),units="mm")) +
+  scale_y_continuous(expand = c(0, 10, 0, 0)) +
+  scale_shape_manual(values = c(NA, 15)) +
+ guides(shape = FALSE,
+        fill = guide_legend(nrow = 1,
+                            label.theme = element_text(size = 7), 
+                            title = "")) 
+
+ 
+ figure2 <- figure %<+% species_df + 
+   geom_tiplab(aes(label = species), 
+               size = 2.5, align = TRUE) 
+
+ figure2
+
+```
+
+
+
 
 ```{r}
 library(treeio)

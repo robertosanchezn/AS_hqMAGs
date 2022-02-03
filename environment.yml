@@ -1,0 +1,7 @@
+name: bgc_analytics
+channels:
+  - conda-forge
+dependencies:
+  - seaborn
+  - pandas
+  - pysqlite3
