@@ -1,13 +1,21 @@
 name: as_hqmags
 channels:
   - conda-forge
+  - bioconda
 dependencies:
   - jupyterlab
   - jupytext
   - seaborn
   - pandas
   - pysqlite3
+  - openpyxl
+  - r-base
+  - r-essentials
   - r-tidyverse
+  - r-argparser
+  - bioconductor-genomicranges
+  - r-pbapply
+  - r-irkernel
   - pip
   - pip:
       - azure-cli
