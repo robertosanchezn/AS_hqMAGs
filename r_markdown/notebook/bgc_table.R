@@ -21,7 +21,7 @@ p <- add_argument(p, "--antismash_dir",
                   default = "~/p__Myxococcota_all/antismash/6.0.1/")
 p <- add_argument(p, "--bigscape_dir",
                   short = "-b",
-                  default = "~/p__Myxococcota_all/bigscape//",
+                  default = "~/p__Myxococcota_all/bigscape/",
                   help = paste0(
                     "Directory with BiG-SCAPE output, containing Network Annotations ", 
                     "and clustering files"))

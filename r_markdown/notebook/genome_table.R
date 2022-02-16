@@ -83,7 +83,8 @@ mags <- read_xlsx(
   
 metadata <- read_tsv(
   argv$gtdb_metadata, 
-  col_select = c(1,  4, 14, 17, 41:43, 46, 49)) %>%
+  col_select = c(1,  4, 14, 17, 41:43, 46, 49), 
+  show_col_types = FALSE) %>%
   mutate(genome_id = str_sub(accession, start = 4), 
          source = if_else(str_detect(accession, "^RS_"), "refseq", "genbank"), 
          mimag_quality = case_when(
@@ -99,7 +100,7 @@ metadata <- read_tsv(
   filter(genome_id %in% bgcs$genome_id) 
 
 genomes <- bind_rows(mags, metadata) %>%
-  left_join(bgcs, by = "genome_id")
+  left_join(bgcs, by = "genome_id") 
 
 write_csv(genomes, 
           argv$output)

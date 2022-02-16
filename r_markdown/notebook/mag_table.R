@@ -15,23 +15,23 @@ p <- arg_parser(hide.opts = TRUE,
 p <- add_argument(p, "--bgcs_table",
                   short = "-b",
                   help = "csv table with bgcs produced by bgcs_table.R", 
-                  default = "../tables/bgcs.csv")
+                  default = "~/f__Polyangiaceae/bgcs.csv")
 p <- add_argument(p, "--gtdbtk_dir",
                   short = "-g",
                   help = "Directory with GTDB-Tk summary.tsv files", 
-                  default = "../data/")
+                  default = "~/AS_hqMAGs/r_markdown/data/")
 p <- add_argument(p, "--supplementary_file", 
                   short = "-s", 
                   help = "Filepath with supplementary info from Singleton et al 2021", 
-                  default = "../data/41467_2021_22203_MOESM5_ESM.xlsx")
+                  default = "~/AS_hqMAGs/r_markdown/data/singleton_2021_table3.xlsx")
 p <- add_argument(p, "--assembly_details", 
                   short = "-a", 
                   help = "Assembly details file from the bioproject", 
-                  default = "../data/PRJNA629478_AssemblyDetails.txt")
+                  default = "~/AS_hqMAGs/r_markdown/data/assembly_details.txt")
 p <- add_argument(p, "--output", 
                   short = "-o", 
                   help = "Filepath for output csv table", 
-                  default = "../tables/mags.csv")
+                  default = "tables/p__Myxococcota_all_bgcs.csv")
 
 argv <- parse_args(p)
 

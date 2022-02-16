@@ -266,6 +266,10 @@ tips_to_drop <- family_tree$tip.label[
 
 family_tree <- drop.tip(family_tree, tips_to_drop)
 
+data_tree <- left_join(family_tree,
+                         family_ds[,c("genome_id", "tip_label")],
+                         by = c("label" = "genome_id"))
+
 #family_tree <- treeio::full_join(family_tree,
 #                         family_ds[,c("genome_id","tip_label")]
 #                         , by = c("label"= "genome_id"))
@@ -276,9 +280,9 @@ matrix_ds <- bgcs %>%
   unnest(GCF) %>%
     mutate(class = factor(class, levels = bigscape_classes), 
          class = my_classes[as.numeric(class)]) %>%
-  group_by(GCF) %>%
-  filter(n() > 1) %>%
-  mutate(string = paste0(GCF, ": ", product)) 
+  mutate(string = paste0(GCF, ": ", product))  %>%
+  group_by(string) %>%
+  filter(n() > 1) 
 
 
 matrix_ds <- expand_grid(
@@ -290,8 +294,7 @@ matrix_ds <- expand_grid(
   arrange(class, product) %>%
   mutate(string = factor(string, levels = unique(string))) 
  
-
-tree_matrix <-  ggtree(family_tree) + 
+tree_matrix <-  ggtree(data_tree) + 
 
     geom_fruit(
   geom = "geom_point", 
@@ -300,7 +303,7 @@ tree_matrix <-  ggtree(family_tree) +
     fill = class,
     x = string, 
     y = genome_id), 
-  size = 1.7, 
+  size = 1.5, 
   offset = 0.25,
   shape = 21, 
   pwidth = 4,
@@ -322,8 +325,22 @@ tree_matrix <-  ggtree(family_tree) +
  guides(shape = FALSE,
         fill = guide_legend(nrow = 1,
                             label.theme = element_text(size = 7), 
-                            title = ""))
-tree_matrix
+                            title = "")) +
+  geom_fruit(
+    geom = "geom_bar", 
+    data = family_ds, 
+    mapping = aes(
+      x = total_bgcs, 
+      y = genome_id), 
+    orientation = "y", 
+    stat = "identity", 
+    title = "Total BGCs",
+    pwidth = 1,
+    axis.params = list(axis = "x"), 
+    grid.params = list(vline = TRUE)) +
+  
+  geom_tiplab(aes(label = tip_label))
+  
 ```
 
 
