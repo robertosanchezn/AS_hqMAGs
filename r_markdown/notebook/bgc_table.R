@@ -2,7 +2,6 @@ suppressPackageStartupMessages({
   library("tidyverse")
   library("argparser") 
   library("parallel") 
-  library("GenomicRanges") 
   library("jsonlite") 
   library("pbapply")
   })
@@ -19,16 +18,17 @@ p <- arg_parser(hide.opts = TRUE,
 p <- add_argument(p, "--antismash_dir",
                   short = "-a",
                   help = "Directory containing antiSMASH-generated json files", 
-                  default = "~/bgcflow/data/interim/antismash/")
+                  default = "~/p__Myxococcota_all/antismash/6.0.1/")
 p <- add_argument(p, "--bigscape_dir",
                   short = "-b",
-                  default = "~/bgcflow/data/interim/bigscape/",
+                  default = "~/p__Myxococcota_all/bigscape//",
                   help = paste0(
                     "Directory with BiG-SCAPE output, containing Network Annotations ", 
                     "and clustering files"))
 p <- add_argument(p, "--output", 
                   short = "-o", 
-                  help = "../tables/bgcs.csv")
+                  default = "~/AS_hqMAGs/r_markdown/tables/p__Myxococcota_all_bgcs.csv", 
+                  help = "Output csv file")
 p <- add_argument(p, "--threads",
                   short = "-t",
                   help = "Number of threads to use in parallel", 
@@ -61,8 +61,7 @@ get_region_rows <-   function(genome_id){
     colnames(regions) <- c(
      "contig", "start", "end", "product", "contig_edge")
     regions
-   
-  }
+    }
 
 genome_ids <- list.files(
   argv$antismash_dir,
@@ -74,7 +73,10 @@ genome_ids <- list.files(
 
 cluster <- makeForkCluster(nnodes = argv$threads)
 pbo  <- pboptions(type="timer")
-regions_list <- pbsapply(genome_ids, get_region_rows, simplify = FALSE, cl  = cluster)
+regions_list <- pbsapply(genome_ids, 
+                         get_region_rows, 
+                         simplify = FALSE,
+                         cl  = cluster)
 
 regions <- bind_rows(regions_list, .id = 'genome_id') %>%
   group_by(contig) %>%
@@ -116,13 +118,11 @@ bigscape_clustering <- distinct(
 
 colnames(bigscape_clustering) <- c("bgc_id", "GCF")
 
-
 bgcs_dataframe <- bigscape_clustering %>% 
   group_by(bgc_id) %>% 
   summarise(GCF = paste0(unique(GCF), collapse =';')) %>%
-  left_join(bigscape_annotations, by = "bgc_id") %>%
-  left_join(regions, by = 'bgc_id')
-
+  right_join(regions, by = "bgc_id") %>%
+  left_join(bigscape_annotations, by = "bgc_id")
 
 write_csv(bgcs_dataframe, 
           file = argv$output, 
