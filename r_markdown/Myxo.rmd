@@ -150,7 +150,7 @@ ggplotly(families_boxplots)
 
 ```
 
-Overview of the phylum Myxococcota
+Overview of the phylum Myxococcota. Add number of MAGs per clade
 
 ```{r echo=FALSE, fig.height=15, fig.width=10}
 
@@ -246,19 +246,23 @@ clades_tree
 
 Absence / Presence matrix for f__Polyangiaceae
 
-```{r fig.height=7, fig.width=9}
-family_ds <- 
-  filter(genomes, str_detect(gtdb_taxonomy, 'f__Polyangiaceae')) %>%
-  filter(source == "refseq" |  ncbi_bioproject == "PRJNA629478") %>%
-  mutate(species = str_extract(gtdb_taxonomy, "s__.*"), 
-         species = str_sub(species, start = 4), 
-         tip_label = paste(genome_id, species))
+Keep this as supplementary, fix it for publications
 
-family <- "f__Polyangiaceae"
+```{r fig.height=7, fig.width=12}
+
+family <- "f__Nannocystaceae"
+
+family_ds <- 
+  filter(genomes, str_detect(gtdb_taxonomy, family)) %>%
+  mutate(AS_hqMAG = if_else(ncbi_bioproject == "PRJNA629478", TRUE, FALSE)) %>%
+  filter(source == "refseq" |  AS_hqMAG) %>%
+  mutate(species = str_extract(gtdb_taxonomy, "s__.*"), 
+         species = str_sub(species, start = 4),
+         tip_label = paste(genome_id, species))
 
 family_tree <- tree_subset(
   phylum_tree,
-  node = families_df$node[families_df$label == family], 
+  node = families_df$node[str_detect(families_df$label, family)], 
   levels_back = 0)
 
 tips_to_drop <- family_tree$tip.label[
@@ -266,14 +270,9 @@ tips_to_drop <- family_tree$tip.label[
 
 family_tree <- drop.tip(family_tree, tips_to_drop)
 
-data_tree <- left_join(family_tree,
-                         family_ds[,c("genome_id", "tip_label")],
+data_tree <- left_join(family_tree,family_ds,
                          by = c("label" = "genome_id"))
 
-#family_tree <- treeio::full_join(family_tree,
-#                         family_ds[,c("genome_id","tip_label")]
-#                         , by = c("label"= "genome_id"))
-#
 matrix_ds <- bgcs %>%
   filter(genome_id %in% family_tree$tip.label) %>%
   mutate(GCF = str_split(GCF, ";")) %>%
@@ -284,7 +283,6 @@ matrix_ds <- bgcs %>%
   group_by(string) %>%
   filter(n() > 1) 
 
-
 matrix_ds <- expand_grid(
   unique(matrix_ds$string), 
   unique(matrix_ds$genome_id)) %>%
@@ -294,7 +292,7 @@ matrix_ds <- expand_grid(
   arrange(class, product) %>%
   mutate(string = factor(string, levels = unique(string))) 
  
-tree_matrix <-  ggtree(data_tree) + 
+tree_matrix <-  ggtree(data_tree) +
 
     geom_fruit(
   geom = "geom_point", 
@@ -304,7 +302,7 @@ tree_matrix <-  ggtree(data_tree) +
     x = string, 
     y = genome_id), 
   size = 1.5, 
-  offset = 0.25,
+  offset = 0.5,
   shape = 21, 
   pwidth = 4,
   axis.params = list(axis = "x", 
@@ -315,31 +313,41 @@ tree_matrix <-  ggtree(data_tree) +
                      size = 1, 
                      color = "gray95"),
   color = "gray95") +
-  scale_fill_manual(values = my_colors, 
-                    na.value = "gray95")  +
-  theme(legend.position = "top", 
-        legend.direction = "horizontal",
-        legend.box.spacing = unit(x=c(0,0,0,0),units="mm")) +
-  scale_y_continuous(expand = c(0, 10, 0, 0)) +
-  scale_shape_manual(values = c(NA, 15)) +
- guides(shape = FALSE,
-        fill = guide_legend(nrow = 1,
-                            label.theme = element_text(size = 7), 
-                            title = "")) +
+  
   geom_fruit(
     geom = "geom_bar", 
-    data = family_ds, 
     mapping = aes(
       x = total_bgcs, 
       y = genome_id), 
     orientation = "y", 
     stat = "identity", 
     title = "Total BGCs",
-    pwidth = 1,
-    axis.params = list(axis = "x"), 
+    pwidth = 0.4,
+    axis.params = list(title = "Total BGCs", 
+                       axis = "x", 
+                       text.size = 2.5), 
     grid.params = list(vline = TRUE)) +
   
-  geom_tiplab(aes(label = tip_label))
+  geom_tiplab(aes(label = tip_label,
+                  color = AS_hqMAG), 
+              size = 2, 
+              align = TRUE) + 
+  
+  scale_fill_manual(values = my_colors, 
+                    na.value = "gray95")  +
+  scale_y_continuous(expand = c(0, 10, 0, 0)) +
+  scale_shape_manual(values = c(NA, 15)) +
+  scale_color_manual(values = c("black", "darkred")) +
+ guides(shape = FALSE,
+        fill = guide_legend(nrow = 1, 
+                            label.theme = element_text(size = 7),
+                            title = ""), 
+        color = FALSE)  +
+  theme(legend.position = "top", 
+        legend.direction = "horizontal",
+        legend.box.spacing = unit(x=c(0,0,0,0),units="mm"))
+
+tree_matrix
   
 ```
 
