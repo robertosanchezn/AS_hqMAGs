@@ -18,16 +18,16 @@ p <- arg_parser(hide.opts = TRUE,
 p <- add_argument(p, "--antismash_dir",
                   short = "-a",
                   help = "Directory containing antiSMASH-generated json files", 
-                  default = "~/p__Myxococcota_all/antismash/6.0.1/")
+                  default = "~/wwtphqmags/antismash/6.0.1/")
 p <- add_argument(p, "--bigscape_dir",
                   short = "-b",
-                  default = "~/p__Myxococcota_all/bigscape/",
+                  default = "~/wwtphqmags/bigscape/wwtphqmags_antismash_6.0.1/network_files/2022-02-10_10-03-49_glocal_wwtphqmags_antismash_6.0.1/",
                   help = paste0(
                     "Directory with BiG-SCAPE output, containing Network Annotations ", 
                     "and clustering files"))
 p <- add_argument(p, "--output", 
                   short = "-o", 
-                  default = "~/AS_hqMAGs/r_markdown/tables/p__Myxococcota_all_bgcs.csv", 
+                  default = "~/AS_hqMAGs/r_markdown/tables/wwtphqmags_bgcs.csv", 
                   help = "Output csv file")
 p <- add_argument(p, "--threads",
                   short = "-t",

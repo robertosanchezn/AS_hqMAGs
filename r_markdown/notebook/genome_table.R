@@ -14,7 +14,7 @@ p <- arg_parser(hide.opts = TRUE,
 p <- add_argument(p, "--bgcs_table",
                   short = "-b",
                   help = "csv table with bgcs produced by bgcs_table.R", 
-                  default = "~/AS_hqMAGs/r_markdown/tables/p__Myxococcota_all_bgcs.csv")
+                  default = "~/AS_hqMAGs/r_markdown/tables/wwtphqmags_bgcs.csv")
 
 p <- add_argument(p, "--gtdbtk_summary",
                   short = "-g",
@@ -34,7 +34,7 @@ p <- add_argument(p, "--assembly_details",
 p <- add_argument(p, "--output", 
                   short = "-o", 
                   help = "Filepath for output csv table", 
-                  default = "~/AS_hqMAGs/r_markdown/tables/p__Myxococcota_all_genomes.csv")
+                  default = "~/AS_hqMAGs/r_markdown/tables/wwtphqmags_genomes.csv")
 
 p <- add_argument(p, "--gtdb_metadata", 
                   short = "-m", 
@@ -98,9 +98,15 @@ metadata <- read_tsv(
            ncbi_assembly_level == "Chromosome" ~ "Complete/Chromosome"),
          .keep = "unused") %>%
   filter(genome_id %in% bgcs$genome_id) 
-
+  
 genomes <- bind_rows(mags, metadata) %>%
-  left_join(bgcs, by = "genome_id") 
+  left_join(bgcs, by = "genome_id") %>%
+  filter(is.na(gtdb_taxonomy) == FALSE) %>%
+  relocate(genome_id, 
+           total_bgcs,
+           bgcs_on_contig_edge,
+           gtdb_taxonomy) %>%
+  mutate(total_bgcs = replace_na(total_bgcs, 0))
 
 write_csv(genomes, 
           argv$output)
