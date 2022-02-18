@@ -1,51 +1,91 @@
 ```{r}
-  library('tidyverse')
+suppressPackageStartupMessages({
+library('tidyverse')
+library('plotly')
+library('treeio')
+library('ggtree')
+library('ggtreeExtra')
+library("RColorBrewer")
+library("cowplot")
+library("shadowtext")})
 ```
 
+Creates supplementary table 1, with BGCs as observations  
 
-```{bash}
+```{bash eval=FALSE, warning=FALSE, results='hide'}
 Rscript notebook/bgc_table.R \
-  --antismash_dir  ~/bgcflow/data/interim/antismash/6.0.1/ \
-  --bigscape_dir ~/bgcflow/data/interim/bigscape/Nitrospira_tree_antismash_6.0.1/ \
-  --output tables/Nitrospira_tree_bgcs.csv 
+  --antismash_dir  ~/wwtphqmags/antismash/6.0.1/ \
+  --bigscape_dir ~/wwtphqmags/bigscape/wwtphqmags_antismash_6.0.1/network_files/2022-02-10_10-03-49_glocal_wwtphqmags_antismash_6.0.1/ \
+  --output tables/wwtphqmags_bgcs.csv 
 ```
+```{r,warning=FALSE, echo=FALSE}
+bgcs <- read_csv("tables/wwtphqmags_bgcs.csv", show_col_types = FALSE)
+bgcs
+```
+Creates supplementary table 2, with MAGs as observations
 
-```{bash}
-Rscript notebook/mag_table.R \
-  --bgcs_table tables/Nitrospira_tree_bgcs.csv \
-  --gtdbtk_dir data/ \
+```{bash, echo = TRUE, results = 'hide', warning=FALSE}
+Rscript notebook/genome_table.R \
+  --bgcs_table  tables/wwtphqmags_bgcs.csv \
   --supplementary_file data/singleton_2021_table3.xlsx \
   --assembly_details data/assembly_details.txt \
-  --output tables/mags.csv 
+  --output  tables/wwtphqmags_genomes.csv 
+```
+```{r, warning=FALSE, echo = FALSE}
+mags <- read_csv("tables/wwtphqmags_genomes.csv", show_col_types = FALSE)
+mags
 ```
 
-```{r}
-mags <- read_csv("tables/mags.csv", 
-                 col_select = c(1,3), 
-                 col_types = "cc")
+Histogram
 
-nitro_bgcs <- read_csv("tables/Nitrospira_tree_bgcs.csv", 
-                       col_select = c(2,3,4,8,9), 
-                       col_types = "ccccl")
+```{r echo=FALSE, warning=FALSE}
+##Dataset
 
-gtdb_tax_files <- list.files("~/bgcflow/data/interim/gtdb",
-                             pattern = '*json',
-                             full.names = TRUE)
-
-get_taxonomy <- function(file){ jsonlite::fromJSON(file)$gtdb_taxonomy}
-
-gtdb_tax <- lapply(gtdb_tax_files, get_taxonomy)
-
-names(gtdb_tax) <- str_sub(start = 2, end = -6, str_extract(gtdb_tax_files, '/G.*?$'))
+histogram_ds <- mags %>% 
+  arrange(desc(total_bgcs), bgcs_on_contig_edge) %>%
+  mutate(genome_id = factor(genome_id, levels = unique(genome_id)), 
+         across(contains('bgcs'), ~ replace_na(.x, 0)), 
+         complete_bgcs = total_bgcs - bgcs_on_contig_edge, 
+         taxonomy = str_replace_all(gtdb_taxonomy, ';', '\n')) %>%
+  pivot_longer(cols = c("complete_bgcs", "bgcs_on_contig_edge"), 
+               names_to = "bgc_type", 
+               values_to = "count")
   
-gtdb_tax <- do.call(rbind.data.frame, gtdb_tax) %>%
-  rownames_to_column("genome_id")
+##Plot
 
+ histogram <- ggplot(histogram_ds,
+        aes(x = as.numeric(genome_id),
+            fill = bgc_type, 
+            y = count, 
+            label = taxonomy)) + 
+  geom_bar(stat = "identity",
+           position = "stack", 
+           color = NA, 
+           size = 0) +
+  scale_fill_manual(values = c("grey", "black")) +
+  theme_minimal() +
+  theme(legend.position = "top", 
+        legend.direction = "horizontal") +
+  ylab("BGC count") +
+  xlab("Number of genomes")
+
+##Save figure
+ 
+ggsave(histogram, 
+       device = "svg",
+       filename = "figures/histogram.svg", 
+       height = 3, 
+       width = 9, 
+       units = "in")
+ 
+##Interactive plot
+ 
+ggplotly(histogram)
 ```
 
-New classes, and color palette
+New classes and color palettes
 
-```{r}
+```{r,echo = FALSE}
 bigscape_classes <- c("Terpene",
                       "RiPPs", 
                       "NRPS",
@@ -64,210 +104,456 @@ my_classes <- c("Terpene",
                 "Other", 
                 "Other")
 
-my_colors <- c("#ff8800",
-               "#20c200",
-               "#ff0000",
-               "#dd00ff",
-               "#0d00ff",
-               "#757575")
+my_colors <- c("Oranges",
+               "Greens",
+               "Reds",
+               "Purples",
+               "Blues",
+               "Greys")
 ```
 
-Zoom (subset) gtdb tree to taxon of interest, here, f__Nitrospiraceae
+Barplot
 
-```{r}
-library(treeio)
+```{r,  echo=FALSE, warning=FALSE}
 
-gtdb_tree <- read.newick("data/gtdbtk.bac120.classify.tree")
+##Function for randomizing color within a palette
 
-taxon <- "f__Nitrospiraceae"
+get_random_color <- Vectorize(function(class){
+   hue <- my_colors[as.numeric(class)]
+   palette  <- brewer.pal(n=9, name = hue)
+   sample(palette, 1)})
 
-taxon_node <- gtdb_tree$node.label[str_detect(gtdb_tree$node.label, taxon)]
+##Dataset
+barplots_ds <- bgcs %>% 
+  group_by(class, product) %>%
+  tally() %>%
+  mutate(class = factor(class, levels = bigscape_classes), 
+         class = my_classes[as.numeric(class)], 
+         class = factor(class, levels = unique(my_classes)), 
+         color = get_random_color(class)) %>%
+  arrange(class, desc(n)) %>%
+  mutate(product  = factor(product, levels = rev(unique(product))), 
+         label = str_replace_all(product, ';', ' / '), 
+         ymax = cumsum(n), 
+         ymin = ymax - n,
+         label_position =
+           if_else(n > 40,
+                   ymin +(ymax-ymin)/2, 
+                   as.double(NA_character_)))
 
-tree <- tree_subset(gtdb_tree, node = taxon_node, levels_back = 0)
+##Plot
+barplot <- ggplot(barplots_ds, 
+       aes(x = 0,
+           fill = product,
+           label = label)) +
+  geom_bar(aes( y = n), 
+           position = "stack", stat ="identity") +
+  geom_shadowtext(aes(y = label_position),
+             size = 3,
+             color = "black", 
+             bg.color = "white") +
+  facet_grid( . ~ class, space = "free") +
+  scale_fill_manual(values = barplots_ds$color) +
+  scale_x_continuous(breaks = 0) +
+  scale_y_continuous(breaks = seq(0, 1200, by = 200)) +
+  theme_minimal() +
+  theme(legend.position = "none", 
+        axis.text.x = element_blank()) +
+  ylab("Number of BGCs") +
+  xlab("")
 
-tree$node.label <- str_extract(tree$node.label, '.__.*$')
+##Interactive plot
+ggplotly(barplot + geom_text(aes(y =label_position)))
+
 ```
 
-BGC data for the tree
+Boxplots
 
-```{r}
-matrix_ds <- nitro_bgcs %>%
-  filter(genome_id %in% tree$tip.label) %>%
+```{r, echo=FALSE,warning=FALSE}
+
+##Dataset
+
+boxplot_ds <- mags %>%
+  mutate(MBp = genome_size / 1e+06, 
+         phylum = str_extract(gtdb_taxonomy, 'p__.*?;'), 
+         phylum  = str_sub(phylum, start = 4, end  = -2)) %>%
+  group_by(phylum) %>%
+  mutate(n = n()) %>%
+  ungroup() %>%
+  arrange(desc(n)) %>%
+  mutate(phylum = if_else(n > 7, phylum, "Other"), 
+         phylum = factor(phylum, levels = unique(phylum))) %>%
+  group_by(phylum) %>% 
+  mutate(n = n(),
+         label = paste0(phylum, " (", n ,")"),
+         label = factor(label, levels = unique(label)), 
+         tax = str_replace_all(gtdb_taxonomy, ";", "\n"))
+       
+##Plot   
+
+boxplots <- 
+  ggplot(boxplot_ds, 
+       aes(x = label, 
+           color = MBp, 
+           y = total_bgcs, 
+           label = tax)) +
+  geom_boxplot(
+    fill = NA,
+    outlier.shape = NA, 
+    fatten = 7,
+    width =0.9, 
+    size = 0.2) +
+  geom_jitter(alpha = 0.7, 
+              height = 0.1,
+              width = 0.25)  +
+scale_color_gradient2(
+  low = "steelblue",
+  mid = "lemonchiffon",
+  high = "red3", 
+  midpoint = 6, 
+  limits = c(0,12))+
+  scale_x_discrete(expand = c(0.1,0, 0, 0)) +
+  scale_y_continuous(breaks = seq(0, 22, by = 4)) +
+  theme_minimal() +
+  theme(axis.text.x =          
+          element_text(
+            angle = 90,
+            hjust = 1,
+            size = 12, 
+            vjust = 0.5), 
+        legend.position = "top", 
+        legend.box = "horizontal") +
+  ylab('BGCs per MAG') +
+  xlab('Phylum') +
+  guides(color = guide_colorbar(
+    title = "Genome size (Mbp)"))
+
+##Interactive plot
+
+ggplotly(boxplots)
+
+summary <-  plot_grid(barplot,
+                   boxplots, 
+                   ncol =2,
+                   align = "h",
+                   axis = "l", 
+                   labels = c("A", "B")) 
+##Save figure
+
+ggsave("figures/summary.svg", 
+       summary, 
+       device = "svg",
+       height = 6.9,
+       width = 9, 
+       units = "in")
+```
+
+Genome size scatter plots
+
+```{r,  echo=FALSE, warning=FALSE}
+
+##Dataset
+
+scatter_ds <- mags %>%
+  mutate(phylum = case_when(
+    str_detect(gtdb_taxonomy, 'p__Myxococcota') ~ "Myxococcota", 
+    str_detect(gtdb_taxonomy, 'p__Patescibacteria|p__Dependentiae') ~ 
+      "Patescibacteria/Dependentiae", 
+    TRUE ~ "Other"), 
+    tax = str_replace_all(gtdb_taxonomy, ";", "\n")) 
+
+##Plot
+
+scatter <- ggplot(scatter_ds, 
+         aes(x = genome_size,
+             y = total_bgcs, 
+             color = phylum,
+             label = tax)) +
+  geom_jitter(alpha = 0.4) +
+  scale_color_manual(values = c("red", "darkgrey", "blue")) +
+  theme_minimal() +
+  theme(legend.position = "top", 
+        legend.direction = "horizontal")
+
+ggsave("figures/scatter.svg", 
+       scatter, 
+       device = "svg",
+       height = 6.9,
+       width = 9, 
+       units = "in")
+
+##Interactive
+
+ggplotly(scatter)
+
+```
+Pearson correlation of complete dataset
+```{r, warning=FALSE, collapse=TRUE}
+cor(x = scatter_ds$genome_size, y = scatter_ds$total_bgcs)
+```
+Pearson correlation without the three phyla highlighted above
+```{r warning=FALSE, collapse = TRUE}
+without_ds <- scatter_ds[scatter_ds$phylum == "Other", ]
+cor(x = without_ds$genome_size,  y = without_ds$total_bgcs)
+```
+
+Tree of the 1080 genomes
+
+```{r, echo=FALSE, warning=FALSE}
+#Imports tree
+tree <- read.newick("data/gtdbtk.bac120.classify.tree")
+
+#Drops all non-internal leaves
+leaves_to_drop <- tree$tip.label[tree$tip.label %in% mags$genome_id == FALSE]
+tree <- drop.tip(tree, leaves_to_drop)
+
+#Joins tree with mag data
+taxa_tree <- full_join(tree, mags, by = c("label" = "genome_id"))
+
+#Gets all genera, families, orders, classes and phyla
+levels <- c("f", "o", "c", "p")
+
+pattern <- paste0("[", paste0(levels, collapse = ""), "]__.*?;")
+
+taxons <- lapply(mags$gtdb_taxonomy,
+                 str_extract_all,
+                 pattern = pattern) 
+taxons <- unique(unlist(taxons))
+taxons <- taxons[is.na(taxons) == FALSE]
+taxons <- str_sub(taxons, end = -2) 
+#taxons <- taxons[nchar(taxons) > 3]
+
+#Finds nodes for the taxa above
+
+get_node_from_taxon <- function(taxon){
+  nodes <- as_tibble(taxa_tree) %>%
+    filter(str_detect(gtdb_taxonomy, taxon)) %>% pull(node)
+  MRCA(tree, nodes)
+  }
+
+#Parallelizes this step because it's a little slow
+cluster <- parallel::makeForkCluster(nnodes = 16)
+taxon_nodes <- pbapply::pbsapply(taxons, get_node_from_taxon, cl=cluster)
+
+#Counts leaves for each node
+count_leaves <- Vectorize(function(node) {
+  length(offspring(.data = tree, node, tiponly = TRUE))})
+
+clades_df <- bind_cols(taxon = taxons, node = taxon_nodes) %>%
+  mutate(level = factor(str_sub(taxon, end = 1), levels = levels)) %>%
+  arrange(desc(level))%>%
+  mutate(leaves = count_leaves(node)) %>%
+##Tune these filters to choose an appropriate resolution for the clades
+  #I want to keep this family in the tree
+  filter(leaves < 100 | taxon == "f__Saprospiraceae") %>%
+  filter(leaves > 7) %>%
+  filter(leaves > 20 | level == 'p') %>%
+##Looks like p__Bdellovibrionota may be polyphyletic according to this tree, best to remove it
+  filter(node != 1419)
+
+#Dataset for barplot
+
+tree_bgcs_ds <- bgcs %>%
   mutate(class = factor(class, levels = bigscape_classes), 
          class = my_classes[as.numeric(class)], 
          class = factor(class, levels = unique(my_classes))) %>%
-  arrange(class, product) %>%
-  mutate(GCF = factor(GCF, levels = unique(GCF))) %>%
-  arrange(GCF) %>%
-  mutate(string = paste0(GCF, ": ", product), 
-         string = factor(string, levels = unique(string))) %>%
-  select(genome_id, string, class)
+  group_by(genome_id, class) %>%
+  tally()
+  
+relative_widths <- group_by(tree_bgcs_ds, class) %>% 
+  summarise(n = max(n)) %>%  pull(n)
 
-matrix_ds <- expand_grid(matrix_ds$string, matrix_ds$genome_id) %>%
-  setNames(c("string", "genome_id")) %>%
-  left_join(matrix_ds, by = c("string", "genome_id"))
-```
+#Plots tree and BGC count 
 
-Genus and Species annotations for the tree
+tree_bgcs <-  ggtree(tree, aes(color = isTip), size = 0.4)
 
-```{r}
-genera <- as_tibble(tree) %>% 
-  filter(str_detect(label, 'g__')) %>% 
-  pull(label) %>%
-  str_replace('\'', '')
+for (i in 1:length(unique(my_classes))){
+  class <- unique(my_classes)[i]
+  nbreaks <- relative_widths[i]/2
+  color <- brewer.pal(n = 7, my_colors[i])[5]
+  tree_bgcs <- tree_bgcs +
+    geom_fruit(data = tree_bgcs_ds[tree_bgcs_ds$class == class,], 
+               geom = "geom_bar", 
+               mapping = aes(y = genome_id, 
+                             x = n, 
+                             group = label), 
+               pwidth = 0.03 * relative_widths[i],
+               stat = "identity", 
+               orientation = "y",
+               fill = color, 
+               offset = 0.05,
+               axis.params = list(axis = "x",
+                                  text.size = 3,
+                                  vjust = 1,
+                                  nbreak = nbreaks,
+                                  line.size = NA, 
+                                  title = class, 
+                                  title.height = 0.02,
+                                  title.size = 3),
+               grid.params = list(vline = FALSE)) 
+  }
 
-genera_nodes <- as_tibble(tree) %>% 
-  filter(str_detect(label, 'g__')) %>%
-  pull(node)
+#Collapses the tree  
 
-get_tips <- function(i){
-as_tibble(tree) %>% 
-  filter(isTip(tree, node)) %>% 
-  filter(node %in% offspring(tree, genera_nodes[i])) %>%
-    mutate(genus = genera[i]) %>%
-    select(genus, label)
+collapsed_tree <- tree_bgcs
+
+for (i in 1:nrow(clades_df)) {
+  collapsed_tree <- collapse(collapsed_tree, 
+                             node=clades_df$node[i], 
+                             clade_name = clades_df$taxon[i],
+                             mode = "mixed", 
+                             color = "black", 
+                             fill = "gray95")
 }
 
-genera_df <- bind_rows(lapply(1:length(genera), get_tips))
-
-species <- gtdb_tax[gtdb_tax$genome_id %in% tree$tip.label, ]$species
-names(species) <-  gtdb_tax[gtdb_tax$genome_id %in% tree$tip.label, ]$genome_id
-
-species_df <- bind_rows(genome = names(species), species = species) %>%
-  mutate(species = str_extract(species, " .*"))
-
-tips_to_drop <- 
-  gtdb_tree$tip.label[gtdb_tree$tip.label %in% nitro_bgcs$genome_id == FALSE]
-
-tree <- drop.tip(tree, tips_to_drop)
-
-labels_df <- genera_df %>% 
-  filter(label %in% tree$tip.label) %>%
-  group_by(genus) %>%
-  summarise(node = MRCA(tree, label))
-```
-
-Plot tree
-
-```{r}
-library(ggtree)
-library(ggtreeExtra)
-
-figure <-  ggtree(tree) + 
-   
-  geom_highlight(data = labels_df, 
-                 aes(node = node),
-                 fill  = NA, 
-                 color = "grey",
+#Anotates the tree
+labelled_tree <- collapsed_tree +
+  
+    geom_highlight(data = clades_df,
+                 mapping = aes(node = node), 
+                 fill = NA,
+                 color = "lightgray",
                  extend = 10) +
-    
-  geom_tippoint(aes(shape = label %in% mags$genome_id),
-                size =1, 
-                align = TRUE) +
-   
-   geom_cladelab(data = labels_df, 
-                 mapping = aes(node = node, label = genus),
-                 geom = "shadowtext",
-                 color = "black", 
-                 bg.colour = "white",
-                 bg.r = 0.3,
-                 fontsize = 2.5,
-                 barsize = NA, 
-                 offset.text = -0.2) +
-    
-  geom_fruit(
-  geom = "geom_point", 
-  data = matrix_ds[is.na(matrix_ds$class) == FALSE,], 
-  mapping = aes(
-    fill = class,
-    x = string, 
-    y = genome_id), 
-  size = 1.7, 
-  offset = 0.25,
-  shape = 21, 
-  pwidth = 4,
-  axis.params = list(axis = "x", 
-                     text.size = 2.5, 
-                     text.angle = 90, 
-                     hjust =1),
-  grid.params = list(vline = TRUE, 
-                     size = 1, 
-                     color = "gray95"),
-  color = "gray95") +
-  scale_fill_manual(values = my_colors, 
-                    na.value = "gray95")  +
+  
+  geom_cladelab(data = as_tibble(clades_df), 
+                barcolour = NA, 
+                geom = "shadowtext",
+                label. = "black",
+                bg.colour = "white",
+                align = TRUE,
+                offset = -1.1,
+                mapping = aes(node = node, 
+                              label = taxon), 
+                size = 0) +
+  scale_color_manual(values = c("darkgrey", "grey")) +
+  scale_y_continuous(expand = c(0.03, 1)) +
+  theme(legend.position = "none")
+  
+labelled_tree
+
+#Save file
+
+ggsave("figures/wwtphqmags_tree.svg", 
+       labelled_tree, 
+       device = "svg",
+       height = 6.9,
+       width = 9, 
+       units = "in")
+
+```
+
+Boxplots for relevant genera
+
+```{r,echo=FALSE, warning=FALSE}
+
+#Mapping MiDAS4.8 genera to GTDBR202 taxonomy
+
+filamentous <- c(
+  "Ca_Microthrix" = "g__Microthrix",
+  "Ca_Amarolinea" = "g__SSC4",
+  "Promineofilum" = "g__Promineofilum", 
+  "Ca_Villigracilis" = "g__OLB14")
+
+nitrifiers <- c(
+  "Nitrosomonas" = "g__Nitrosomonas",
+  "Nitrospira" = "g__Nitrospira_A",
+  "Nitrospira" = "g__Nitrospira_F",
+  "Nitrotoga" = "g__Nitrotoga")
+
+denitrifiers <- c(
+  "Rhodoferax" = "g__Rhodoferax",
+  "Acidovorax" = "g__Giesbergeria",
+  "Zoogloea" = "g__Zoogloea")
+
+PAOs <- c(
+  "Tetrasphaera" = "g__GCA-2748155", 
+  "Tetrasphaera" = "g__Tetrasphaera",
+  "Tetrasphaera"  = "g__Phycicoccus_A",
+  "Dechloromonas" = "g__Azonexus", 
+  "Dechloromonas" = "g__SSSZ01",
+  "Ca_Accumulibacter" = "g__Accumulibacter", 
+  "Ca_Accumulibacter" = "g__Propionivibrio")
+
+GAOs <- c(
+  "Ca_Competibacter" = "g__Competibacter",
+  "Micropruina" = "g__Micropruina",
+  "Defluviicoccus" = "g__SSA4")
+
+pets <- list(
+  filamentous, 
+  nitrifiers, 
+  denitrifiers, 
+  PAOs, 
+  GAOs)
+
+guilds <- c(
+  "Filamentous", 
+  "Nitrifiers", 
+  "Denitrifiers", 
+  "PAOs", 
+  "GAOs")
+
+names(pets) <- guilds
+guilds_df <- bind_rows(lapply(pets, tibble), .id = "guild") 
+colnames(guilds_df) <- c("guild", "genus")
+guilds_df <- bind_cols(guilds_df, midas = names(guilds_df$genus))
+
+#Counts bgcs per class
+
+pets_bgcs <- bgcs %>%
+  mutate(class = factor(class, levels = bigscape_classes), 
+         class = my_classes[as.numeric(class)], 
+         class = factor(class, levels = unique(my_classes))) %>%
+  group_by(genome_id, class) %>%
+  tally()
+
+#Create dataset
+
+pets_ds <- 
+  expand.grid(genome_id = unique(mags$genome_id), 
+              class = unique(my_classes))%>%
+  left_join(mags[,c("genome_id", "gtdb_taxonomy")],
+            by = "genome_id") %>%
+  left_join(pets_bgcs, by = c("genome_id", "class")) %>%
+  mutate(n = replace_na(n, 0), 
+         genus = str_extract(gtdb_taxonomy, 'g__.*?;'), 
+         genus = str_sub(genus, end = -2))%>%
+  left_join(guilds_df, by = "genus") %>% 
+  filter(is.na(guild) == FALSE)  %>%
+  mutate(guild = factor(guild, levels = guilds)) %>%
+  group_by(midas) %>%
+  mutate(mags = length(unique(genome_id)), 
+         string = paste0(midas, ' (', mags,')'))
+
+colors <- sapply(lapply(my_colors, brewer.pal, n = 7), function(a) a[[5]])
+
+#Plot
+pets_boxplot <- ggplot(pets_ds) +
+  geom_boxplot(aes(x = n, y = string, color = class), 
+               fatten = 2.5) +
+  facet_grid(guild ~ class, scales = "free", space = "free") +
+  scale_color_manual(values = colors) +
+  scale_x_continuous(breaks = seq(0, 8, by =2)) +
+  theme_minimal() +
   theme(legend.position = "top", 
-        legend.direction = "horizontal",
-        legend.box.spacing = unit(x=c(0,0,0,0),units="mm")) +
-  scale_y_continuous(expand = c(0, 10, 0, 0)) +
-  scale_shape_manual(values = c(NA, 15)) +
- guides(shape = FALSE,
-        fill = guide_legend(nrow = 1,
-                            label.theme = element_text(size = 7), 
-                            title = "")) 
+        legend.box = "horizontal",
+        panel.background =  element_rect(color = "gray"), 
+        strip.text.x = element_blank()) +
+  guides(color = guide_legend(nrow = 1)) +
+  xlab("BGCs") +
+  ylab("Genus") 
 
- 
- figure2 <- figure %<+% species_df + 
-   geom_tiplab(aes(label = species), 
-               size = 2.5, align = TRUE) 
 
- figure2
+pets_boxplot
 
+#Save
+
+ggsave(pets_boxplot, 
+       filename = "figures/pets.svg", 
+       device = "svg", 
+       height = 6.9, 
+       width = 9, 
+       units = "in")
 ```
-
-
-
-
-```{r}
-library(treeio)
-library(ggtree)
-
-gtdb_tree <- read.newick("data/gtdbtk.bac120.classify.tree")
-
-taxon <- "p__Myxococcota"
-
-taxon_node <- gtdb_tree$node.label[str_detect(gtdb_tree$node.label, taxon)]
-
-tree <- tree_subset(gtdb_tree, node = taxon_node, levels_back = 1)
-
-```
-How many genomes in total? How many are MAGs?
-
-```{r}
-length(tree$tip.label)
-
-sum(tree$tip.label %in% mags$genome_id)
-```
-How many families?
-
-```{r}
-family_nodes <- as_tibble(tree) %>%
-  filter(str_detect(label, 'f__')) %>%
-  pull(node)
-
-tip_nodes <- sapply(family_nodes, 
-                     offspring,
-                     .data = tree,
-                     tiponly = TRUE)
-
-names(tip_nodes) <- family_nodes
-
-tibble(family_node = rep(family_nodes, sapply(tip_nodes, length)),
-       node = unlist(tip_nodes, use.names = FALSE)) %>%
-  left_join(as_tibble(tree)[,c("node", "label")], by = c("node")) %>%
-  mutate(genome_id = label, .keep = "unused") %>%
-  left_join(as_tibble(tree)[,c("node", "label")], by = c("family_node" = "node")) %>%
-  mutate(family = str_extract(label, 'f__.*'),
-         family = str_replace(family, '\'|-g.*', ""),
-         .keep = "unused") %>%
-  group_by(family) %>%
-  summarise(n = n(), 
-            n_mags = sum(genome_id %in% mags$genome_id)) %>%
-  arrange(desc(n_mags)) 
-
-```
-
-
-
 
 
