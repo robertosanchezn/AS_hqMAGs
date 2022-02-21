@@ -16,7 +16,9 @@ library("parallel")
 ```
 
 
-Creates supplementary table 1, with BGCs as observations  
+Creates supplementary table 1, with BGCs as observation. 
+Set "--antismash-dir" to the directory with antismash output. 
+Set "--bigscape-dir" to the directory with bigsacape output. 
 
 ```{bash eval=FALSE, warning=FALSE, results='hide'}
 Rscript notebook/bgc_table.R \
@@ -31,9 +33,9 @@ bgcs
 Creates supplementary table 2, with MAGs as observations
 
 ```{bash, eval = FALSE, results = 'hide', warning=FALSE}
-wget --output-document ~/AS_hqMAGs/r_markdown/data/bac120_metadata_r202.tar.gz \
+wget --output-document data/bac120_metadata_r202.tar.gz \
 https://data.gtdb.ecogenomic.org/releases/release202/202.0/bac120_metadata_r202.tar.gz
-tar -xvzf ~/AS_hqMAGs/r_markdown/data/bac120_metadata_r202.tar.gz
+tar -xvzf data/bac120_metadata_r202.tar.gz
 
 Rscript notebook/genome_table.R \
   --bgcs_table  tables/wwtphqmags_bgcs.csv \
