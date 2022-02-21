@@ -9,9 +9,9 @@ library(svglite)
   })
 ```
 
-Creates a BGC table for Myxococcota, might take a few minutes
+BGC table for Myxococcota
 
-```{bash eval = FALSE, results = 'hide', warning = FALSE}
+```{bash include = FALSE, eval = FALSE}
 Rscript notebook/bgc_table.R \
   --antismash_dir  ~/p__Myxococcota_all/antismash/6.0.1/ \
   --bigscape_dir ~/p__Myxococcota_all/bigscape/p__Myxococcota_all_antismash_6.0.1/network_files/2022-02-01_09-33-46_glocal_p__Myxococcota_all_antismash_6.0.1/ \
@@ -19,37 +19,39 @@ Rscript notebook/bgc_table.R \
 ```
 ```{r, echo=FALSE}
 bgcs <- read_csv("tables/p__Myxococcota_all_bgcs.csv", 
-                 show_col_types = FALSE) %>%
-  filter(genome_id %in% genomes$genome_id)
+                 show_col_types = FALSE)
+bgcs
 ```
 
-Creates a genome table for Myxococcota, might take a few minutes
+Genome table for Myxococcota
 
-```{bash include=FALSE}
-wget --output-document ~/AS_hqMAGs/r_markdown/data/bac120_metadata_r202.tar.gz \
+```{bash include=FALSE,eval = FALSE}
+wget --output-document data/bac120_metadata_r202.tar.gz \
 https://data.gtdb.ecogenomic.org/releases/release202/202.0/bac120_metadata_r202.tar.gz
-tar -xvzf ~/AS_hqMAGs/r_markdown/data/bac120_metadata_r202.tar.gz
+tar -xvzf data/bac120_metadata_r202.tar.gz
 
-Rscript ~/AS_hqMAGs/r_markdown/notebook/genome_table.R \
-  --bgcs_table ~/AS_hqMAGs/r_markdown/tables/p__Myxococcota_all_bgcs.csv \
-  --gtdbtk_summary ~/AS_hqMAGs/r_markdown/data/gtdbtk.bac120.summary.tsv \
-  --supplementary_file  ~/AS_hqMAGs/r_markdown/data/singleton_2021_table3.xlsx \
-  --assembly_details ~/AS_hqMAGs/r_markdown/data/assembly_details.txt \
-  --output ~/AS_hqMAGs/r_markdown/tables/p__Myxococcota_all_genomes.csv \
-  --gtdb_metadata ~/AS_hqMAGs/r_markdown/data/bac120_metadata_r202.tsv 
+Rscript notebook/genome_table.R \
+  --bgcs_table tables/p__Myxococcota_all_bgcs.csv \
+  --gtdbtk_summary data/gtdbtk.bac120.summary.tsv \
+  --supplementary_file  data/singleton_2021_table3.xlsx \
+  --assembly_details data/assembly_details.txt \
+  --output tables/p__Myxococcota_all_genomes.csv \
+  --gtdb_metadata data/bac120_metadata_r202.tsv 
 ```
-
-```{r}
-genomes <- read_csv("~/AS_hqMAGs/r_markdown/tables/p__Myxococcota_all_genomes.csv", 
+```{r, echo = FALSE}
+genomes <- read_csv("tables/p__Myxococcota_all_genomes.csv", 
                     show_col_types = FALSE)  %>%
   filter(str_detect(gtdb_taxonomy, "p__Myxococcota")) %>%
   filter(mimag_quality != "LQ")
+genomes
+```
 
-bgcs <- read_csv("~/AS_hqMAGs/r_markdown/tables/p__Myxococcota_all_bgcs.csv", 
+```{r include = FALSE}
+bgcs <- read_csv("tables/p__Myxococcota_all_bgcs.csv", 
                  show_col_types = FALSE) %>%
   filter(genome_id %in% genomes$genome_id)
 
-gtdb_tree <- read.newick("~/AS_hqMAGs/r_markdown/data/gtdbtk.bac120.classify.tree")
+gtdb_tree <- read.newick("data/gtdbtk.bac120.classify.tree")
 
 
 taxon <- "p__Myxococcota"
@@ -61,7 +63,6 @@ phylum_tree <- tree_subset(gtdb_tree, node = taxon_node, levels_back = 0)
 phylum_tree$node.label <- str_extract(phylum_tree$node.label, '.__.*$') %>%
   str_replace_all('\'', '')
 ```
-
 
 Customize BiG-SCAPE classes and color palette
 
@@ -92,9 +93,11 @@ my_colors <- c("#ff8800",
                "#757575")
 ```
 
-Boxplots
+QC Boxplots for the phylum Nitrospirota
 
-```{r}
+```{r, echo = FALSE}
+
+#Create dataset
 
 boxplots_ds <- genomes %>%
  
@@ -104,6 +107,8 @@ boxplots_ds <- genomes %>%
            assembly_level == "Complete/Chromosome" ~ assembly_level,  
            assembly_level == "Contig/Scaffold" ~ mimag_quality), 
          taxonomy = str_replace_all(gtdb_taxonomy, ";", "\n"))
+
+#Create plot
 
 boxplots <- ggplot(boxplots_ds, 
        aes(x = quality, 
@@ -119,6 +124,8 @@ boxplots <- ggplot(boxplots_ds,
   ylab("% of BGCs on a contig edge") +
   xlab("")
 
+#Save figure
+
 ggsave(boxplots, 
        filename = "figures/boxplot_myxo.svg", 
        device = "svg", 
@@ -126,13 +133,15 @@ ggsave(boxplots,
        width = 4.5, 
        units = "in")
 
+#Interactive figure
+
 ggplotly(boxplots)
 
 ```
 
 What family should we focus on? Polyangiaceae is well represented by our MAGs and the references. 
 
-```{r}
+```{r, echo=FALSE}
 
 families_boxplots_ds <- genomes %>%
   group_by(family = str_sub(str_extract(gtdb_taxonomy, "f__.*?;"), end= -2)) %>%
@@ -155,7 +164,7 @@ ggplotly(families_boxplots)
 
 Overview of the phylum Myxococcota. Add number of MAGs per clade
 
-```{r echo=FALSE, fig.height=15, fig.width=10}
+```{r echo=FALSE, warning = FALSE, fig.height=15, fig.width=10}
 
 phylum_tree_ds <- bgcs %>%
    mutate(class = factor(class, levels = bigscape_classes), 
@@ -249,11 +258,9 @@ clades_tree
 
 Absence / Presence matrix for f__Polyangiaceae
 
-Keep this as supplementary, fix it for publications
+```{r echo=FALSE, fig.height=7, fig.width=12, message=FALSE, warning=FALSE}
 
-```{r fig.height=7, fig.width=12}
-
-family <- "f__Nannocystaceae"
+family <- "f__Polyangiaceae"
 
 family_ds <- 
   filter(genomes, str_detect(gtdb_taxonomy, family)) %>%
