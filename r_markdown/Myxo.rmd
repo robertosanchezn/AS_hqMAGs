@@ -1,31 +1,35 @@
 ```{r}
+suppressPackageStartupMessages({
 library(tidyverse)
 library(plotly)
 library(treeio)
 library(ggtree)
 library(ggtreeExtra)
 library(svglite)
+  })
 ```
 
 Creates a BGC table for Myxococcota, might take a few minutes
 
-```{bash}
-Rscript ~/AS_hqMAGs/r_markdown/notebook/bgc_table.R \
+```{bash eval = FALSE, results = 'hide', warning = FALSE}
+Rscript notebook/bgc_table.R \
   --antismash_dir  ~/p__Myxococcota_all/antismash/6.0.1/ \
   --bigscape_dir ~/p__Myxococcota_all/bigscape/p__Myxococcota_all_antismash_6.0.1/network_files/2022-02-01_09-33-46_glocal_p__Myxococcota_all_antismash_6.0.1/ \
-  --output  ~/AS_hqMAGs/r_markdown/tables/p__Myxococcota_all_bgcs.csv
+  --output  tables/p__Myxococcota_all_bgcs.csv
 ```
-Downloads metadata table from GTDB, might take a few minutes
+```{r, echo=FALSE}
+bgcs <- read_csv("tables/p__Myxococcota_all_bgcs.csv", 
+                 show_col_types = FALSE) %>%
+  filter(genome_id %in% genomes$genome_id)
+```
+
+Creates a genome table for Myxococcota, might take a few minutes
 
 ```{bash include=FALSE}
 wget --output-document ~/AS_hqMAGs/r_markdown/data/bac120_metadata_r202.tar.gz \
 https://data.gtdb.ecogenomic.org/releases/release202/202.0/bac120_metadata_r202.tar.gz
 tar -xvzf ~/AS_hqMAGs/r_markdown/data/bac120_metadata_r202.tar.gz
-```
 
-Creates a genome table for Myxococcota
-
-```{bash}
 Rscript ~/AS_hqMAGs/r_markdown/notebook/genome_table.R \
   --bgcs_table ~/AS_hqMAGs/r_markdown/tables/p__Myxococcota_all_bgcs.csv \
   --gtdbtk_summary ~/AS_hqMAGs/r_markdown/data/gtdbtk.bac120.summary.tsv \
@@ -34,8 +38,6 @@ Rscript ~/AS_hqMAGs/r_markdown/notebook/genome_table.R \
   --output ~/AS_hqMAGs/r_markdown/tables/p__Myxococcota_all_genomes.csv \
   --gtdb_metadata ~/AS_hqMAGs/r_markdown/data/bac120_metadata_r202.tsv 
 ```
-
-Imports both tables and the tree
 
 ```{r}
 genomes <- read_csv("~/AS_hqMAGs/r_markdown/tables/p__Myxococcota_all_genomes.csv", 
@@ -48,6 +50,7 @@ bgcs <- read_csv("~/AS_hqMAGs/r_markdown/tables/p__Myxococcota_all_bgcs.csv",
   filter(genome_id %in% genomes$genome_id)
 
 gtdb_tree <- read.newick("~/AS_hqMAGs/r_markdown/data/gtdbtk.bac120.classify.tree")
+
 
 taxon <- "p__Myxococcota"
 

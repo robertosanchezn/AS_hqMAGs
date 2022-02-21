@@ -1,4 +1,5 @@
-```{r}
+```{r results = "hide", warning=FALSE}
+
 suppressPackageStartupMessages({
 library('tidyverse')
 library('plotly')
@@ -7,8 +8,13 @@ library('ggtree')
 library('ggtreeExtra')
 library("RColorBrewer")
 library("cowplot")
-library("shadowtext")})
+library("shadowtext")
+library("pbapply")
+library("parallel")
+})  
+  
 ```
+
 
 Creates supplementary table 1, with BGCs as observations  
 
@@ -24,7 +30,11 @@ bgcs
 ```
 Creates supplementary table 2, with MAGs as observations
 
-```{bash, echo = TRUE, results = 'hide', warning=FALSE}
+```{bash, eval = FALSE, results = 'hide', warning=FALSE}
+wget --output-document ~/AS_hqMAGs/r_markdown/data/bac120_metadata_r202.tar.gz \
+https://data.gtdb.ecogenomic.org/releases/release202/202.0/bac120_metadata_r202.tar.gz
+tar -xvzf ~/AS_hqMAGs/r_markdown/data/bac120_metadata_r202.tar.gz
+
 Rscript notebook/genome_table.R \
   --bgcs_table  tables/wwtphqmags_bgcs.csv \
   --supplementary_file data/singleton_2021_table3.xlsx \
@@ -269,8 +279,8 @@ scatter <- ggplot(scatter_ds,
              y = total_bgcs, 
              color = phylum,
              label = tax)) +
-  geom_jitter(alpha = 0.4) +
-  scale_color_manual(values = c("red", "darkgrey", "blue")) +
+  geom_jitter(alpha = 0.3) +
+  scale_color_manual(values = c("red", "black", "blue")) +
   theme_minimal() +
   theme(legend.position = "top", 
         legend.direction = "horizontal")
@@ -332,8 +342,8 @@ get_node_from_taxon <- function(taxon){
   }
 
 #Parallelizes this step because it's a little slow
-cluster <- parallel::makeForkCluster(nnodes = 16)
-taxon_nodes <- pbapply::pbsapply(taxons, get_node_from_taxon, cl=cluster)
+cluster <- makeForkCluster(nnodes = detectCores())
+taxon_nodes <- pbsapply(taxons, get_node_from_taxon, cl = cluster)
 
 #Counts leaves for each node
 count_leaves <- Vectorize(function(node) {
