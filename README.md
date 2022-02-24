@@ -2,6 +2,11 @@
 # bgcflow_AS_hqMAGs
 This repository contains the code required to reproduce the analysis of BGCs diversity in 1000 MAGs from waste water treatment plant in Denmark. The genomes are publicly available from https://www.ncbi.nlm.nih.gov/bioproject/prjna629478.
 
+# Preview analyses notebooks
+- [AS_hqMAGs](https://htmlpreview.github.io/?https://github.com/robertosanchezn/AS_hqMAGs/blob/main/r_markdown/AS_hqMAGs.html)
+- [p__Myxococcota](https://htmlpreview.github.io/?https://github.com/robertosanchezn/AS_hqMAGs/blob/main/r_markdown/Myxo.html)
+- [p__Nitrospirota](https://htmlpreview.github.io/?https://github.com/robertosanchezn/AS_hqMAGs/blob/main/r_markdown/Nitro.html)
+
 # Correspondence
 robertosan97@gmail.com
 
