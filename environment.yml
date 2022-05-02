@@ -16,6 +16,7 @@ dependencies:
   - bioconductor-genomicranges
   - r-pbapply
   - r-irkernel
+  - alive-progress
   - pip
   - pip:
       - azure-cli
