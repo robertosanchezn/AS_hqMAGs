@@ -1,0 +1,638 @@
+---
+title: "comparison"
+author: "Roberto Sánchez"
+date: "5/19/2022"
+output: html_document
+---
+
+```{r}
+library("tidyverse")
+library("jsonlite")
+library("RColorBrewer")
+library("igraph")
+library("ggraph")
+library("cowplot")
+library("readxl")
+library("curl")
+```
+
+```{r}
+source("notebook/parse_antismash.R")
+dirs <- list.dirs(path = "F:/roberto_bgcs/bgcflow/processed", recursive = FALSE)
+dirs <- dirs[str_detect(dirs, "et_al")]
+dirs <- paste0(dirs, "/antismash/6.0.1/")
+#data <- sapply(dirs, parse_study, simplify = FALSE)
+data <- readRDS("data/comparison.rds")
+```
+
+```{r}
+source("notebook/parse_bigscape.R")
+bigscape_dir <- "F:/roberto_bgcs/bgcflow/interim/all_hqmags_study_bgcs_antismash_6.0.1"
+bigscape <- import_bigscape(bigscape_dir)
+```
+
+```{r}
+studies <- str_match(dirs, "\\/([\\w-]+?_et_al_\\d{4})")[,2]
+data <- keep(data, map_lgl(data, ~is_empty(.x[["regions"]]) == FALSE))
+names(data) <- studies
+
+references <- c("Crits-Christoph_et_al_2018", 
+             "Sharrar_et_al_2020", 
+             "Chen_et_al_2020", 
+             "Singleton_et_al_2021",
+             "Liu_et_al_2021", 
+             "Bickhart_et_al_2022")
+
+environments <- c("Soil", 
+                 "Soil", 
+                 "Microbial Mats", 
+                 "Activated Sludge", 
+                 "Activated Sludge", 
+                 "Sheep Feces")
+
+long_reads <- c('short reads', 
+                'short reads', 
+                'short reads', 
+                'long reads', 
+                'long reads', 
+                'long reads')
+
+studies <- tibble(study_tag = LETTERS[1:length(studies)], 
+       reference = references, 
+       author = str_match(reference, "(^.+?)_et_al")[,2],
+       environment = environments, 
+       long_reads = long_reads) %>%
+  mutate(author = factor(author, levels = author), 
+         environment = str_replace(environment, " ", "\n"))
+
+studies
+```
+```{r}
+bgcs %>%
+  mutate(product = map_chr(product, paste, collapse = ';')) %>%
+  write_csv(file = "tables/comparison_bgcs.csv")
+```
+
+
+```{r}
+traffic_light <- ggplot(studies, aes(x = author, label = environment)) +
+  geom_point(y = 1, size = 5, aes(color = long_reads)) +
+  geom_label(y = 0, size = 3) +
+  scale_color_manual(values = c("steelblue","firebrick")) +
+  scale_y_continuous(limits = c(-0.5,1.5), breaks = 0:1) +
+  theme_minimal() +
+  theme( 
+    panel.grid.major.y = element_line(color = "black"), 
+    panel.grid.minor = element_blank(), 
+    legend.position = "top", 
+    axis.text = element_text(color = "white" ), 
+    legend.margin = margin(-1,-1,-1,-1)) +
+  guides(color = guide_legend(title = NULL)) +
+  ylab(" ") +
+  xlab("")
+
+traffic_light
+```
+Filtering Bickhart for HQ Bacterial MAGs
+
+```{r}
+Bickhart_supplementary <- 
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41587-021-01130-z/MediaObjects/41587_2021_1130_MOESM3_ESM.xlsx"
+
+download.file(
+  Bickhart_supplementary, 
+  destfile = "data/bickhart_supplementary.xlsx", 
+  quiet = TRUE,
+  mode = "wb") 
+
+bickhart_bacteria <- read_xlsx(
+  "data/bickhart_supplementary.xlsx", 
+  sheet = 'SupplementaryTable1') %>%
+  setNames(c("mag", "tax")) %>%
+  filter(str_detect(tax, "^d__Bacteria")) %>%
+  pull(mag)
+
+# Manual CheckM output
+
+bickhart_hq <- read_tsv("data/bickhart_checkm.tsv", col_select = c(1,12,13)) %>%
+  set_names("mag", "completeness", "contamination") %>%
+  filter(completeness > 90) %>%
+  filter(contamination < 5) %>%
+  pull(mag) %>%
+  str_remove("\\.contigs")
+  
+```
+
+Filtering Liu
+
+```{r}
+Liu_supplementary <- 
+  "https://static-content.springer.com/esm/art%3A10.1186%2Fs40168-021-01155-1/MediaObjects/40168_2021_1155_MOESM2_ESM.xlsx"
+
+download.file(
+  Liu_supplementary, 
+  destfile = "data/liu_supplementary.xlsx", 
+  quiet = TRUE,
+  mode = "wb") 
+
+Liu_df <- read_xlsx("data/liu_supplementary.xlsx", sheet = 3) %>%
+  select(MAGs, `Completeness (%)`, `Contamination (%)`, `Taxa (GTDB)`) %>%
+  set_names("mag", "completeness", "contamination", "tax") 
+
+liu_bacteria <- Liu_df %>%
+  filter(str_detect(tax, "^d__Bacteria")) %>%
+  pull(mag)
+  
+liu_hq <- Liu_df %>%
+  filter(completeness > 90) %>%
+  filter(contamination < 5) %>%
+  pull(mag)
+
+```
+
+```{r}
+CritsChristoph_supplementary <-"https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-018-0207-y/MediaObjects/41586_2018_207_MOESM3_ESM.xlsx"
+  
+download.file(
+  CritsChristoph_supplementary, 
+  destfile = "data/crits-christoph_supplementary.xlsx", 
+  quiet = TRUE,
+  mode = "wb") 
+
+CritsChristoph_bioproject_accession <- 'PRJNA449266'
+CritsChristoph_mapping <- paste0(
+  "https://www.ncbi.nlm.nih.gov/bioproject/?term=", 
+  CritsChristoph_bioproject_accession) %>%
+  read_html() %>%
+  html_node("#AssemblyDetails") %>%
+  html_table() %>%
+  select(Assembly, Isolate) %>%
+  set_names(c("genome_id", "isolate")) %>%
+  mutate(isolate = str_remove(isolate, '^.+? '))
+
+critschristoph_hq <- read_xlsx("data/crits-christoph_supplementary.xlsx") %>%
+  set_names(~tolower(str_replace_all(.x, "\\W", ''))) %>%
+  mutate(genome = str_remove(genome, "^.+_")) %>%
+  left_join(CritsChristoph_mapping, by = c('genome' = 'isolate')) %>%
+  filter(checkmcompleteness > 90) %>%
+  filter(checkmcontamination < 5) %>%
+  pull(genome_id)
+    
+```
+
+```{r}
+Sharrar_supplementary <- 
+  'https://journals.asm.org/doi/suppl/10.1128/mBio.00416-20/suppl_file/mbio.00416-20-st002.xlsx'
+
+sharrar_genomes <- list.dirs(
+  "../../bgcflow/processed/Sharrar_et_al_2020/antismash/6.0.1", 
+  recursive = FALSE, 
+  full.names = FALSE) 
+
+download.file(Sharrar_supplementary,
+              destfile = "data/sharrar_supplementary.xlsx",
+              mode = "wb")
+
+genome_mapping_pattern <- 
+  paste0(sharrar_genomes, "$", collapse = "|")
+  
+sharrar_hq <- read_xlsx("data/sharrar_supplementary.xlsx") %>%
+  set_names(~tolower(str_replace_all(.x, "\\W", ''))) %>%
+  filter(checkmcompleteness > 90) %>%
+  filter(checkmcontamination < 5) %>%
+  mutate(corrected_genome_id = str_match(genomename, genome_mapping_pattern)[,1]) %>%
+  drop_na(corrected_genome_id) %>%
+  pull(corrected_genome_id) 
+  
+```
+
+
+```{r}
+# Manual checkm
+chen_hq_bacteria <- read_tsv("data/chen_checkm_output.tsv") %>%
+  set_names(~str_remove_all(.x, "\\W")) %>%
+  filter(str_detect(Markerlineage, "rchaea") == FALSE) %>%
+  filter(Completeness > 90) %>%
+  filter(Contamination < 5) %>% 
+  pull(BinId)
+  
+
+chen_api <- "https://api.mg-rast.org/project/mgp81948?verbosity=full"
+chen_genome_ids <- fromJSON(chen_api)$metagenomes$metagenome_id
+chen_urls <- paste0("https://api.mg-rast.org/download/", chen_genome_ids, "?file=299.1")
+chen_destinations <- paste0('//wsl$/Ubuntu/home/roberto/chen/', chen_genome_ids, ".fna")
+#map(1:length(chen_urls), ~download.file(chen_urls[.x], destfile =chen_destinations[.x]))
+```
+
+```{r}
+bgcs <- map(data, "regions") %>%
+  bind_rows(.id = "study") %>%
+  left_join(studies[,c("reference", "author")], by = c("study" = "reference")) %>%
+    # Some accession numbers in these two studies lost the ".1", 
+    # so I add it again to be able to map it to BiG-SCAPE
+    mutate(
+      bgc_id = if_else(
+        author %in% c("Singleton", "Crits-Christoph") &
+          str_detect(bgc_id, "\\.1\\.region", negate = TRUE),
+        str_replace(bgc_id, ".region", ".1.region"), bgc_id)) %>%
+  left_join(bigscape, by = "bgc_id") %>%
+  mutate(class = factor(translate_class(class), levels = unique(my_classes))) %>%
+  filter(author != "Crits-Christoph" | genome_id %in% critschristoph_hq) %>%
+  filter(author != "Sharrar" | genome_id %in% sharrar_hq) %>%
+  filter(author != "Chen" | genome_id %in% chen_hq_bacteria) %>%
+  filter(author != "Liu" | genome_id %in% liu_hq) %>%
+  filter(author != "Bickhart" | genome_id %in% c(bickhart_hq, bickhart_bacteria))
+  
+```
+
+# Contig edge comparison
+
+```{r fig.width=9}
+contig_edge_1 <- bgcs %>%
+  arrange(author) %>%
+  group_by(author) %>%
+  mutate(perc = round(100 - 100*sum(contig_edge)/n(), 1), 
+         label = paste0(author,"\n(", perc, "%)"), 
+         label = factor(label, levels = unique(label))) %>%
+  ungroup() %>%
+  mutate(BGCs = if_else(contig_edge, "incomplete", "complete"), 
+         BGCs = factor(BGCs, levels = c ("incomplete", "complete"))) %>%
+  ggplot(aes(x = label, fill = BGCs)) +
+  geom_bar(color = "black") +
+  scale_fill_manual(values = c("grey95", "darkgrey")) +
+  theme_minimal() +
+  theme(axis.line = element_line())
+
+contig_edge_2 <- contig_edge_1 +
+  theme(axis.title = element_blank(),   
+        legend.position = "top")
+
+contig_edge_1
+
+```
+
+The short-read studies (first three) have BGCs mostly in the contig edge. 
+The studies using long reads have mostly complete BGCs. 
+Bickhart has the highest, but uses PacBio. 
+Singleton and Liu use "hybrid assembly".
+
+# Have different studies different classes of BGCs ?
+
+```{r fig.width=9}
+class_distribution_1 <- bgcs %>% 
+  filter(is.na(class) == FALSE) %>%
+  arrange(author) %>%
+  group_by(author) %>%
+  mutate(n_study = n(), 
+         label = paste0(author, "\n(", n_study, " BGCs)"), 
+         label = factor(label, levels = unique(label))) %>%
+  ungroup() %>%
+  group_by(label, class, n_study) %>%
+  summarise(n = n(), perc = n / n_study * 100) %>%
+  distinct() %>%
+  ggplot(aes(x = class, y = perc, fill = class)) + 
+  geom_bar(stat ="identity") +
+  facet_grid(~label) +
+  scale_fill_manual(values = my_colors) +
+  #theme_minimal() +
+  theme(axis.text.x = element_blank()) +
+  ylab("% of BGCs") +
+  xlab("") 
+
+class_distribution_2 <- class_distribution_1 +
+  theme(
+    legend.margin = margin(-1,-1,-1,-1),
+    #strip.text.x = element_blank(),
+    legend.position = "bottom", 
+    legend.direction = "horizontal", 
+    axis.ticks = element_blank()) +
+  guides(fill = guide_legend(nrow = 1, title = NULL))
+
+class_distribution_1
+```
+
+Studies on soil have abundant NRPS (first two)
+Bickhart (Sheep feces) has mostly RiPPs.
+
+# What's the novelty of the BGCs in other studies?
+
+```{r fig.width=9}
+long_bigscape <- bigscape %>%
+  select(-class) %>%
+  left_join(bgcs[c("bgc_id", "author", "class", "product")], by = "bgc_id") %>%
+  mutate(mibig = if_else(str_detect(bgc_id, "^BGC"), TRUE, FALSE)) %>%
+  filter(is.na(author) == FALSE | mibig) %>%
+  pivot_longer(starts_with('GCF'), names_to = "cutoff", values_to = "GCF") %>%
+  mutate(cutoff = as.numeric(str_match(cutoff, "c(.+$)")[,2]))
+
+# Possibly useful function "find_mibig_hits"
+
+bgc_count <- table(bgcs$author)
+bgc_count <- tibble(author = names(bgc_count), total_bgcs = bgc_count)
+
+GCFs_with_mibig_hit <- long_bigscape %>%
+  group_by(cutoff, GCF) %>%
+  summarise(n_mibig = sum(mibig)) %>%
+  filter(n_mibig > 0) %>%
+  left_join(long_bigscape, by = c("cutoff", "GCF"))
+
+novelty_1 <- GCFs_with_mibig_hit  %>%
+  filter(mibig == FALSE) %>%
+  left_join(bgc_count, by = "author") %>%
+  group_by(author, cutoff, class) %>%
+  summarise(hits = n(), 
+            perc_hits = hits/total_bgcs * 100) %>%
+  bind_rows(tibble(author = "Crits-Christoph")) %>%
+  mutate(author = factor(author, levels = studies$author)) %>%
+  ggplot(aes(x = cutoff, fill = class, y = perc_hits)) +
+  geom_bar(stat = "identity", position = "stack") +
+  facet_grid(~author) +
+  scale_fill_manual(values = my_colors, drop = FALSE) +
+  ylab("% of BGCs clustered with a MIBiG BGC") 
+  
+novelty_1
+  
+novelty_2 <- novelty_1 + 
+  theme(strip.text = element_text(angle = 90, hjust = 0.5),
+        legend.position = "none")
+```
+Christoph has no hits at all, but the dataset is much smaller. 
+Only Sharrar and Liu have hits at 0.3 
+
+Our hits at c = 0.5 are:
+arylpolyenes hits to flexirubin (BGC0000839)
+ectoines hits to reference ectoines
+NRPS-like hit to BGC0000871
+
+# Do our BGCs cluster with Liu's?
+
+```{r}
+overlapping_GCFs <- long_bigscape %>%
+  filter(author %in% c("Singleton", "Liu")) %>%
+  group_by(GCF, cutoff) %>%
+  summarise(from_singleton = sum(author == "Singleton"), 
+            from_liu = sum(author == "Liu")) %>%
+  filter(from_singleton > 0) %>%
+  filter(from_liu > 0) 
+  
+overlapping_GCFs %>%
+  group_by(cutoff) %>%
+  summarise(number_of_overlapping_GCFs = n(), 
+            bgcs_from_singleton = sum(from_singleton), 
+            bgcs_from_liu = sum(from_liu), 
+            total_bgcs = bgcs_from_singleton + bgcs_from_liu) 
+  
+```
+
+Yes, there is some overlap. 60 BGCs overlap both studies, containing a total of 194 (4.58%) of our BGCs and 109 (5.19%) of theirs. 
+
+# How much do the studies overlap with each other
+
+```{r}
+studies_plus_mibig <- c(levels(studies$author), "MIBiG")
+bgc_count_mibig <- rbind(bgc_count, tibble(author = "MIBiG", total_bgcs = 1926))
+
+find_overlap <- Vectorize(function(study1, study2, cutoff_value = 0.3){
+
+ filter(long_bigscape, cutoff == cutoff_value) %>%
+    mutate(author = if_else(
+      str_detect(bgc_id, "^BGC") & is.na(author), "MIBiG", as.character(author)), 
+      author = factor(author, levels = studies_plus_mibig))  %>%
+    filter(author %in% c(study1, study2)) %>%
+    group_by(GCF) %>%
+    summarise(
+      from_study1 = sum(author == study1), 
+      from_study2 = sum(author == study2)) %>%
+    filter(from_study1 > 0) %>%
+    filter(from_study2 > 0)  %>%
+    pull(from_study1) %>% sum()
+})
+
+overlap_matrix <- expand.grid(study1 = studies_plus_mibig,
+                              study2 = studies_plus_mibig) %>%
+  mutate(bgcs = find_overlap(study1, study2)) %>%
+  mutate(bgcs = replace(bgcs, study1 == "MIBiG" & study2 == "MIBiG", 1926)) %>% 
+  left_join(bgc_count_mibig, by = c("study1" = 'author')) %>%
+  mutate(perc = as.double(bgcs/total_bgcs * 100), 
+         across(starts_with('study'), 
+                ~factor(.x, levels = studies_plus_mibig)))
+
+overlap <-  ggplot(overlap_matrix,
+                   aes(x = study1,
+                       y = study2, 
+                       fill = perc,
+                       label = bgcs)) +
+  geom_tile() + 
+  geom_text() +
+  scale_fill_gradient2(low = "steelblue4",
+                       mid = "white", 
+                       high = "firebrick", 
+                       midpoint = 50) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), 
+        axis.title = element_blank(),
+        legend.position = "top", 
+        legend.margin = margin(0,0,0,0))+
+  guides(fill = guide_colorbar(title = "% of BGCs"))
+  
+overlap
+```
+
+# What about with other cutoff values?
+
+```{r}
+overlap_matrix_cutoffs <- 
+  expand.grid(study1 = studies_plus_mibig, 
+              study2 = studies_plus_mibig, 
+              cutoff = c(0.3, 0.4, 0.5)) %>%
+  mutate(bgcs = find_overlap(study1, study2, cutoff)) %>%
+  mutate(bgcs = replace(bgcs, study1 == "MIBiG" & study2 == "MIBiG", 1926)) %>% 
+  left_join(bgc_count_mibig, by = c("study1" = 'author')) %>%
+  mutate(perc = as.double(bgcs/total_bgcs * 100), 
+         across(starts_with('study'), 
+                ~factor(.x, levels = studies_plus_mibig)), 
+                cutoff = paste("cutoff =", cutoff))
+
+overlap_faceted <- ggplot(overlap_matrix_cutoffs,
+                   aes(x = study1,
+                       y = study2, 
+                       fill = perc,
+                       label = bgcs)) +
+  geom_tile() + 
+  geom_text() +
+  facet_grid(~cutoff) +
+  scale_fill_gradient2(low = "steelblue4",
+                       mid = "white", 
+                       high = "firebrick", 
+                       midpoint = 50) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), 
+        axis.title = element_blank(),
+        legend.position = "top", 
+        legend.margin = margin(0,0,0,0), 
+        panel.grid = element_blank(),
+        axis.ticks = element_line(color = "black"))+
+  guides(fill = guide_colorbar(title = "% of BGCs"))
+
+ggsave("figures/overlap.svg", 
+       overlap_faceted,
+       width = 9, height = 4.3)
+
+
+```
+
+# How do these overlapping GCFs look like?
+
+```{r}
+nodes <- bgcs %>%
+  filter(GCF_c0.3 %in% overlapping_GCFs$GCF) %>%
+  filter(author %in% c("Singleton", "Liu")) %>%
+  relocate(bgc_id, .before = 1) 
+
+edges_df <- import_networks(bigscape_dir) %>%
+  filter(if_all(starts_with("bgc_id"), ~.x %in% nodes$bgc_id)) 
+
+graph <- graph_from_data_frame(edges_df, vertices = nodes, directed = FALSE)
+
+vertex_attr(graph)$class <- factor(vertex_attr(graph)$class, levels = unique(my_classes))
+
+layout <- layout_with_fr(graph, weights = edge_attr(graph)$squared_similarity)
+
+ggraph(graph, layout = layout) +
+  geom_edge_link(aes(alpha = squared_similarity)) +
+  geom_node_point(aes(color = class, shape = author)) +
+  scale_color_manual(values = my_colors, drop = FALSE) +
+  #facet_nodes(~class) + 
+  theme_classic() +
+  theme(
+   # legend.position = "none",
+    axis.text = element_blank(), 
+    axis.title = element_blank(), 
+    axis.ticks = element_blank())
+
+```
+
+Modules
+
+```{r}
+modules <- data %>%
+  map("modules") %>%
+  bind_rows(.id = "study") %>%
+ # filter(complete) %>%
+  left_join(bind_rows(map(data, "regions"), .id = "study"),
+            by = c("genome_id", "contig", "study"), 
+            suffix = c("", "_region")) %>%
+  # This could be a useful function
+  mutate(.keep = "unused", across(
+    starts_with("location"), list(
+      start = ~str_match(.x, '\\[(.+?):')[,2],
+      end = ~str_match(.x, ':(.+?)\\]')[,2]),
+    .names = "{.col}_{.fn}")) %>%
+  filter(location_start >= location_region_start) %>%
+  filter(location_end <= location_region_end) %>%
+  left_join(studies[,c("author", "reference")], by = c("study" = "reference")) %>%
+  select(-contains("region"))
+
+modules %>%
+  mutate(product = map_chr(product, paste, collapse = " ")) %>%
+  write_csv("tables/comparison_modules.csv")
+```
+
+
+```{r}
+modular_products <- c("NRPS", "T1PKS", "transAT-PKS")
+                
+modules_df <- modules %>%
+  filter(complete) %>%
+  filter(map_lgl(product, ~as.logical(sum(modular_products %in% .x)))) %>% 
+  mutate(product = map_chr(product, paste, collapse = ";")) %>%
+  group_by(bgc_id, author) %>%
+  summarise(n_modules = n()) %>%  
+  #mutate(author = factor(study, levels = studies$author)) %>%
+  arrange(author) %>%
+  group_by(author) %>%
+  mutate(n_bgcs = n(), 
+         label = paste0(n_bgcs, " modular\nBGCs"), 
+         label = factor(label, levels = unique(label))) 
+
+modules_plot <- 
+  ggplot(modules_df, aes(x = label, y = n_modules)) +
+  geom_boxplot() +
+  scale_y_log10(breaks = c(1,2,5,10,20)) +
+  theme_minimal() +
+  xlab("") +
+  ylab(label = paste(
+    "Number of complete PKS / NRPS modules in\nmodular BGCs (", 
+    paste0(modular_products, collapse = " / "),
+    ")")) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5))
+
+modules_plot
+```
+It seems that in the environment, multimodular BGCs are not as common as in isolates. 
+
+```{r fig.height=7, fig.width=9}
+modules_long_reads <- 
+  modules_df %>%
+  filter(author %in% studies[studies$long_reads == "long reads",]$author) %>%
+  mutate(label = paste0(author, "\n(", label,  ")"), 
+         label = factor(label, levels = unique(label))) %>%
+  ggplot(aes(x = label, y = n_modules)) +
+  geom_boxplot() +
+  scale_y_log10(breaks = c(1,2,5,10,20)) +
+  theme_minimal() +
+  theme(axis.title = element_text(size = 8), 
+        axis.line = element_line())+
+  xlab("") +
+  ylab(label = paste(
+    "Number of complete PKS/NRPS\nmodules in modular BGCs\n(", 
+    paste0(modular_products, collapse = " / "),
+    ")")) 
+
+modules_long_reads
+
+```
+
+
+```{r fig.height=7, fig.width=9}
+panel_filepath <- "figures/comparison_panel.svg"
+
+source("notebook/remove_text_length.R")
+
+panel_2 <- 
+  plot_grid(
+    ncol = 2,
+    plot_grid(
+      ncol = 1, 
+      contig_edge_2, 
+      traffic_light,
+      class_distribution_2, 
+      rel_heights = c(7,4,7), 
+      labels = c("A", "", "B")), 
+    plot_grid(
+      ncol = 1,
+      overlap, 
+      modules_long_reads, 
+      rel_heights = 3:2, 
+      labels = c("C", "D")),
+    rel_widths = 3:2)
+
+panel_2
+
+panel_filepath <- "figures/comparison_panel.svg"
+
+ggsave(panel_2, device = "svg", height = 7, width = 9, file = panel_filepath)
+remove_text_length(panel_filepath)  
+```
+```{r}
+long_bigscape %>%
+  filter(cutoff == 0.3) %>%
+  filter(author %in% c("Singleton", "Liu")) %>%
+  group_by(GCF) %>%
+  summarise(Singleton = sum(author == "Singleton"), 
+            Liu = sum(author == "Liu")) %>%
+  filter(Singleton > 0) %>%
+  filter(Liu > 0) %>% nrow()
+
+```
+

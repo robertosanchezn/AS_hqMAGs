@@ -1,58 +1,96 @@
 ```{r}
-suppressPackageStartupMessages({
 library(tidyverse)
 library(plotly)
 library(treeio)
 library(ggtree)
 library(ggtreeExtra)
 library(svglite)
-  })
+library(jsonlite)
+library(rvest)
 ```
 
-BGC table for Myxococcota
+Fetch info for Nitrospirota genomes
 
-```{bash, eval = FALSE}
-Rscript notebook/bgc_table.R \
-  --antismash_dir  ~/p__Nitrospirota_all/antismash/6.0.1/ \
-  --bigscape_dir ~/p__Nitrospirota_all/p__Nitrospirota_all_antismash_6.0.1/network_files/2022-02-01_16-12-56_glocal_p__Nitrospirota_all_antismash_6.0.1/ \
-  --output tables/p__Nitrospirota_all_bgcs.csv
-```
-```{r, echo=FALSE}
-bgcs <- read_csv("tables/p__Nitrospirota_all_bgcs.csv", 
-                 show_col_types = FALSE)
-bgcs
-```
+```{r}
+bioproject_accession <- "prjna629478"
 
-Genome table for Myxococcota
+assembly_details <- 
+  paste0("https://www.ncbi.nlm.nih.gov/bioproject/", bioproject_accession) %>%
+  read_html() %>%
+  html_node("#AssemblyDetails") %>%
+  html_table() %>% 
+  select(Assembly, Isolate) %>%
+setNames(c("genome_id", "isolate"))
 
-```{bash include=FALSE,eval = FALSE}
-wget --output-document data/bac120_metadata_r202.tar.gz \
-https://data.gtdb.ecogenomic.org/releases/release202/202.0/bac120_metadata_r202.tar.gz
-tar -xvzf data/bac120_metadata_r202.tar.gz
+gtdb202_taxonomy <- read_tsv(
+  "data/gtdbtk.bac120.summary.tsv", 
+  col_select = 1:2, 
+  col_types = "cc") %>%
+  set_names(c("genome_id", "gtdb_taxonomy"))
 
-Rscript notebook/genome_table.R \
-  --bgcs_table tables/p__Nitrospirota_all_bgcs.csv \
-  --gtdbtk_summary data/gtdbtk.bac120.summary.tsv \
-  --supplementary_file  data/singleton_2021_table3.xlsx \
-  --assembly_details data/assembly_details.txt \
-  --output tables/p__Nitrospirota_all_genomes.csv \
-  --gtdb_metadata data/bac120_metadata_r202.tsv 
-```
-```{r, echo = FALSE}
-genomes <- read_csv("tables/p__Nitrospirota_all_genomes.csv", 
-                    show_col_types = FALSE)  %>%
-  filter(str_detect(gtdb_taxonomy, "p__Nitrospirota")) %>%
-  filter(mimag_quality != "LQ")
+singleton_2021_table3_url <-
+  "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-021-22203-2/MediaObjects/41467_2021_22203_MOESM5_ESM.xlsx"
+
+download.file(singleton_2021_table3_url,
+              destfile = "data/singleton_2021_table3.xlsx", 
+              method = "curl")
+
+gtdb_metadata_url <- 
+  "https://data.gtdb.ecogenomic.org/releases/release202/202.0/bac120_metadata_r202.tar.gz"
+tar_file <- "data/bac120_metadata_r202.tar.gz"
+download.file(gtdb_metadata_url, tar_file)
+untar(tar_file, exdir = 'data')
+
+mags <- read_xlsx(
+  "data/singleton_2021_table3.xlsx",
+  skip = 1) %>%
+  mutate(isolate = str_replace(MAG, '.fa', ""), 
+         assembly_level = if_else(Circ == "CIRCULAR",
+                                  "Complete/Chromosome",
+                                  "Contig/Scaffold"),
+         checkm_completeness = Comp, 
+         checkm_contamination = Cont, 
+         genome_size = TotBP, 
+         ncbi_bioproject = "PRJNA629478",
+         mimag_quality = "HQ",
+         source = "genbank",
+         .keep = "none") %>%
+  left_join(assembly_details, by = "isolate") %>%
+  left_join(gtdb202_taxonomy, by = "genome_id") %>%
+  select(-isolate) %>%
+  filter(str_detect(gtdb_taxonomy, "p__Nitrospirota;")) 
+
+metadata <- read_tsv("data/bac120_metadata_r202.tsv", 
+                    col_select = c(1, 3:4, 14, 17, 41:43, 46, 49)) %>%
+  filter(str_detect(gtdb_taxonomy, "p__Nitrospirota;")) %>%
+  mutate(genome_id = str_sub(accession, start = 4), 
+         source = if_else(str_detect(accession, "^RS_"), "refseq", "genbank"), 
+         mimag_quality = case_when(
+           mimag_high_quality ~ "HQ", 
+           mimag_medium_quality ~ "MQ", 
+           mimag_low_quality ~ "LQ"), 
+         assembly_level = case_when(
+           ncbi_assembly_level == "Contig" ~ "Contig/Scaffold", 
+           ncbi_assembly_level == "Scaffold" ~ "Contig/Scaffold", 
+           ncbi_assembly_level == "Complete Genome" ~ "Complete/Chromosome",
+           ncbi_assembly_level == "Chromosome" ~ "Complete/Chromosome"),
+         .keep = "unused") %>%
+  filter(mimag_quality != "LQ") 
+
+genomes <- bind_rows(mags, metadata) 
+
 genomes
 ```
 
+Parse info into tables
+
 ```{r include = FALSE}
+
 bgcs <- read_csv("tables/p__Nitrospirota_all_bgcs.csv", 
                  show_col_types = FALSE) %>%
   filter(genome_id %in% genomes$genome_id)
 
 gtdb_tree <- read.newick("data/gtdbtk.bac120.classify.tree")
-
 
 taxon <- "p__Nitrospirota"
 
@@ -62,6 +100,18 @@ phylum_tree <- tree_subset(gtdb_tree, node = taxon_node, levels_back = 0)
 
 phylum_tree$node.label <- str_extract(phylum_tree$node.label, '.__.*$') %>%
   str_replace_all('\'', '')
+
+genomes <- genomes %>%
+  left_join(
+    bgcs %>% 
+      group_by(genome_id) %>% 
+      summarise(total_bgcs = n(),
+                bgcs_on_contig_edge = sum(contig_edge))) %>%
+  mutate(across(contains("bgcs"), ~replace_na(.x, 0))) %>%
+  relocate(genome_id, contains('bgcs'), gtdb_taxonomy)
+  
+write_csv(bgcs, "tables/p__Nitrospirota_all_bgcs.csv")
+write_csv(genomes, "tables/p__Nitrospirota_all_genomes.csv")
 ```
 
 Customize BiG-SCAPE classes and color palette
@@ -139,7 +189,7 @@ ggplotly(boxplots)
 
 ```
 
-Overview of the phylum Myxococcota. Add number of MAGs per clade
+Overview of the phylum Nitrospirota Add number of MAGs per clade
 
 ```{r echo=FALSE, warning = FALSE, fig.height=10, fig.width=7}
 
@@ -233,7 +283,7 @@ clades_tree
 
 ```
 
-Absence / Presence matrix for f__Nitrospiraceae
+Absence / Presence matrix for f\_\_Nitrospiraceae
 
 ```{r echo=FALSE, fig.height=7, fig.width=10, message=FALSE, warning=FALSE}
 
@@ -264,8 +314,8 @@ matrix_ds <- bgcs %>%
   filter(genome_id %in% family_tree$tip.label) %>%
   mutate(GCF = str_split(GCF, ";")) %>%
   unnest(GCF) %>%
-    mutate(class = factor(class, levels = bigscape_classes), 
-         class = my_classes[as.numeric(class)]) %>%
+    mutate(class = my_classes[match(class, bigscape_classes)], 
+           class = factor(class, levels = unique(my_classes))) %>%
   mutate(string = paste0(GCF, ": ", product))  %>%
   group_by(string) %>%
   mutate(singleton = n() == 1)
@@ -283,7 +333,7 @@ tree_matrix <-  ggtree(data_tree) +
 
     geom_fruit(
   geom = "geom_point", 
-  data = matrix_ds[is.na(matrix_ds$class) == FALSE,], 
+  data = matrix_ds, 
   mapping = aes(
     fill = class,
     x = string, 
@@ -292,13 +342,13 @@ tree_matrix <-  ggtree(data_tree) +
   size = 1.5, 
   offset = 0.5,
   shape = 21, 
-  pwidth = 4,
+  pwidth = 6,
   axis.params = list(axis = "x", 
                      text.size = 2.5, 
                      text.angle = 90, 
                      hjust =1),
   grid.params = list(vline = TRUE, 
-                     size = 1, 
+                     size = 0.5, 
                      color = "gray95")) +
   
   geom_tiplab(mapping = aes(
@@ -322,10 +372,78 @@ tree_matrix <-  ggtree(data_tree) +
         legend.box.spacing = unit(x=c(0,0,0,0),units="mm"))
 
 tree_matrix
-  
+
+ggsave("figures/nitro_tree.svg", 
+       tree_matrix,
+       width = 9, 
+       device = "svg")
+
+source("notebook/remove_text_length.R")
+
+remove_text_length("figures/nitro_tree.svg")
 ```
 
+```{r}
+
+barplot_ds <- bgcs %>% 
+  filter(genome_id %in% family_ds$genome_id) %>%
+  mutate(class = case_when(
+    str_detect(product, "hserlactone") ~  "h-Ser-lactone", 
+    str_detect(product, "phosphonate") ~ "Phosphonate", 
+    TRUE ~ class)) %>%
+  group_by(genome_id, class) %>% tally() %>%
+  arrange(n)
+
+classes_barplot <- c("Terpene", "RiPPs", "NRPS", "PKS-NRP_Hybrids", "PKSI", "Phosphonate", "h-Ser-lactone", "Others")
+
+barplot_ds <- mutate(
+  barplot_ds, 
+  class = factor(class, levels = classes_barplot)) %>%
+  arrange(class)
+
+relative_widths <- barplot_ds %>% 
+  group_by(class) %>%
+  summarise(n = max(n)) %>% 
+  pull(n)
+
+barplot_colors <- c(my_colors[1:5], "cyan", "yellow", "grey")
+bgcs_tree <- ggtree(data_tree) +
+  
+  geom_tiplab(mapping = aes(
+    label = species, 
+    color = AS_hqMAG), 
+              size = 1.7, 
+              align = TRUE) + 
+    scale_color_manual(values = c("black", "darkred"))
+
+for (i in 1:length(classes_barplot)){
+  
+ # nbreaks <- relative_widths[i]/2
+  title  <- classes_barplot[i]
+  class <- classes_barplot[i]
+  nbreaks <- relative_widths[i]
+    
+  bgcs_tree <- bgcs_tree +
+    geom_fruit(data = barplot_ds[barplot_ds$class == class,], 
+               geom = "geom_bar", 
+               mapping = aes(y = genome_id, 
+                             x = n, 
+                             group = label), 
+               pwidth = 0.1 * relative_widths[i],
+               stat = "identity", 
+               orientation = "y",
+               fill = barplot_colors[i], 
+               axis.params = list(axis = "x",
+                                  text.size = 3,
+                                  vjust = 1,
+                                  nbreak = nbreaks,
+                                  line.size = NA),
+               grid.params = list(vline = FALSE)) 
+}
+
+filename <- bgcs_tree
+ggsave(bgcs_tree, filename = filename, height = 7, width = 9)
 
 
 
-
+```
