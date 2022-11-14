@@ -1,0 +1,74 @@
+genome_id,source,organism,genus,species,strain,closest_placement_reference,Genome,Phylum,# of Contigs,Length (bp),CheckM Completeness %,CheckM Contamination %,ncbi_mapping,Level,WGS,BioSample,Isolate,Taxonomy
+GCA_003223135.1,ncbi,,,,,,Acidobacteria_gp22_AA4,Acidobacteria,154.0,3747099.0,91.09,3.42,gp22 AA4,Scaffold,QHXX00000000,SAMN08912089,gp22 AA4,Acidobacteria bacterium
+GCA_003225175.1,ncbi,,,,,,Acidobacteria_gp1_AA114,Acidobacteria,265.0,5828300.0,98.29,2.14,gp1 AA114,Scaffold,QIBA00000000,SAMN08912199,gp1 AA114,Acidobacteria bacterium
+GCA_003225055.1,ncbi,,,,,,Acidobacteria_gp1_AA121,Acidobacteria,289.0,7479097.0,98.81,1.57,gp1 AA121,Scaffold,QIAU00000000,SAMN08912206,gp1 AA121,Acidobacteria bacterium
+GCA_003225565.1,ncbi,,,,,,Acidobacteria_gp1_AA125,Acidobacteria,504.0,4271518.0,91.9,3.02,gp1 AA125,Scaffold,QIAQ00000000,SAMN08912210,gp1 AA125,Acidobacteria bacterium
+GCA_003225075.1,ncbi,,,,,,Acidobacteria_gp1_AA126,Acidobacteria,250.0,4846260.0,97.17,4.56,gp1 AA126,Scaffold,QIAP00000000,SAMN08912211,gp1 AA126,Acidobacteria bacterium
+GCA_003225005.1,ncbi,,,,,,Acidobacteria_gp1_AA128,Acidobacteria,544.0,7964278.0,98.84,4.27,gp1 AA128,Scaffold,QIAN00000000,SAMN08912213,gp1 AA128,Acidobacteria bacterium
+GCA_003225465.1,ncbi,,,,,,Acidobacteria_gp1_AA134,Acidobacteria,534.0,6369190.0,95.87,3.68,gp1 AA134,Scaffold,QIAH00000000,SAMN08912219,gp1 AA134,Acidobacteria bacterium
+GCA_003224975.1,ncbi,,,,,,Acidobacteria_gp1_AA135,Acidobacteria,543.0,6250957.0,96.79,2.14,gp1 AA135,Scaffold,QIAG00000000,SAMN08912220,gp1 AA135,Acidobacteria bacterium
+GCA_003225455.1,ncbi,,,,,,Acidobacteria_gp1_AA140,Acidobacteria,193.0,5044374.0,94.44,3.85,gp1 AA140,Scaffold,QIAB00000000,SAMN08912225,gp1 AA140,Acidobacteria bacterium
+GCA_003224905.1,ncbi,,,,,,Acidobacteria_gp1_AA141,Acidobacteria,300.0,5693849.0,96.84,3.52,gp1 AA141,Scaffold,QIAA00000000,SAMN08912226,gp1 AA141,Acidobacteria bacterium
+GCA_003225365.1,ncbi,,,,,,Acidobacteria_gp13_AA74,Acidobacteria,415.0,5253747.0,95.03,4.56,gp13 AA74,Scaffold,QHZN00000000,SAMN08912159,gp13 AA74,Acidobacteria bacterium
+GCA_003225315.1,ncbi,,,,,,Acidobacteria_gp2_AA100,Acidobacteria,57.0,4983911.0,94.66,1.71,gp2 AA100,Scaffold,QHZD00000000,SAMN08912185,gp2 AA100,Acidobacteria bacterium
+GCA_003224525.1,ncbi,,,,,,Acidobacteria_gp2_AA102,Acidobacteria,473.0,6649346.0,92.31,3.42,gp2 AA102,Scaffold,QHZB00000000,SAMN08912187,gp2 AA102,Acidobacteria bacterium
+GCA_003225295.1,ncbi,,,,,,Acidobacteria_gp2_AA104,Acidobacteria,369.0,8206459.0,95.73,4.27,gp2 AA104,Scaffold,QHYZ00000000,SAMN08912189,gp2 AA104,Acidobacteria bacterium
+GCA_003224475.1,ncbi,,,,,,Acidobacteria_gp2_AA106,Acidobacteria,471.0,8187649.0,95.66,2.56,gp2 AA106,Scaffold,QHYX00000000,SAMN08912191,gp2 AA106,Acidobacteria bacterium
+GCA_003225255.1,ncbi,,,,,,Acidobacteria_gp2_AA107,Acidobacteria,433.0,7367770.0,90.81,1.71,gp2 AA107,Scaffold,QHYW00000000,SAMN08912192,gp2 AA107,Acidobacteria bacterium
+GCA_003224235.1,ncbi,,,,,,Acidobacteria_gp2_AA80,Acidobacteria,222.0,4623513.0,93.16,2.14,gp2 AA80,Scaffold,QHYU00000000,SAMN08912165,gp2 AA80,Acidobacteria bacterium
+GCA_003223325.1,ncbi,,,,,,Acidobacteria_gp2_AA82,Acidobacteria,362.0,6168009.0,94.44,4.27,gp2 AA82,Scaffold,QHYS00000000,SAMN08912167,gp2 AA82,Acidobacteria bacterium
+GCA_003223295.1,ncbi,,,,,,Acidobacteria_gp2_AA88,Acidobacteria,463.0,6119419.0,91.88,4.27,gp2 AA88,Scaffold,QHYM00000000,SAMN08912173,gp2 AA88,Acidobacteria bacterium
+GCA_003224085.1,ncbi,,,,,,Acidobacteria_gp2_AA90,Acidobacteria,157.0,6817407.0,93.73,3.49,gp2 AA90,Scaffold,QHYK00000000,SAMN08912175,gp2 AA90,Acidobacteria bacterium
+GCA_003223255.1,ncbi,,,,,,Acidobacteria_gp2_AA91,Acidobacteria,422.0,6728016.0,94.63,1.71,gp2 AA91,Scaffold,QHYJ00000000,SAMN08912176,gp2 AA91,Acidobacteria bacterium
+GCA_003223245.1,ncbi,,,,,,Acidobacteria_gp2_AA92,Acidobacteria,224.0,6362349.0,95.73,2.56,gp2 AA92,Scaffold,QHYI00000000,SAMN08912177,gp2 AA92,Acidobacteria bacterium
+GCA_003223215.1,ncbi,,,,,,Acidobacteria_gp2_AA93,Acidobacteria,270.0,8872263.0,94.87,3.85,gp2 AA93,Scaffold,QHYH00000000,SAMN08912178,gp2 AA93,Acidobacteria bacterium
+GCA_003223225.1,ncbi,,,,,,Acidobacteria_gp2_AA94,Acidobacteria,761.0,7916167.0,92.85,2.18,gp2 AA94,Scaffold,QHYG00000000,SAMN08912179,gp2 AA94,Acidobacteria bacterium
+GCA_003224055.1,ncbi,,,,,,Acidobacteria_gp2_AA96,Acidobacteria,135.0,4528585.0,91.14,2.8,gp2 AA96,Scaffold,QHYE00000000,SAMN08912181,gp2 AA96,Acidobacteria bacterium
+GCA_003224025.1,ncbi,,,,,,Acidobacteria_gp2_AA99,Acidobacteria,353.0,5050301.0,93.16,4.27,gp2 AA99,Scaffold,QHYB00000000,SAMN08912184,gp2 AA99,Acidobacteria bacterium
+GCA_003223115.1,ncbi,,,,,,Acidobacteria_gp3_AA109,Acidobacteria,562.0,9181584.0,97.37,2.19,gp3 AA109,Scaffold,QHXW00000000,SAMN08912194,gp3 AA109,Acidobacteria bacterium
+GCA_003223065.1,ncbi,,,,,,Acidobacteria_gp3_AA111,Acidobacteria,525.0,6331374.0,90.07,0.0,gp3 AA111,Scaffold,QHXU00000000,SAMN08912196,gp3 AA111,Acidobacteria bacterium
+GCA_003223025.1,ncbi,,,,,,Acidobacteria_gp4_AA15,Acidobacteria,32.0,4342350.0,97.44,2.61,gp4 AA15,Scaffold,QHXR00000000,SAMN08912100,gp4 AA15,Acidobacteria bacterium
+GCA_003222945.1,ncbi,,,,,,Acidobacteria_gp4_AA20,Acidobacteria,324.0,4762992.0,93.59,4.33,gp4 AA20,Scaffold,QHXM00000000,SAMN08912105,gp4 AA20,Acidobacteria bacterium
+GCA_003222895.1,ncbi,,,,,,Acidobacteria_gp4_AA24,Acidobacteria,165.0,4805763.0,93.75,2.56,gp4 AA24,Scaffold,QHXI00000000,SAMN08912109,gp4 AA24,Acidobacteria bacterium
+GCA_003222385.1,ncbi,,,,,,Acidobacteria_gp7_AA6,Acidobacteria,221.0,3678706.0,95.66,3.42,gp7 AA6,Scaffold,QHVV00000000,SAMN08912091,gp7 AA6,Acidobacteria bacterium
+GCA_003223645.1,ncbi,,,,,,Acidobacteria_gp7_AA8,Acidobacteria,51.0,6382978.0,99.15,3.42,gp7 AA8,Scaffold,QHVT00000000,SAMN08912093,gp7 AA8,Acidobacteria bacterium
+GCA_003223555.1,ncbi,,,,,,Acidobacteria_unk_AA32,Acidobacteria,147.0,5414709.0,91.36,4.27,AA32,Scaffold,QHVM00000000,SAMN08912117,AA32,Acidobacteria bacterium
+GCA_003222275.1,ncbi,,,,,,Acidobacteria_unk_AA35,Acidobacteria,593.0,6888973.0,92.35,4.27,AA35,Scaffold,QHVJ00000000,SAMN08912120,AA35,Acidobacteria bacterium
+GCA_003223515.1,ncbi,,,,,,Angelobacter_gp1_AA117,Acidobacteria,206.0,6493111.0,99.79,3.47,gp1 AA117,Scaffold,QHVI00000000,SAMN08912202,gp1 AA117,Acidobacteriia bacterium AA117
+GCA_003223455.1,ncbi,,,,,,Gemmatimonadetes_AG11,Gemmatimonadetes,125.0,4983587.0,93.41,2.2,AG11,Scaffold,QHVE00000000,SAMN08911868,AG11,Gemmatimonadetes bacterium
+GCA_003222205.1,ncbi,,,,,,Gemmatimonadetes_AG13,Gemmatimonadetes,208.0,2997750.0,95.6,3.95,AG13,Scaffold,QHVC00000000,SAMN08911870,AG13,Gemmatimonadetes bacterium
+GCA_003222195.1,ncbi,,,,,,Gemmatimonadetes_AG14,Gemmatimonadetes,94.0,3513433.0,98.35,2.2,AG14,Contig,QHVB00000000,SAMN08911871,AG14,Gemmatimonadetes bacterium
+GCA_003223395.1,ncbi,,,,,,Gemmatimonadetes_AG16,Gemmatimonadetes,122.0,3426061.0,98.35,1.2,AG16,Scaffold,QHUZ00000000,SAMN08911873,AG16,Gemmatimonadetes bacterium
+GCA_003223415.1,ncbi,,,,,,Gemmatimonadetes_AG17,Gemmatimonadetes,272.0,3612243.0,97.7,1.1,AG17,Scaffold,QHUY00000000,SAMN08911874,AG17,Gemmatimonadetes bacterium
+GCA_003222055.1,ncbi,,,,,,Gemmatimonadetes_AG21,Gemmatimonadetes,171.0,3714046.0,94.32,3.3,AG21,Contig,QHUT00000000,SAMN08911878,AG21,Gemmatimonadetes bacterium
+GCA_003222035.1,ncbi,,,,,,Gemmatimonadetes_AG22,Gemmatimonadetes,128.0,3617576.0,95.64,3.3,AG22,Scaffold,QHUS00000000,SAMN08911879,AG22,Gemmatimonadetes bacterium
+GCA_003222115.1,ncbi,,,,,,Gemmatimonadetes_AG29,Gemmatimonadetes,99.0,3098416.0,96.7,1.1,AG29,Scaffold,QHUL00000000,SAMN08911886,AG29,Gemmatimonadetes bacterium
+GCA_003222085.1,ncbi,,,,,,Gemmatimonadetes_AG3,Gemmatimonadetes,64.0,3535971.0,93.41,3.3,AG3,Contig,QHUK00000000,SAMN08911860,AG3,Gemmatimonadetes bacterium
+GCA_003221895.1,ncbi,,,,,,Gemmatimonadetes_AG30,Gemmatimonadetes,231.0,3772809.0,98.9,4.4,AG30,Scaffold,QHUJ00000000,SAMN08911887,AG30,Gemmatimonadetes bacterium
+GCA_003221075.1,ncbi,,,,,,Gemmatimonadetes_AG34,Gemmatimonadetes,395.0,3322098.0,90.41,4.4,AG34,Scaffold,QHUF00000000,SAMN08911891,AG34,Gemmatimonadetes bacterium
+GCA_003221035.1,ncbi,,,,,,Gemmatimonadetes_AG38,Gemmatimonadetes,103.0,3378283.0,98.25,2.2,AG38,Contig,QHUB00000000,SAMN08911895,AG38,Gemmatimonadetes bacterium
+GCA_003221805.1,ncbi,,,,,,Gemmatimonadetes_AG39,Gemmatimonadetes,240.0,3238148.0,90.01,2.3,AG39,Scaffold,QHUA00000000,SAMN08911896,AG39,Gemmatimonadetes bacterium
+GCA_003221005.1,ncbi,,,,,,Gemmatimonadetes_AG4,Gemmatimonadetes,138.0,2825227.0,93.71,1.1,AG4,Scaffold,QHTZ00000000,SAMN08911861,AG4,Gemmatimonadetes bacterium
+GCA_003221765.1,ncbi,,,,,,Gemmatimonadetes_AG44,Gemmatimonadetes,221.0,2996657.0,95.6,4.4,AG44,Scaffold,QHTU00000000,SAMN08911901,AG44,Gemmatimonadetes bacterium
+GCA_003221755.1,ncbi,,,,,,Gemmatimonadetes_AG5,Gemmatimonadetes,228.0,3112550.0,95.6,4.4,AG5,Scaffold,QHTO00000000,SAMN08911862,AG5,Gemmatimonadetes bacterium
+GCA_003220805.1,ncbi,,,,,,Gemmatimonadetes_AG7,Gemmatimonadetes,134.0,3838238.0,96.7,4.95,AG7,Scaffold,QHTL00000000,SAMN08911864,AG7,Gemmatimonadetes bacterium
+GCA_003220495.1,ncbi,,,,,,Rokubacteria_AR28,Rokubacteria,157.0,6013750.0,91.03,4.38,AR28,Scaffold,QHSP00000000,SAMN08911934,AR28,Candidatus Rokubacteria bacterium
+GCA_003221295.1,ncbi,,,,,,Verrucomicrobia_AV114,Verrucomicrobia,267.0,3080349.0,90.2,3.04,AV114,Scaffold,QHRA00000000,SAMN08912064,AV114,Verrucomicrobia bacterium
+GCA_003221255.1,ncbi,,,,,,Verrucomicrobia_AV117,Verrucomicrobia,256.0,2211425.0,90.19,2.03,AV117,Scaffold,QHQX00000000,SAMN08912067,AV117,Verrucomicrobia bacterium
+GCA_003219895.1,ncbi,,,,,,Verrucomicrobia_AV121,Verrucomicrobia,199.0,2364279.0,90.37,3.41,AV121,Scaffold,QHQS00000000,SAMN08912071,AV121,Verrucomicrobia bacterium
+GCA_003219835.1,ncbi,,,,,,Verrucomicrobia_AV132,Verrucomicrobia,267.0,2805560.0,96.62,2.7,AV132,Scaffold,QHQG00000000,SAMN08912082,AV132,Verrucomicrobia bacterium
+GCA_003219215.1,ncbi,,,,,,Verrucomicrobia_AV18,Verrucomicrobia,191.0,2408314.0,90.81,2.36,AV18,Scaffold,QHPY00000000,SAMN08911968,AV18,Verrucomicrobia bacterium
+GCA_003219195.1,ncbi,,,,,,Verrucomicrobia_AV19,Verrucomicrobia,177.0,2864703.0,95.41,2.6,AV19,Scaffold,QHPX00000000,SAMN08911969,AV19,Verrucomicrobia bacterium
+GCA_003219545.1,ncbi,,,,,,Verrucomicrobia_AV32,Verrucomicrobia,82.0,2731459.0,99.19,4.05,AV32,Scaffold,QHPI00000000,SAMN08911982,AV32,Verrucomicrobia bacterium
+GCA_003218975.1,ncbi,,,,,,Verrucomicrobia_AV37,Verrucomicrobia,159.0,3090450.0,97.3,3.15,AV37,Scaffold,QHPD00000000,SAMN08911987,AV37,Verrucomicrobia bacterium
+GCA_003218885.1,ncbi,,,,,,Verrucomicrobia_AV44,Verrucomicrobia,211.0,2381129.0,90.8,3.72,AV44,Scaffold,QHOV00000000,SAMN08911994,AV44,Verrucomicrobia bacterium
+GCA_003218875.1,ncbi,,,,,,Verrucomicrobia_AV45,Verrucomicrobia,205.0,3134697.0,97.3,4.05,AV45,Scaffold,QHOU00000000,SAMN08911995,AV45,Verrucomicrobia bacterium
+GCA_003219415.1,ncbi,,,,,,Verrucomicrobia_AV47,Verrucomicrobia,239.0,3681659.0,96.45,3.83,AV47,Scaffold,QHOS00000000,SAMN08911997,AV47,Verrucomicrobia bacterium
+GCA_003219345.1,ncbi,,,,,,Verrucomicrobia_AV5,Verrucomicrobia,628.0,5899704.0,91.19,3.19,AV5,Scaffold,QHOP00000000,SAMN08911955,AV5,Verrucomicrobia bacterium
+GCA_003218615.1,ncbi,,,,,,Verrucomicrobia_AV60,Verrucomicrobia,324.0,2412795.0,91.62,2.01,AV60,Scaffold,QHOD00000000,SAMN08912010,AV60,Verrucomicrobia bacterium
+GCA_003218535.1,ncbi,,,,,,Verrucomicrobia_AV68,Verrucomicrobia,263.0,2751760.0,93.92,4.39,AV68,Scaffold,QHNV00000000,SAMN08912018,AV68,Verrucomicrobia bacterium
+GCA_003218135.1,ncbi,,,,,,Verrucomicrobia_AV72,Verrucomicrobia,205.0,2816360.0,93.58,4.05,AV72,Contig,QHNQ00000000,SAMN08912022,AV72,Verrucomicrobia bacterium
+GCA_003217965.1,ncbi,,,,,,Verrucomicrobia_AV86,Verrucomicrobia,338.0,2779190.0,92.61,4.77,AV86,Scaffold,QHNB00000000,SAMN08912036,AV86,Verrucomicrobia bacterium
+GCA_003218255.1,ncbi,,,,,,Verrucomicrobia_AV90,Verrucomicrobia,356.0,2939151.0,90.48,2.37,AV90,Scaffold,QHMW00000000,SAMN08912040,AV90,Verrucomicrobia bacterium
+GCA_003218235.1,ncbi,,,,,,Verrucomicrobia_AV92,Verrucomicrobia,327.0,2779005.0,95.95,1.57,AV92,Scaffold,QHMU00000000,SAMN08912042,AV92,Verrucomicrobia bacterium
+GCA_003217895.1,ncbi,,,,,,Verrucomicrobia_AV94,Verrucomicrobia,322.0,2894051.0,94.93,4.39,AV94,Scaffold,QHMS00000000,SAMN08912044,AV94,Verrucomicrobia bacterium
