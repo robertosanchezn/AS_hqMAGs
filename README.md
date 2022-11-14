@@ -1,14 +1,15 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/robertosanchezn/AS_hqMAGs/main)
 # bgcflow_AS_hqMAGs
-- This repository contains the code required to reproduce the analysis from the manuscript **_Sánchez-Navarro et al. 2022. Long-Read Metagenome-Assembled Genomes Improve Identification of Novel Complete Biosynthetic Gene Clusters in a AQ: A Complex Microbial-Activated Sludge Ecosystem_**.
+- This repository contains the code required to reproduce the analysis from the manuscript **_Sánchez-Navarro et al. 2022. Long-Read Metagenome-Assembled Genomes Improve Identification of Novel Complete Biosynthetic Gene Clusters in a Complex Microbial-Activated Sludge Ecosystem_**.
 
-# Preview analyses notebooks
-- [AS_hqMAGs](https://htmlpreview.github.io/?https://github.com/robertosanchezn/AS_hqMAGs/blob/main/r_markdown/AS_hqMAGs.html)
-- [p__Myxococcota](https://htmlpreview.github.io/?https://github.com/robertosanchezn/AS_hqMAGs/blob/main/r_markdown/Myxo.html)
-- [p__Nitrospirota](https://htmlpreview.github.io/?https://github.com/robertosanchezn/AS_hqMAGs/blob/main/r_markdown/Nitro.html)
+# Preview notebooks
+- [FIG 1](https://htmlpreview.github.io/?https://github.com/robertosanchezn/AS_hqMAGs/blob/manuscript-update/r_markdown/AS_hqMAGs.html)
+- [FIG 2](https://htmlpreview.github.io/?https://github.com/robertosanchezn/AS_hqMAGs/blob/manuscript-update/r_markdown/AS_hqMAGs.html)
+- [FIG 3](https://htmlpreview.github.io/?https://github.com/robertosanchezn/AS_hqMAGs/blob/manuscript-update/r_markdown/AS_hqMAGs.html)
+- FIG 4 *TO DO*
+- FIG 5 *TO DO*
+- FIG 6 *TO DO*
 
-# Correspondence
-robertosan97@gmail.com
 
 # Usage
 Follow these steps to reproduce the analysis and data generated in this study.
@@ -21,12 +22,12 @@ cd AS_hqMAGs
 ```
 
 ## Run the analysis
-To generate the figures in the manuscript, run the analysis inside the `r_markdown` folder or `jupyter_notebook` folder. Each folder has its own `README.md` to with instructions to run the analysis.
+To generate the figures in the manuscript, run the analysis inside the `r_markdown` folder or `jupyter_notebook` folder. Each folder has its own `README.md` with instructions to run the analysis.
 
 ## Reproduce the data
 ### 1. Install Conda Environments & BGCFlow
 - This analysis was done in Microsoft Azure Virtual Machine running on Linux (ubuntu 20.04).
-- Get a clone of BGCflow, following the instructions at https://github.com/NBChub/bgcflow:
+- Get a clone of BGCflow, following the instructions at https://github.com/NBChub/bgcflow :
 ```bash
 git clone git@github.com:NBChub/bgcflow.git
 cd bgcflow
@@ -35,6 +36,7 @@ cd bgcflow
 ```bash
 git checkout v0.3.3-alpha
 ```
+- *TO DO*: attach a zipped archive of the [v0.3.3-alpha](https://github.com/NBChub/bgcflow/archive/refs/tags/v0.3.3-alpha.tar.gz)
 - Installing Snakemake using [Mamba](https://github.com/mamba-org/mamba) is advised. In case you don’t use [Mambaforge](https://github.com/conda-forge/miniforge#mambaforge) you can always install [Mamba](https://github.com/mamba-org/mamba) into any other Conda-based Python distribution with:
 ```bash
 conda install -n base -c conda-forge mamba
