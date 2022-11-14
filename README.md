@@ -3,12 +3,12 @@
 - This repository contains the code required to reproduce the analysis from the manuscript **_Sánchez-Navarro et al. 2022. Long-Read Metagenome-Assembled Genomes Improve Identification of Novel Complete Biosynthetic Gene Clusters in a Complex Microbial-Activated Sludge Ecosystem_**.
 
 # Preview notebooks
-- [FIG 1](https://htmlpreview.github.io/?https://github.com/robertosanchezn/AS_hqMAGs/blob/manuscript-update/r_markdown/AS_hqMAGs.html)
-- [FIG 2](https://htmlpreview.github.io/?https://github.com/robertosanchezn/AS_hqMAGs/blob/manuscript-update/r_markdown/AS_hqMAGs.html)
-- [FIG 3](https://htmlpreview.github.io/?https://github.com/robertosanchezn/AS_hqMAGs/blob/manuscript-update/r_markdown/AS_hqMAGs.html)
-- FIG 4 *TO DO*
-- FIG 5 *TO DO*
-- FIG 6 *TO DO*
+- [FIG 1. Overview of the number of BGCs detected in the HQ MAG data set.](https://htmlpreview.github.io/?https://github.com/robertosanchezn/AS_hqMAGs/blob/manuscript-update/r_markdown/AS_hqMAGs.html)
+- [FIG 2. Distribution of BGCs and BGC classes across taxonomic groups.](https://htmlpreview.github.io/?https://github.com/robertosanchezn/AS_hqMAGs/blob/manuscript-update/r_markdown/AS_hqMAGs.html)
+- [FIG 3. BGCs in selected genera functionally relevant and/or abundant in WWTPs with nutrient removal.](https://htmlpreview.github.io/?https://github.com/robertosanchezn/AS_hqMAGs/blob/manuscript-update/r_markdown/AS_hqMAGs.html)
+- FIG 4. Distribution of the presence of GCFs across the phylogenomic tree of 16 genomes of Nitrospira. *TO DO*
+- FIG 5. Distribution of the presence of GCFs across the phylogenomic tree of 22 genomes within the Polyangiaceae. *TO DO*
+- FIG 6. Comparison of BGC mining studies in HQ MAGs. *TO DO*
 
 
 # Usage
@@ -36,7 +36,7 @@ cd bgcflow
 ```bash
 git checkout v0.3.3-alpha
 ```
-- *TO DO*: attach a zipped archive of the [v0.3.3-alpha](https://github.com/NBChub/bgcflow/archive/refs/tags/v0.3.3-alpha.tar.gz)
+>- **TO DO: attach a zipped archive of the [v0.3.3-alpha](https://github.com/NBChub/bgcflow/archive/refs/tags/v0.3.3-alpha.tar.gz)**
 - Installing Snakemake using [Mamba](https://github.com/mamba-org/mamba) is advised. In case you don’t use [Mambaforge](https://github.com/conda-forge/miniforge#mambaforge) you can always install [Mamba](https://github.com/mamba-org/mamba) into any other Conda-based Python distribution with:
 ```bash
 conda install -n base -c conda-forge mamba
