@@ -1,0 +1,18 @@
+#### RULE CONFIGURATION ####
+# rules: set value to TRUE if you want to run the analysis or FALSE if you don't
+rules:
+  seqfu: TRUE
+  mlst: FALSE
+  refseq-masher: FALSE
+  checkm: FALSE
+  prokka-gbk: FALSE
+  antismash-summary: TRUE
+  antismash-zip: TRUE
+  query-bigslice: FALSE
+  bigscape: TRUE
+  bigslice: FALSE
+  automlst-wrapper: FALSE
+  arts: FALSE
+  roary: FALSE
+  eggnog: FALSE
+  eggnog-roary: FALSE
