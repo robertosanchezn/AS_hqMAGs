@@ -57,11 +57,30 @@ do
     done
 done
 ```
-## 4. Run the workflow
+## 4. Run the workflow for each individual study
 This will generate antiSMASH results and other downstream processes.
 ```bash
 conda activate snakemake
 snakemake --use-conda --cores 8 --keep-going -n
+conda deactivate
+```
+- **PS**: remove the args `-n` to do a real run
+
+## 5. Run the workflow for all study comparison
+This will generate antiSMASH results and other downstream processes.
+```bash
+conda activate snakemake
+snakemake --configfile config/config_all_studies.yaml --use-conda --cores 8 --keep-going -n
+conda deactivate
+```
+- **PS**: remove the args `-n` to do a real run
+
+## 6. Run the workflow for in depth study in Phylum Nitrospirota and Myxococcota
+This will generate antiSMASH results and other downstream processes.
+```bash
+conda activate snakemake
+snakemake --configfile config/config_in_depth.yaml --use-conda --cores 8 --keep-going -n
+conda deactivate
 ```
 - **PS**: remove the args `-n` to do a real run
 
