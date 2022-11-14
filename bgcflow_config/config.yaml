@@ -7,44 +7,64 @@
 # - name : name of your project
 # - samples : a csv file containing a list of genome ids for analysis with multiple sources mentioned. Genome ids must be unique.
 # - prokka-db (optional): list of the custom accessions to use as prokka reference database
+# - gtdb-tax (optional): output summary file of GTDB-tk with "user_genome" and "classification" as the two minimum columns
+
 projects:
-# Project 1 - Done!
-  - name: f__Nitrospiraceae_all
-    samples: config/f__Nitrospiraceae_all.csv
-    gtdb-tax: config/hqMAGs_taxonomy.tsv
-# Project 2 - Done!
-  - name: p__Nitrospirota_all
-    samples: config/p__Nitrospirota_all.csv
-    gtdb-tax: config/hqMAGs_taxonomy.tsv
-# Project 3 - Done!
-  - name: p__Nitrospirota_HQ_all
-    samples: config/p__Nitrospirota_HQ_all.csv
-    gtdb-tax: config/hqMAGs_taxonomy.tsv
-# Project 4 - Done!
-  - name: p__Myxococcota_all
-    samples: config/p__Myxococcota_all.csv
-    gtdb-tax: config/hqMAGs_taxonomy.tsv
+# Project 1
+  - name: Bickhart_et_al
+    samples: config/Bickhart_et_al/df_bickhart_checkm_HQ.csv
+    gtdb-tax: config/gtdb.all_hqmags_studies.tsv
+# Project 2
+  - name: Chen_et_al
+    samples: config/Chen_et_al/df_chen_checkm_HQ.csv
+    gtdb-tax: config/gtdb.all_hqmags_studies.tsv
+# Project 3
+  - name: Christoph_et_al
+    samples: config/Christoph_et_al/df_christoph_checkm_HQ.csv
+    gtdb-tax: config/gtdb.all_hqmags_studies.tsv
+# Project 4
+  - name: Liu_et_al
+    samples: config/Liu_et_al/df_liu_checkm_HQ.csv
+    gtdb-tax: config/gtdb.all_hqmags_studies.tsv
+# Project 5
+  - name: Sharrar_et_al
+    samples: config/Sharrar_et_al/df_sharrar_checkm_HQ.csv
+    gtdb-tax: config/gtdb.all_hqmags_studies.tsv
+# Project 6
+  - name: Singleton_et_al
+    rules: config/Singleton_et_al/project_config.yaml
+    samples: config/Singleton_et_al/df_singleton_bacteria.csv
+    gtdb-tax: config/gtdb.all_hqmags_studies.tsv
 
 #### RULE CONFIGURATION ####
 # rules: set value to TRUE if you want to run the analysis or FALSE if you don't
 rules:
-  bigscape: TRUE
+  seqfu: FALSE
+  mlst: FALSE
+  refseq_masher: FALSE
+  checkm: False
+  prokka-gbk: FALSE
+  antismash-summary: True
+  antismash-zip: FALSE
   query_bigslice: FALSE
-  mlst: TRUE
-  refseq_masher: TRUE
-  seqfu: TRUE
-  eggnog: FALSE
-  roary: FALSE
+  bigscape: FALSE
   bigslice: FALSE
   automlst_wrapper: FALSE
+  arts: FALSE
+  roary: FALSE
+  eggnog: FALSE
+  eggnog-roary: FALSE
   # other parameter settings
   rnammer: FALSE
 
+
 #### RESOURCES CONFIGURATION ####
-# resources : the location of the resources to run the rule. The default location is at "resources/{resource_name}".
+# resources : the location of the resources to run the rule.
+# The default location is at "resources/{resource_name}".
 resources_path: 
   antismash_db: resources/antismash_db
   eggnog_db: resources/eggnog_db
   BiG-SCAPE: resources/BiG-SCAPE
   bigslice: resources/bigslice
+  checkm: resources/checkm
   #RNAmmer: resources/RNAmmer # Path must be specified if rule configuration "rnammer" is TRUE

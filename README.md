@@ -11,17 +11,59 @@ This repository contains the code required to reproduce the analysis of BGCs div
 robertosan97@gmail.com
 
 # Usage
-## 1. Generate the data required for Analysis
-- Install snakemake and get a clone of BGCflow, following the instructions in https://github.com/NBChub/bgcflow:
-```shell
+Follow these steps to reproduce all the data required for analysis in this study.
+## 1. Install Conda Environments & BGCFlow
+- Get a clone of BGCflow, following the instructions at https://github.com/NBChub/bgcflow:
+```bash
 git clone git@github.com:NBChub/bgcflow.git
+cd bgcflow
 ```
+- Switch to branch v0.3.3-alpha (where this study was conducted)
+```bash
+git checkout v0.3.3-alpha
+```
+- Installing Snakemake using [Mamba](https://github.com/mamba-org/mamba) is advised. In case you don’t use [Mambaforge](https://github.com/conda-forge/miniforge#mambaforge) you can always install [Mamba](https://github.com/mamba-org/mamba) into any other Conda-based Python distribution with:
+```bash
+    conda install -n base -c conda-forge mamba
+```
+- Install conda environments
+```bash
+# snakemake environment
+mamba create -c conda-forge -c bioconda -n snakemake snakemake=7.6.1
+
+# environment to run notebooks
+mamba env create -n workflow/envs/bgc_analytics.yaml
+```
+## 2. Snakemake configuration set up
 - Set up the configuration files by copying the content in `/bgcflow_configuration` folder (replacing the original `config.yaml` in BGCflow)
-- Run the analysis as instructed in BGCflow. Might be a good idea to do a dry run first by:
 ```shell
-snakemake --use-conda --cores 64 --keep-going -n
+cp ../bgcflow_config/* config/. -r
 ```
-- remove the `-n` to do a real run
+## 3. Download and prepare data from other studies
+- Not all of the genomes are hosted in NCBI, and some fasta files needs cleaning. Run the notebook to grab all custom fasta files to `data/raw/fasta`.
+```shell
+# run notebook to download genomes from other studies to bgcflow/data/external, will take a while to finish
+conda activate bgc_analytics
+(cd ../jupyter_notebook/notebook2/ && jupyter nbconvert --to html --execute 01_other_MAG_dataset_table.ipynb)
+conda deactivate
+
+# generate symlink
+ext_dir="data/external"
+for directory in Bickhart_et_al Chen_et_al_sanitized Liu_et_al Sharrar_et_al_sanitized;
+do
+    for fna in $ext_dir/$directory/*.fna
+    do
+        (cd data/raw/fasta && ln -s ../../external/$directory/$(basename $fna) $(basename $fna) --verbose)
+    done
+done
+```
+## 4. Run the workflow
+This will generate antiSMASH results and other downstream processes.
+```bash
+conda activate snakemake
+snakemake --use-conda --cores 8 --keep-going -n
+```
+- **PS**: remove the args `-n` to do a real run
 
 ## 2. Analyse the data
 To generate the figures, run the analysis inside the `r_markdown` folder or `jupyter_notebook` folder. Each folder has its own `README.md` to with instructions to run the analysis.
