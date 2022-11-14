@@ -1,0 +1,74 @@
+cff-version: 1.2.0
+message: "If you find this repository useful, please cite it as below."
+authors:
+- family-names: "Sánchez-Navarro"
+  given-names: "Roberto"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+- family-names: "Nuhamunada"
+  given-names: "Matin"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+- family-names: "Mohite"
+  given-names: "Omkar"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+- family-names: "Wasmund"
+  given-names: "Kenneth"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+- family-names: "Albertsen"
+  given-names: "Mads"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+- family-names: "Gram"
+  given-names: "Lone"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+- family-names: "Nielsen"
+  given-names: "Per H."
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+- family-names: "Weber"
+  given-names: "Tilmann"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+- family-names: "Singleton"
+  given-names: "Caitlin M."
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+title: "Long-Read Metagenome-Assembled Genomes Improve Identification of Novel Complete Biosynthetic Gene Clusters in a Complex Microbial-Activated Sludge Ecosystem"
+version: 1.0.0
+doi: -
+date-released: 2022-11-14
+url: "https://github.com/robertosanchezn/AS_hqMAGs"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Sánchez-Navarro"
+    given-names: "Roberto"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Nuhamunada"
+    given-names: "Matin"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Mohite"
+    given-names: "Omkar"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Wasmund"
+    given-names: "Kenneth"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Albertsen"
+    given-names: "Mads"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Gram"
+    given-names: "Lone"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Nielsen"
+    given-names: "Per H."
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Weber"
+    given-names: "Tilmann"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Singleton"
+    given-names: "Caitlin M."
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  doi: "10.0000/00000"
+  journal: "Journal Title"
+  month: 11
+  start: 1 # First page number
+  end: 10 # Last page number
+  title: "Long-Read Metagenome-Assembled Genomes Improve Identification of Novel Complete Biosynthetic Gene Clusters in a Complex Microbial-Activated Sludge Ecosystem"
+  issue: 1
+  volume: 1
+  year: 2022
