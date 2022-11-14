@@ -6,37 +6,41 @@
 # A project must contain the variable "name" and "samples".
 # - name : name of your project
 # - samples : a csv file containing a list of genome ids for analysis with multiple sources mentioned. Genome ids must be unique.
-# - rules: a yaml file containing project rule configurations. This will override global rule configuration.
-# - prokka-db (optional): list of the custom accessions to use as prokka reference database.
+# - prokka-db (optional): list of the custom accessions to use as prokka reference database
 # - gtdb-tax (optional): output summary file of GTDB-tk with "user_genome" and "classification" as the two minimum columns
 
 projects:
-# Project 7
-  - name: all_hqmags_studies
-    samples: config/all_hqmags_studies/all_hqmags_studies_checkm_HQ.csv
-    gtdb-tax: config/all_hqmags_studies/gtdb.all_hqmags_studies.tsv
-    rules: config/all_hqmags_studies/project_config.yaml
+# Project 8
+  - name: p__Nitrospirota_all
+    samples: config/p__Nitrospirota_all/p__Nitrospirota_all.csv
+    gtdb-tax: config/wwtphqmags/wwtphqmags.gtdbtk.summary.tsv
+# Project 9
+  - name: p__Myxococcota_all
+    samples: config/p__Myxococcota_all/p__Myxococcota_all.csv
+    gtdb-tax: config/wwtphqmags/wwtphqmags.gtdbtk.summary.tsv
 
-#### GLOBAL RULE CONFIGURATION ####
-# This section configures the rules to run globally.
-# Use project specific rule configurations if you want to run different rules for each projects.
+
+#### RULE CONFIGURATION ####
 # rules: set value to TRUE if you want to run the analysis or FALSE if you don't
 rules:
   seqfu: FALSE
   mlst: FALSE
-  refseq-masher: FALSE
-  checkm: FALSE
+  refseq_masher: FALSE
+  checkm: False
   prokka-gbk: FALSE
-  antismash-summary: FALSE
+  antismash-summary: True
   antismash-zip: FALSE
-  query-bigslice: FALSE
+  query_bigslice: FALSE
   bigscape: FALSE
   bigslice: FALSE
-  automlst-wrapper: FALSE
+  automlst_wrapper: FALSE
   arts: FALSE
   roary: FALSE
   eggnog: FALSE
   eggnog-roary: FALSE
+  # other parameter settings
+  rnammer: FALSE
+
 
 #### RESOURCES CONFIGURATION ####
 # resources : the location of the resources to run the rule.
@@ -47,4 +51,4 @@ resources_path:
   BiG-SCAPE: resources/BiG-SCAPE
   bigslice: resources/bigslice
   checkm: resources/checkm
-  #RNAmmer: resources/RNAmmer # If specified, will override Barnapp in Prokka
+  #RNAmmer: resources/RNAmmer # Path must be specified if rule configuration "rnammer" is TRUE
